@@ -1,0 +1,72 @@
+.hide {
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.screnn-espera-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.screnn-espera-img {
+    font-size: 5em;
+    font-family: serif;
+    text-align: center;
+    width: 436px;
+    height: 188px;
+}
+
+.animar {
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.screnn-espera-select-div {
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+}
+
+.screnn-espera-select::-ms-expand {
+    display: none;
+}
+
+.screnn-espera-select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}

@@ -1,0 +1,38 @@
+.box-login-mk-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-login-mk-login {
+    position: absolute;
+    width: 442px;
+    height: 573px;
+    margin-top: 10%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-login-mk-input-user {
+    background-color: antiquewhite;
+    width: 355px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-login-mk-form {
+    height: 219px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}

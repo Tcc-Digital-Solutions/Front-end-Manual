@@ -1,0 +1,17 @@
+:root {
+    /* paleta menu ilha */
+    --cor-menu-ilha: #C9CEE2;
+    --cor-button-menu-ilha: rgb(255, 255, 255);
+    --cor-button-active-menu-ilha: #3469F1;
+    --cor-button-text-menu-ilha: #000;
+    --cor-button-active-text-menu-ilha: rgb(255, 255, 255);
+
+    /* paleta informações*/
+    --cor-name-ferramenta: #E1E1E1;
+}
+*{
+    margin: 0;
+    top: 0;
+}
+
+
