@@ -1,7 +1,7 @@
-import '../../assets/css/css_universal/Screnn-espera.css'
+import '../../assets/css/css_universal/Screen-espera.css'
 import '../../assets/css/css_universal/dropdown.css'
 import bosch from '../../assets/img/download.png'
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
 export const ScreenEspera = () => {
@@ -10,7 +10,7 @@ export const ScreenEspera = () => {
     setTimeout(() => {
         setAnimado(false)
         console.log(animado)
-    }, 5000);
+    }, 3000);
 
     const puxarIdioma = (idioma) => {
         navigate("/informacoes")
