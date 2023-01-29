@@ -1,4 +1,4 @@
-import '../../assets/css/css_universal/Screnn-espera.css'
+import '../../assets/css/css_universal/Screen-espera.css'
 import '../../assets/css/css_universal/dropdown.css'
 import bosch from '../../assets/img/loguinho.png'
 import { useState } from 'react';
@@ -6,7 +6,7 @@ import {Introducao} from './Introducao'
 
 export const ScreenEspera = () => {
     const [animado, setAnimado] = useState(true)
-    const userLocale = navigator?.languages?.length ? navigator.languages[0] : navigator.language;
+    // const userLocale = navigator?.languages?.length ? navigator.languages[0] : navigator.language;
 
     setTimeout(() => {
         setAnimado(false)
