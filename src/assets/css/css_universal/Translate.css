@@ -1,0 +1,16 @@
+.translate-div{
+    width: 300px;
+    font-family: var(--fonte);
+}
+
+.translate-div-img{
+    width: 13px;
+}
+
+.translate-div-span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 170px;
+}
