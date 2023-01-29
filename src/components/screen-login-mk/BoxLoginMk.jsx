@@ -1,5 +1,7 @@
 import '../../assets/css/css-login-mk/BoxLoginMk.css'
 import boschLogo from '../../assets/img/Bosch-logo.png'
+import userImg from '../../assets/img/🦆 icon _user_.png'
+import passImg from '../../assets/img/🦆 icon _lock_.png'
 
 export const BoxLoginMk = () => {
     return (
@@ -7,13 +9,21 @@ export const BoxLoginMk = () => {
             <span className="box-login-mk-login">
                 <img src={boschLogo} alt="" />
                 <form action={`/cadastro-manual`} className="box-login-mk-form">
-                    <span className="box-login-mk-input-user">
-                        <input className="caixa" type="text" name="nome" placeholder="Nome completo*" required />
+                    <span className="box-login-mk-input-span">
+                        <div className="box-login-mk-input-user">
+                            <img src={userImg} alt="" />
+                            <input className="box-login-mk-input" type="text" name="nome" required />                            
+                        </div>
+                        <div className="box-login-mk-input-fake"></div>
                     </span>
-                    <span className="box-login-mk-input-user">
-                        <input className="caixa" type="password" name="password1" placeholder="Password*" required maxlength="10" min="8" />
+                    <span className="box-login-mk-input-span">
+                    <div className="box-login-mk-input-user">
+                            <img src={passImg} alt="" />
+                            <input className="box-login-mk-input" type="password" name="password1" required maxlength="10" min="8" />                           
+                        </div>
+                        <div className="box-login-mk-input-fake"></div>
                     </span>
-                    <button type='submit' className='continuar'>CONTINUAR</button>
+                    <button type='submit' className='box-login-mk-button'>ENTRAR</button>
                 </form>
             </span>
         </div>

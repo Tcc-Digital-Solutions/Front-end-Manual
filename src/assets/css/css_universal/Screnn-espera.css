@@ -4,7 +4,6 @@
 
 .dropdown {
     position: relative;
-    width: 100%;
 }
 
 .screnn-espera-div {
@@ -15,7 +14,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 36%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -24,8 +23,8 @@
     font-size: 5em;
     font-family: serif;
     text-align: center;
-    width: 436px;
-    height: 188px;
+    width: 398px;
+    height: 164px;
 }
 
 .animar {
