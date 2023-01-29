@@ -11,7 +11,7 @@ export const ScreenEspera = () => {
     setTimeout(() => {
         setAnimado(false)
         console.log(animado)
-    }, 5000);
+    }, 3000);
 
     return (
         <div className="screnn-espera-div" >
