@@ -69,3 +69,12 @@
     border-radius: .25em;
     overflow: hidden;
 }
+
+.screnn-espera-button {
+    display: none;
+
+}
+
+.para {
+    font-family: var(--fonte);
+}

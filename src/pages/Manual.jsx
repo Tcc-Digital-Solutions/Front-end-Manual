@@ -8,9 +8,9 @@ class Manual extends Component {
     render() {
         return (
             <>
-                <ButtonsBar />
-                <BoxManual />
                 <Navbar />
+                <BoxManual />
+                <ButtonsBar />
             </>
         );
     }

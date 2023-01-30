@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { Navbar } from '../components/universal/Navbar';
 
 class Home extends Component {
-    state = {  } 
-    render() { 
+    state = {}
+    render() {
         return (
             <>
-
+                <Navbar />
             </>
         );
     }
 }
- 
+
 export default Home;

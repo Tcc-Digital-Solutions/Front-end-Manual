@@ -4,6 +4,7 @@ import bosch from '../../assets/img/loguinho.png'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import { Introducao } from './Introducao'
 
 export const ScreenEspera = () => {
     const [animado, setAnimado] = useState(true)
@@ -13,7 +14,7 @@ export const ScreenEspera = () => {
 
     if (!animado) {
         if (!id) {
-            window.location.reload(false);
+            // window.location.reload(false);
         }
         if (id) navigate('/informacoes/' + id)
     };
@@ -26,6 +27,10 @@ export const ScreenEspera = () => {
     return (
         <div className="screnn-espera-div" >
             <img className={animado ? 'screnn-espera-img animar' : ' screnn-espera-img'} src={bosch} alt="" />
+            <div className={!animado ? 'screnn-espera-button- para' : 'screnn-espera-button'}>
+                <span>Nenhum código de produto encontrado na url ir para home para selecionar produto Bosch para ver manual</span>
+                <Introducao />
+            </div>
         </div>
     )
 }
