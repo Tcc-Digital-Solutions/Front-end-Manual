@@ -15,8 +15,8 @@ export const RoutesJS = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Careegamento />} />
-        <Route path="/informacoes" element={<Informacoes />} />
+        <Route path="/:id?" element={<Careegamento />} />
+        <Route path="/informacoes/:id?" element={<Informacoes />} />
         <Route path="/login" element={<Login />} />
         <Route path="/montagem" element={<Montagem />} />
         <Route path="/Crud" element={<Crud />} />
