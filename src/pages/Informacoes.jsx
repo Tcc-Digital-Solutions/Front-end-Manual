@@ -4,16 +4,16 @@ import { ButtonsBar } from '../components/universal/ButtonsBar';
 import { Navbar } from '../components/universal/Navbar';
 
 class Informaçoes extends Component {
-    state = {  } 
-    render() { 
+    state = {}
+    render() {
         return (
             <>
-            <ButtonsBar/>
-            <BoxInformacoes/>
-            <Navbar/>
+                <Navbar />
+                <BoxInformacoes />
+                <ButtonsBar />
             </>
         );
     }
 }
- 
+
 export default Informaçoes;
