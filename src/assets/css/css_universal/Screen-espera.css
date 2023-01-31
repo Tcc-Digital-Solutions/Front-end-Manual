@@ -26,7 +26,12 @@
     width: 398px;
     height: 164px;
 }
-
+.screnn-espera-img-{
+    display: none;
+}
+.screen-espera-img-error{
+    width: 379px;
+}
 .animar {
     animation: animate 1.5s linear infinite;
 }
