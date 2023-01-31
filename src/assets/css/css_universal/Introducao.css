@@ -31,7 +31,12 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 200px;
+  width: 144px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .Introducao-button:hover,

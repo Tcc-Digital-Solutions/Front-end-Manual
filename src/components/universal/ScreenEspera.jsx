@@ -1,6 +1,7 @@
 import '../../assets/css/css_universal/Screen-espera.css'
 import '../../assets/css/css_universal/dropdown.css'
 import bosch from '../../assets/img/loguinho.png'
+import errorImg from '../../assets/img/ERROR.png'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
@@ -26,9 +27,9 @@ export const ScreenEspera = () => {
 
     return (
         <div className="screnn-espera-div" >
-            <img className={animado ? 'screnn-espera-img animar' : ' screnn-espera-img'} src={bosch} alt="" />
+            <img className={animado ? 'screnn-espera-img animar' : ' screnn-espera-img- '} src={bosch} alt="" />
             <div className={!animado ? 'screnn-espera-button- para' : 'screnn-espera-button'}>
-                <span>Nenhum código de produto encontrado na url ir para home para selecionar produto Bosch para ver manual</span>
+                <img className='screen-espera-img-error' src={errorImg} alt="" />
                 <Introducao />
             </div>
         </div>
