@@ -12,9 +12,9 @@ export const Navbar = () => {
             </div>
             <div className='navbar-div-2'>
                 <img className='navbar-div-img-2' src={boschLogo} alt="" />
-                <Translate/>
+                {/* <Translate/> */}
             </div>
-            
+
         </div>
     )
 }
