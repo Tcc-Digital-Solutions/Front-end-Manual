@@ -12,7 +12,7 @@ class Manual extends Component {
                 <Navbar />
                 <BoxManual />
                 <ButtonsBar />
-                <ButtonYoutube/>
+                <ButtonYoutube />
             </>
         );
     }
