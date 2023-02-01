@@ -4,15 +4,15 @@ import { Navbar } from '../components/universal/Navbar';
 
 
 class Crud extends Component {
-    state = {  } 
-    render() { 
+    state = {}
+    render() {
         return (
             <>
-            <Navbar/>
-            <BoxAddsProdutos/>
+                <Navbar logado='false' />
+                <BoxAddsProdutos />
             </>
         );
     }
 }
- 
+
 export default Crud;
