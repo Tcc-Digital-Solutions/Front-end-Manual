@@ -18,6 +18,28 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 32px;
+}
+
+.navbar-div-button-logof {
+    width: 110px;
+}
+
+.hide {
+    display: none;
+}
+
+.translate-button {
+    width: 38px;
+    height: 36px;
+    background-color: #ffffff00;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 700px) {
