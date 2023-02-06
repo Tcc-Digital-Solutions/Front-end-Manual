@@ -14,10 +14,12 @@ export const Navbar = (props) => {
             </div>
             <div className='navbar-div-2'>
                 <img className='navbar-div-img-2' src={boschLogo} alt="" />
-                <Translate />
-                <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
-                    <ButtonLogoff />
-                </span>
+                <div  className={props.logado ? 'navbar-div-buttons' : 'navbar-div-buttons-2'}>
+                    <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
+                        <ButtonLogoff />
+                    </span>
+                    <Translate />
+                </div>
             </div>
 
         </div>
