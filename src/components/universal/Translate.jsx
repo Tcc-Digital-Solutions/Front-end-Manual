@@ -4,7 +4,7 @@ import translateImg from '../../assets/img/translate.png'
 import { useState } from 'react'
 
 export const Translate = () => {
-    const [visible, setVisible] = useState("button-youtube-box-fechar")
+    const [visible, setVisible] = useState("translate-box-fechar")
     const [pressed, setPressed] = useState(false)
     const userLocale = navigator?.languages?.length ? navigator.languages[0] : navigator.language;
     console.log(userLocale);
@@ -12,7 +12,7 @@ export const Translate = () => {
 
 
     const setMenuVisible = () => {
-        pressed ? setVisible("button-youtube-box-fechar") : setVisible("button-youtube-box")
+        pressed ? setVisible("translate-box-fechar") : setVisible("translate-box")
         setPressed(!pressed)
     }
 
@@ -23,9 +23,16 @@ export const Translate = () => {
     }
     return (
         <div className="translate-div">
-            <button className='translate-button' onClick={() => setMenuVisible()}><img src={translateImg} alt="" /></button>
+            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()}><img src={translateImg} alt="" /></button>
             <span className={visible}>
-
+            <span className="translate-button-text">Languages</span>
+                <span className="translate-buttons">
+                    <button  className="translate-button-active " >Português</button>
+                    <button  className="translate-button-active">English</button>
+                    <button  className="translate-button-active">Español</button>
+                    <button  className="translate-button-active">German</button>
+                    <button  className="translate-button-active">Français</button>                
+                </span>
             </span>
         </div>
     )
