@@ -11,6 +11,7 @@ export const Translate = () => {
     console.log(navigator.languages);
 
 
+
     const setMenuVisible = () => {
         pressed ? setVisible("translate-box-fechar") : setVisible("translate-box")
         setPressed(!pressed)
@@ -23,7 +24,7 @@ export const Translate = () => {
     }
     return (
         <div className="translate-div">
-            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()}><img src={translateImg} alt="" /></button>
+            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()} onBlur={() => setMenuVisible(false)}><img src={translateImg} alt="" /></button>
             <span className={visible}>
             <span className="translate-button-text">Languages</span>
                 <span className="translate-buttons">

@@ -27,7 +27,7 @@
 
 .translate-box{
     background-color: #A5C4D7;
-    width: 186px;
+    width: 168px;
     height: 287px;
     position: fixed;
     margin-top: 53px;
@@ -94,8 +94,8 @@
     touch-action: manipulation;
     vertical-align: top;
     white-space: nowrap;
-    width: 137px;
-    height: 38px;
+    width: 131px;
+    height: 33px;
     display: flex;
     flex-direction: row;
     align-items: center;
