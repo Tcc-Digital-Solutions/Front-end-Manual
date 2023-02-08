@@ -13,6 +13,7 @@ export const ScreenEspera = () => {
     const { id } = useParams();
 
 
+
     if (!animado) {
         if (!id) {
             // window.location.reload(false);
@@ -29,6 +30,11 @@ export const ScreenEspera = () => {
         <div className="screnn-espera-div" >
             <img className={animado ? 'screnn-espera-img animar' : ' screnn-espera-img- '} src={bosch} alt="" />
             <div className={!animado ? 'screnn-espera-button- para' : 'screnn-espera-button'}>
+                <span className="screnn-espera-text">
+                    <p>Nenhum código de produto encontrado na Url</p>
+                    <p> Click em continuar  para selecionar produto </p>
+                </span>
+
                 <img className='screen-espera-img-error' src={errorImg} alt="" />
                 <Introducao />
             </div>
