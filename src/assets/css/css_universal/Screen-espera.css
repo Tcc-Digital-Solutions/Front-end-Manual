@@ -32,11 +32,18 @@
 }
 
 .screen-espera-img-error {
-    width: 869px;
+    width: 100%;
 }
 
 .animar {
     animation: animate 1.5s linear infinite;
+}
+
+.screnn-espera-text {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font);
+    font-weight: bold;
 }
 
 @keyframes animate {
