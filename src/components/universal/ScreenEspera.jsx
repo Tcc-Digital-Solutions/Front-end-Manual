@@ -34,7 +34,6 @@ export const ScreenEspera = () => {
                     <p>Nenhum código de produto encontrado na Url</p>
                     <p> Click em continuar  para selecionar produto </p>
                 </span>
-
                 <img className='screen-espera-img-error' src={errorImg} alt="" />
                 <Introducao />
             </div>
