@@ -9,6 +9,7 @@ import Settings from "./pages/Settings"
 import Manual from "./pages/Manual"
 import Careegamento from "./pages/Carregamento"
 import { BoxLoginMk } from "./components/screen-login-mk/BoxLoginMk";
+import ToCheck from "./pages/ToCheck";
 
 
 export const RoutesJS = () => {
@@ -17,6 +18,7 @@ export const RoutesJS = () => {
       <Routes>
         <Route path="/:id?" element={<Careegamento />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/to-check/:id?" element={<ToCheck />} />
         <Route path="/informacoes/:id?" element={<Informacoes />} />
         <Route path="/login" element={<Login />} />
         <Route path="/montagem" element={<Montagem />} />
