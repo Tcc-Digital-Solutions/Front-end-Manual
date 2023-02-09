@@ -2,7 +2,7 @@
   position: fixed;
   top: 91%;
   left: 4%;
-  width: 100%;
+  z-index: 105;
 }
 
 .button-youtube-button {
