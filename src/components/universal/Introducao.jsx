@@ -5,7 +5,7 @@ export const Introducao = (props) => {
     const navigate = useNavigate();
 
     const proosScreen = () => {
-        navigate("/informacoes")
+        navigate("/home")
 
     }
 
