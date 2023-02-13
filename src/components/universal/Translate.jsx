@@ -24,7 +24,7 @@ export const Translate = () => {
     }
     return (
         <div className="translate-div">
-            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()} onBlur={() => setMenuVisible(false)}><img src={translateImg} alt="" /></button>
+            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()} onBlur={() => setMenuVisible(false)}><img src={translateImg} alt="" className='translateimg'/></button>
             <span className={visible}>
             <span className="translate-button-text">Languages</span>
                 <span className="translate-buttons">
