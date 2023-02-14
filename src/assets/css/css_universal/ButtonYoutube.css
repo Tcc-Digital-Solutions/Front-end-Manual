@@ -96,7 +96,8 @@
 @media only screen and (max-width: 1100px) {
   .button-youtube-div {
     position: fixed;
-    top: 79%;
+    width: 100%;
+    top: 83%;
     left: 0px;
     display: flex;
     flex-direction: row;
@@ -107,4 +108,11 @@
     width: 348px;
   }
 
+
+}
+
+@media only screen and (max-width: 320px){
+  .button-youtube-div{
+    top: 78%;
+  }
 }

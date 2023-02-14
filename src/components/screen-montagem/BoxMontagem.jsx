@@ -25,7 +25,6 @@ export const BoxMontagem = () => {
     return (
 
         <div className="BoxMontagem-div" >
-
             <div className='montagem-components'>
                 <div className='img-principal-div'>
                     <img className='img-principal' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} />
