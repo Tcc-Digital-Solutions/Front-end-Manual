@@ -9,21 +9,22 @@
 }
 
 .BoxManual-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .BoxManual-pdf {
     background-color: #D2D2D2;
-    justify-content: space-around;
     border-radius: 15px;
-    padding: 3% 0px 3% 0px;
     display: flex;
-    margin-top: 5rem;
-    margin-bottom: 6rem;
+    height: 69%;
+    flex-direction: row;
     align-items: center;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .react-pdf__Document{
@@ -33,6 +34,7 @@
     border: 3px solid;
     border: none;
     border-radius: 10px;
+    display: contents;
 }
 
 /* sumir a escrita abaixo do pdf  */
@@ -49,3 +51,57 @@
     margin: 1rem;
     cursor: pointer;
 }
+.react-pdf__Page__canvas{
+    width: 100% !important;
+    height: 517px !important;
+  }
+
+@media only screen and (max-width: 1000px) {
+  
+    .react-pdf__Page__canvas{
+      width: 100% !important;
+      height: 361px !important;
+    }
+    .BoxManual-pdf {
+      background-color: #D2D2D2;
+      border-radius: 15px;
+      display: flex;
+      height: 53%;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+    }
+    .BoxManual-pdf {
+        background-color: #D2D2D2;
+        border-radius: 15px;
+        display: flex;
+        height: 65%;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .BoxManual-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 106px;
+    }
+  
+  }
+
+  @media only screen and (max-width: 320px){
+    .BoxManual-container {
+        margin-top: 92px;
+    }
+    .react-pdf__Page__canvas {
+        height: 281px !important;
+    }
+    .BoxManual-pdf {
+        height: 57%;
+    }
+  }
