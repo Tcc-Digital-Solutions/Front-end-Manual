@@ -104,3 +104,16 @@
     display: none;
   } */
 }
+
+@media only screen and (max-width: 320px){
+  .buttons-bar-click {
+    width: 82px;
+    height: 36px;
+    font-size: 11px;
+  }
+  .button-youtube-box {
+    width: 291px;
+    margin-top: 66px;
+  }
+
+}
