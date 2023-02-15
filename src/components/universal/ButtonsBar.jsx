@@ -7,9 +7,9 @@ export const ButtonsBar = () => {
         <div className="buttons-bar-div" >
             <div className="buttons-bar-ilha">
                 <span className="buttons-bar-ilha-button-acessibilidade"> <ButtonAcessibilidade /></span>
-                <Link to={'/manual'} class="buttons-bar-click-link"><button class="buttons-bar-click" role="button">Manual</button></Link>
-                <Link to={'/montagem'} class="buttons-bar-click-link"><button class="buttons-bar-click" role="button">Montagem</button></Link>
-                <Link to={'/informacoes'} class="buttons-bar-click-link"><button class="buttons-bar-click" role="button">informações</button></Link>
+                <Link to={'/manual'} className="buttons-bar-click-link"><button className="buttons-bar-click" role="button">Manual</button></Link>
+                <Link to={'/montagem'} className="buttons-bar-click-link"><button className="buttons-bar-click" role="button">Montagem</button></Link>
+                <Link to={'/informacoes'} className="buttons-bar-click-link"><button className="buttons-bar-click" role="button">informações</button></Link>
             </div>
         </div>
     )
