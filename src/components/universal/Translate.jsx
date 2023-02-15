@@ -6,9 +6,9 @@ import { useState } from 'react'
 export const Translate = () => {
     const [visible, setVisible] = useState("translate-box-fechar")
     const [pressed, setPressed] = useState(false)
-    const userLocale = navigator?.languages?.length ? navigator.languages[0] : navigator.language;
-    console.log(userLocale);
-    console.log(navigator.languages);
+    // const userLocale = navigator?.languages?.length ? navigator.languages[0] : navigator.language;
+    // console.log(userLocale);
+    // console.log(navigator.languages);
 
 
 
@@ -24,15 +24,15 @@ export const Translate = () => {
     }
     return (
         <div className="translate-div">
-            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()} onBlur={() => setMenuVisible(false)}><img src={translateImg} alt="" className='translateimg'/></button>
+            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()} onBlur={() => setMenuVisible(false)}><img src={translateImg} alt="" className='translateimg' /></button>
             <span className={visible}>
-            <span className="translate-button-text">Languages</span>
+                <span className="translate-button-text">Languages</span>
                 <span className="translate-buttons">
-                    <button  className="translate-button-active " >Português</button>
-                    <button  className="translate-button-active">English</button>
-                    <button  className="translate-button-active">Español</button>
-                    <button  className="translate-button-active">German</button>
-                    <button  className="translate-button-active">Français</button>                
+                    <button className="translate-button-active " >Português</button>
+                    <button className="translate-button-active">English</button>
+                    <button className="translate-button-active">Español</button>
+                    <button className="translate-button-active">German</button>
+                    <button className="translate-button-active">Français</button>
                 </span>
             </span>
         </div>
