@@ -125,6 +125,28 @@
     }
 
 }
+@media  screen and (max-height: 700px) {
+    .img-fixa-montagem {
+        width: 448px;
+        height: 100%;
+    }
+    .box-imgs-montagem-div {
+        height: 100%;
+        width: 200px;
+    }
+    .imgs-montagem {
+        width: 131px;
+    }
+    .img-principal-div {
+        display: inline !important;
+
+    }
+    .img-principal {
+        width: 219px;
+        height: 158px;
+    }
+
+}
 
 @media only screen and (max-width: 1161px) {
     .img-principal-div {
