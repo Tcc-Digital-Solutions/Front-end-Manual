@@ -4,7 +4,6 @@
 
 .dropdown {
     position: relative;
-    width: 100%;
 }
 
 .screnn-espera-div {
@@ -15,7 +14,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 36%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -24,12 +23,27 @@
     font-size: 5em;
     font-family: serif;
     text-align: center;
-    width: 436px;
-    height: 188px;
+    width: 398px;
+    height: 164px;
+}
+
+.screnn-espera-img- {
+    display: none;
+}
+
+.screen-espera-img-error {
+    width: 100%;
 }
 
 .animar {
     animation: animate 1.5s linear infinite;
+}
+
+.screnn-espera-text {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font);
+    font-weight: bold;
 }
 
 @keyframes animate {
@@ -69,4 +83,13 @@
     height: 3em;
     border-radius: .25em;
     overflow: hidden;
+}
+
+.screnn-espera-button {
+    display: none;
+
+}
+
+.para {
+    font-family: var(--fonte);
 }

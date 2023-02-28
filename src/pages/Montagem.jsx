@@ -8,9 +8,9 @@ class Montagem extends Component {
     render() {
         return (
             <>
-                <ButtonsBar />
-                <BoxMontagem />
                 <Navbar />
+                <BoxMontagem />
+                <ButtonsBar />
             </>
         );
     }

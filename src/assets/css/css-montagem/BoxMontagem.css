@@ -1,0 +1,268 @@
+.BoxMontagem-div {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.montagem-components {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    width: 84%;
+}
+
+.img-principal-div {
+    padding: 30px 0 30px 0;
+    background-color: #afc7f55e;
+    border-radius: 10px;
+    border: 1.5px solid rgb(59, 114, 196);
+}
+
+.img-principal {
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+
+}
+
+.img-fixa-montagem-div {
+    justify-content: center;
+    align-items: center;
+}
+
+.img-fixa-montagem {
+    width: 700px;
+    height: 600px;
+    /* box-shadow: rgba(0, 0, 0, 0.356) 0px 7px 29px 0px; */
+
+}
+
+.direction-div {
+    display: flex;
+}
+
+.box-imgs-montagem-div {
+    width: 250px;
+    height: 727px;
+    border-radius: 20px;
+    background-color: #D2D2D2;
+    display: flex;
+    justify-content: center;
+
+}
+
+.div-imgs-montagem {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.imgs-montagem {
+    width: 190px;
+    height: 140px;
+    cursor: pointer;
+}
+
+.imgs-montagem:hover {
+    opacity: 0.7;
+}
+
+.swiper {
+    /* width: 300px; */
+    height: 70vh;
+    /* overflow-y: scroll; */
+}
+
+.swiper-vertical {
+    overflow: auto !important;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: contain;
+    height: auto;
+
+}
+
+.swiper-web {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.swiper-mobile {
+    display: none;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 25px !important;
+    color: black;
+}
+
+@media only screen and (max-width: 1552px) {
+    .img-principal-div {
+        display: none;
+    }
+
+}
+@media  screen and (max-height: 700px) {
+    .img-fixa-montagem {
+        width: 448px;
+        height: 100%;
+    }
+    .box-imgs-montagem-div {
+        height: 100%;
+        width: 200px;
+    }
+    .imgs-montagem {
+        width: 131px;
+    }
+    .img-principal-div {
+        display: inline !important;
+
+    }
+    .img-principal {
+        width: 219px;
+        height: 158px;
+    }
+
+}
+
+@media only screen and (max-width: 1161px) {
+    .img-principal-div {
+        display: none;
+    }
+
+    .montagem-components {
+        display: flex;
+        flex-direction: column;
+        height: 573px;
+    }
+
+    .direction-div {
+        display: flex;
+        width: 100%;
+        height: 226px;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .img-fixa-montagem {
+        width: 100%;
+        height: 303px;
+    }
+
+    .box-imgs-montagem-div {
+        width: 100%;
+        height: 70%;
+    }
+
+    .div-imgs-montagem {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 95%;
+    }
+
+    .swiper-vertical>.swiper-wrapper {
+        flex-direction: row !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .swiper-web {
+        display: none;
+    }
+
+    .swiper-mobile {
+        display: block;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 95%;
+    }
+
+    .img-fixa-montagem {
+        height: 401px;
+    }
+
+    .montagem-components {
+        height: 489px;
+    }
+
+    .imgs-montagem {
+        width: 125px;
+        height: 140px;
+        cursor: pointer;
+    }
+
+}
+
+
+@media only screen and (max-width: 415px) {
+    .direction-div {
+        height: 164px;
+    }
+
+    .img-fixa-montagem {
+        height: 100%;
+    }
+
+    .montagem-components {
+        height: 533px;
+    }
+
+    .imgs-montagem {
+        width: 101px;
+
+    }
+
+    .box-imgs-montagem-div {
+        height: 82%;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    .img-fixa-montagem {
+        height: 229px;
+    }
+
+    .montagem-components {
+        height: 406px;
+    }
+
+    .direction-div {
+        height: 210px;
+    }
+
+    .imgs-montagem {
+        width: 109px;
+    }
+
+    .box-imgs-montagem-div {
+        height: 62%;
+    }
+}
