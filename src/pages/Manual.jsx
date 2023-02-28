@@ -10,6 +10,7 @@ class Manual extends Component {
         return (
             <>
                 <Navbar />
+                <BoxManual/>
                 <ButtonsBar />
                 <ButtonYoutube />
             </>
