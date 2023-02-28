@@ -18,90 +18,47 @@
     align-items: center;
 }
 
-.BoxManual-pdf {
-    background-color: #D2D2D2;
-    border-radius: 15px;
+.pdf-container{
+    width: 97%;
+    height: 769px;
+    background-color: #ffffff;
+    overflow-y: auto;
     display: flex;
-    height: 69%;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-}
-
-.react-pdf__Document{
-    height: 100%;
-    overflow: auto;
-    text-align: center;
-    border: 3px solid;
-    border: none;
-    border-radius: 10px;
-    display: contents;
-}
-
-/* sumir a escrita abaixo do pdf  */
-.react-pdf__Page__textContent.textLayer {
-    visibility: hidden;
-    display: none;
-}
-
-.react-pdf__Page__annotations.annotationLayer {
-    display: none;
-}
-
-.BoxManual-imgSeta {
-    margin: 1rem;
-    cursor: pointer;
-}
-.react-pdf__Page__canvas{
-    width: 100% !important;
-    height: 517px !important;
+  }
+  
+  .error-msg{
+    width: 100%;
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
   }
 
+.rpv-default-layout__toolbar {
+    background-color: #fff !important;
+    border: 0 !important;
+}
+.rpv-default-layout__sidebar-headers {
+    background-color: #fff !important;
+}
+.rpv-default-layout__sidebar--ltr {
+    border: 0 !important;
+}
+.rpv-default-layout__container {
+    border: 0 !important;
+}
+.rpv-default-layout__sidebar-content--ltr {
+    border: 0 !important;
+}
 @media only screen and (max-width: 1000px) {
-  
-    .react-pdf__Page__canvas{
-      width: 100% !important;
-      height: 361px !important;
-    }
-    .BoxManual-pdf {
-      background-color: #D2D2D2;
-      border-radius: 15px;
-      display: flex;
-      height: 53%;
-      width: 100%;
-      flex-direction: row;
-      align-items: center;
-    }
-    .BoxManual-pdf {
-        background-color: #D2D2D2;
-        border-radius: 15px;
-        display: flex;
-        height: 65%;
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    .BoxManual-container {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 106px;
-    }
-  
-  }
 
-  @media only screen and (max-width: 320px){
-    .BoxManual-container {
-        margin-top: 92px;
+  
+}
+@media  screen and (max-height: 700px) {
+    .pdf-container {
+        width: 98%;
+        height: 505px;
     }
-    .react-pdf__Page__canvas {
-        height: 281px !important;
-    }
-    .BoxManual-pdf {
-        height: 57%;
-    }
-  }
+
+}
