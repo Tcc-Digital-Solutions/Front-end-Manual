@@ -1,7 +1,7 @@
 import '../../assets/css/css_universal/ButtonYoutube.css'
 import fecharImg from '../../assets/img/X.png'
 import { useState } from 'react'
-import { BoxYoutube } from './BoxYoutube'
+// import { BoxYoutube } from './BoxYoutube'
 
 export const ButtonYoutube = () => {
     const [visible, setVisible] = useState("button-youtube-box-fechar")
