@@ -1,7 +1,7 @@
 import '../../assets/css/css_universal/ButtonYoutube.css'
 import fecharImg from '../../assets/img/X.png'
 import { useState } from 'react'
-import { BoxYoutube } from './BoxYoutube'
+// import { BoxYoutube } from './BoxYoutube'
 
 export const ButtonYoutube = () => {
     const [visible, setVisible] = useState("button-youtube-box-fechar")
@@ -18,7 +18,7 @@ export const ButtonYoutube = () => {
             <span className={visible}>
                 <button className="button-youtube-button-x" id='button-lado' onClick={() => setMenuVisible()}><img className="button-youtube-button-x-img" src={fecharImg} alt="" /></button>
                 <div className="button-youtube-button-scroll">
-                    <BoxYoutube youtube='Bptf9MTqsAU' />
+                    {/* <BoxYoutube youtube='Bptf9MTqsAU' />
                     <BoxYoutube youtube='287OmjWqVYM' />
                     <BoxYoutube youtube='qZ83KN1G_2c' />
                     <BoxYoutube youtube='MEtQy4c9SoE' />
@@ -27,7 +27,7 @@ export const ButtonYoutube = () => {
                     <BoxYoutube youtube='idb7N4DQO8w' />
                     <BoxYoutube youtube='idb7N4DQO8w' />
                     <BoxYoutube youtube='idb7N4DQO8w' />
-                    <BoxYoutube youtube='idb7N4DQO8w' />
+                    <BoxYoutube youtube='idb7N4DQO8w' /> */}
                 </div>
             </span>
         </div>
