@@ -6,7 +6,7 @@ export const BoxYoutube = (props) => {
 
     return (
         <div className="box-youtube-div" >
-            <YouTube className='box-youtube-button-youtube' videoId={props.youtube}/>
+//             <YouTube className='box-youtube-button-youtube' videoId={props.youtube}/>
         </div>
     )
 }
