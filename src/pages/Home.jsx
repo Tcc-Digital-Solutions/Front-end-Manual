@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Carousel } from '../components/screen-home/Carousel';
 import { NavbarHome } from '../components/screen-home/NavbarHome.css';
 import { Navbar } from '../components/universal/Navbar';
 
@@ -9,6 +10,7 @@ class Home extends Component {
             <>
             <Navbar />
             <NavbarHome/>
+            <Carousel/>
             </>
         );
     }
