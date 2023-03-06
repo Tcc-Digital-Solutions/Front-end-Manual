@@ -3,6 +3,7 @@ import { BoxCategoria } from './BoxCategoria'
 import { useState } from 'react'
 
 
+
 export const NavbarHome = () => {
     const [visible, setVisible] = useState("box-categoria-span-fechar")
     const [pressed, setPressed] = useState(false)
@@ -61,10 +62,10 @@ export const NavbarHome = () => {
         <div className="box-categoria-div" >
             <ul className="box-categoria-ul">
                 <li className="box-categoria-li" id='li-categorias'>
-                    <button className="box-categoria-button" onClick={() => setMenuVisible()} onBlur={() => setMenuVisible(false)} >Ferramentas 12v</button>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible()} onBlur={() => setMenuVisible("box-categoria-span-fechar")} >Ferramentas 12v</button>
                 </li>
                 <span className={visible}>
-                    <BoxCategoria />
+                    <BoxCategoria categoria='Furadeiras e Parafusadeiras' />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
@@ -73,7 +74,7 @@ export const NavbarHome = () => {
                     <BoxCategoria />
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
-                    <button className="box-categoria-button" onClick={() => setMenuVisible1()} onBlur={() => setMenuVisible1(false)}>Ferramentas 110v </button>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible1()} onBlur={() => setMenuVisible1("box-categoria-span-fechar")}>Ferramentas 110v </button>
                 </li>
                 <span className={visible1}>
                     <BoxCategoria />
@@ -85,7 +86,7 @@ export const NavbarHome = () => {
                     <BoxCategoria />
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
-                    <button className="box-categoria-button" onClick={() => setMenuVisible2()} onBlur={() => setMenuVisible2(false)}>Ferramentas 220V </button>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible2()} onBlur={() => setMenuVisible2("box-categoria-span-fechar")}>Ferramentas 220V </button>
                 </li>
                 <span className={visible2}>
                     <BoxCategoria />
@@ -97,7 +98,7 @@ export const NavbarHome = () => {
                     <BoxCategoria />
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
-                    <button className="box-categoria-button" onClick={() => setMenuVisible3()} onBlur={() => setMenuVisible3(false)}>Ferramentas 18V </button>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible3()} onBlur={() => setMenuVisible3("box-categoria-span-fechar")}>Ferramentas 18V </button>
                 </li>
                 <span className={visible3}>
                     <BoxCategoria />
@@ -109,7 +110,7 @@ export const NavbarHome = () => {
                     <BoxCategoria />
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
-                    <button className="box-categoria-button" onClick={() => setMenuVisible4()} onBlur={() => setMenuVisible4(false)}>Linha de Medição </button>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible4()} onBlur={() => setMenuVisible4("box-categoria-span-fechar")}>Linha de Medição </button>
                 </li>
                 <span className={visible4}>
                     <BoxCategoria />
@@ -121,7 +122,7 @@ export const NavbarHome = () => {
                     <BoxCategoria />
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
-                    <button className="box-categoria-button" onClick={() => setMenuVisible5()} onBlur={() => setMenuVisible5(false)}>Acessorios</button>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible5()} onBlur={() => setMenuVisible5("box-categoria-span-fechar")}>Acessorios</button>
                 </li>
                 <span className={visible5}>
                     <BoxCategoria />
