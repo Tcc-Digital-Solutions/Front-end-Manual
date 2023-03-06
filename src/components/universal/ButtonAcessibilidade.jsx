@@ -14,7 +14,7 @@ export const ButtonAcessibilidade = () => {
 
     return (
         <div className="button-acessibilidade-div" >
-            <button className="button-acessibilidade-button" onClick={() => setMenuVisible10()} onBlur={() => setMenuVisible10(false)}><img className='button-acessibilidade-img' src={Acessibilidade} alt="" /></button>
+            <button className="button-acessibilidade-button" onClick={() => setMenuVisible10()} onBlur={() => setMenuVisible10("button-acessibilidade-box-fechar")}><img className='button-acessibilidade-img' src={Acessibilidade} alt="" /></button>
             <span className={visible10}>
                 <span className="button-acessibilidade-text">Acessibilidades</span>
                 <span className="button-acessibilidade-button-div">
