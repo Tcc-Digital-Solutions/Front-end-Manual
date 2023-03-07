@@ -10,6 +10,7 @@ import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 // Worker
 import { Worker } from '@react-pdf-viewer/core'; // install this library
 import PDF from '../../pdf.pdf';
+import PDF2 from '../../gfhjk.pdf'
 export const BoxManual = () => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
