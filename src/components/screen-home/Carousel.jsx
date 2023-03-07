@@ -17,7 +17,7 @@ export const Carousel = (props) => {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
-                slidesPerGroup={3}
+                slidesPerGroup={1}
                 loop={true}
                 loopFillGroupWithBlank={true}
                 autoplay={{

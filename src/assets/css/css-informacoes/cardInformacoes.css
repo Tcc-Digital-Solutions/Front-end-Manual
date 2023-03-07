@@ -1,0 +1,24 @@
+.card{
+    border-radius: 25px;
+    background: #e1e1e1;
+    width: 209px;
+    height: 139px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card i{
+    font-size: 34px;
+}
+
+.card-div{
+    background-color: #ffffff;
+    width: 92%;
+    height: 85%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
