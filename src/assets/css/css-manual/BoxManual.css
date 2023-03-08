@@ -9,7 +9,6 @@
 }
 
 .BoxManual-container {
-    position: fixed;
     width: 100%;
     height: 100%;
     display: flex;
@@ -58,7 +57,8 @@
 @media  screen and (max-height: 700px) {
     .pdf-container {
         width: 98%;
-        height: 505px;
+        height: 463px;
+        margin-top: 5%;
     }
 
 }
