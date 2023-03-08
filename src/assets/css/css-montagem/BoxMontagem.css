@@ -33,6 +33,7 @@
 .img-fixa-montagem-div {
     justify-content: center;
     align-items: center;
+    height: 393px;
 }
 
 .img-fixa-montagem {
@@ -125,9 +126,9 @@
     }
 
 }
-@media  screen and (max-height: 700px) {
+@media  screen and (max-height: 850px) {
     .img-fixa-montagem {
-        width: 448px;
+        width: 382px;
         height: 100%;
     }
     .box-imgs-montagem-div {
@@ -142,7 +143,7 @@
 
     }
     .img-principal {
-        width: 219px;
+        width: 199px;
         height: 158px;
     }
 
