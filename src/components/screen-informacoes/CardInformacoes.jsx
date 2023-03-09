@@ -11,7 +11,6 @@ function CardInformacoes({texto, icone}) {
     return ( 
         <>
             <div className='card'>
-                <span className='card-div'>
                     <p>{texto}</p>
 
                     <i>
@@ -20,9 +19,7 @@ function CardInformacoes({texto, icone}) {
                         
 
                     }
-                    </i>
-                                        
-                </span>
+                    </i>                 
             </div>
         </>
      );

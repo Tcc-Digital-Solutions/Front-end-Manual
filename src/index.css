@@ -26,12 +26,14 @@
 }
 
 * {
+  user-select: text !important;
   margin: 0;
   top: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow:hidden !important;
 }
 
 body::-webkit-scrollbar {
@@ -56,3 +58,4 @@ body::-webkit-scrollbar {
 #button-lado {
   position: absolute;
 }
+
