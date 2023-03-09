@@ -7,7 +7,6 @@ export const BoxInformacoes = () => {
 
         <div className="container-informacoes">
             <div className="BoxInformacoes-div" >
-                <Carouselinformacoes/>
                 <Img360/>
                 <Carouselinformacoes/>
             </div>
