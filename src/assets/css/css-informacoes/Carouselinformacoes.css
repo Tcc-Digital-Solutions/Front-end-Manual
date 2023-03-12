@@ -6,7 +6,10 @@
 .Carousel-informacoes-div{
     border-radius: 25px;
     background-color: #e1e1e1;
-    width: 265px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .swiper-slide-1{
@@ -31,6 +34,12 @@
     height: 250px;
 }
 
-/* .swiper-pointer-events.swiper-vertical {
-    height: 100% !important;
-} */
+#frame-spec{
+    overflow-y: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+    .Carousel-informacoes-div{
+        display: none;
+    }
+}
