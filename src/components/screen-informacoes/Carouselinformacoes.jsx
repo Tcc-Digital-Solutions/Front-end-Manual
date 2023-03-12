@@ -14,10 +14,10 @@ export const Carouselinformacoes = (props) => {
     return (
         <div className='Carousel-informacoes-div' >
             <Swiper
-                slidesPerView={3}
+                slidesPerView={2}
                 direction={'vertical'}
-                spaceBetween={25}
-                slidesPerGroup={3}
+                spaceBetween={30}
+                slidesPerGroup={2}
                 loop={false}
                 loopFillGroupWithBlank={true}
                 autoplay={{
