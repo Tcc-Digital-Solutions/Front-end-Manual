@@ -1,10 +1,9 @@
 .Carousel-img{
-    position: fixed;
     width: 100%;
     z-index: 99;
 }
 .Carousel_react-div{
-    margin-top: 159px;
+    margin-top: 61px;
 }
 
 .swiper-slide-1{

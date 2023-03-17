@@ -39,7 +39,7 @@ export const BoxMontagem = () => {
                                 <Swiper
                                     modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
                                     direction={'vertical'}
-                                    spaceBetween={0}
+                                    spaceBetween={30}
                                     slidesPerView={3}
                                     // navigation
                                     // pagination={{ clickable: true }}
@@ -48,11 +48,11 @@ export const BoxMontagem = () => {
                                     onSlideChange={() => console.log('slide change')}
                                 >
 
-                                    <SwiperSlide><img className='imgs-montagem' src={ImgMontagemA} onClick={() => setImagemMaximizada(ImgMontagemA)} /></SwiperSlide>
-                                    <SwiperSlide><img className='imgs-montagem' src={ImgMontagemB} onClick={() => setImagemMaximizada(ImgMontagemB)} /></SwiperSlide>
-                                    <SwiperSlide><img className='imgs-montagem' src={ImgMontagemC} onClick={() => setImagemMaximizada(ImgMontagemC)} /></SwiperSlide>
-                                    <SwiperSlide><img className='imgs-montagem' src={ImgMontagemD} onClick={() => setImagemMaximizada(ImgMontagemD)} /></SwiperSlide>
-                                    <SwiperSlide><img className='imgs-montagem' src={ImgMontagemE} onClick={() => setImagemMaximizada(ImgMontagemE)} /></SwiperSlide>
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemA} onClick={() => setImagemMaximizada(ImgMontagemA)} /></span></SwiperSlide>
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemB} onClick={() => setImagemMaximizada(ImgMontagemB)} /></span></SwiperSlide>
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemC} onClick={() => setImagemMaximizada(ImgMontagemC)} /></span></SwiperSlide>
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemD} onClick={() => setImagemMaximizada(ImgMontagemD)} /></span></SwiperSlide>
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemE} onClick={() => setImagemMaximizada(ImgMontagemE)} /></span></SwiperSlide>
                                 </Swiper>
                             </div>
 

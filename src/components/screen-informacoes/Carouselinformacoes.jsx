@@ -16,7 +16,7 @@ export const Carouselinformacoes = (props) => {
             <Swiper
                 slidesPerView={2}
                 direction={'vertical'}
-                spaceBetween={30}
+                spaceBetween={15}
                 slidesPerGroup={2}
                 loop={false}
                 loopFillGroupWithBlank={true}

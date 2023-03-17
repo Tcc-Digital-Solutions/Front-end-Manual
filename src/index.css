@@ -26,6 +26,7 @@
 }
 
 * {
+  font-family: var(--fonte);
   user-select: text !important;
   margin: 0;
   top: 0;
