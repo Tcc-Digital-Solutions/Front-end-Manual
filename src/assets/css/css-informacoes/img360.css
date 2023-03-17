@@ -1,8 +1,8 @@
 /* TODO na responsividade alterar o min-width da classe abaixo */
 .img360-iframe {
-    height: 395px;
+    height: 483px;
     width: inherit;
-    min-width: 400px;
+    min-width: 475px;
     border: 0;
 }
 
@@ -40,7 +40,3 @@
     height: 50px;
 }
 
-
-iframe{
-    overflow: hidden;
-}
