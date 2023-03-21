@@ -69,7 +69,7 @@ export const Carousel = (props) => {
                     <SwiperSlide className="swiper-slide-1"><Cardproduto/></SwiperSlide>
                 </Swiper>                
             </span>
-
+   
         </div>
     )
 }
