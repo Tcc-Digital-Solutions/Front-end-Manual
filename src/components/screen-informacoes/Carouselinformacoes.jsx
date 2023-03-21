@@ -13,27 +13,46 @@ export const Carouselinformacoes = (props) => {
 
     return (
         <div className='Carousel-informacoes-div' >
-            <Swiper
-                slidesPerView={2}
-                direction={'vertical'}
-                spaceBetween={15}
-                slidesPerGroup={2}
-                loop={false}
-                loopFillGroupWithBlank={true}
-                autoplay={{
-                    delay: 40000,
-                    disableOnInteraction: false,
-                  }}
-                navigation={false}
-                modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
-                className="mySwiper"
-            >
-                <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Bivolt 127v - 220v.Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
-                <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Olá como vai?'} icone={'engrenagem'} /></SwiperSlide>
-                <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'1 ano de garantia, quando produtos ou peças apresentarem defeitos provenientes de falha.'} icone={'certificado'} /></SwiperSlide>
-                <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} /></SwiperSlide>
+            <span className='Carousel-informacoes-01'>
+                <Swiper
+                    slidesPerView={2}
+                    direction={'vertical'}
+                    spaceBetween={15}
+                    slidesPerGroup={2}
+                    loop={false}
+                    loopFillGroupWithBlank={true}
+                    autoplay={{
+                        delay: 40000,
+                        disableOnInteraction: false,
+                    }}
+                    navigation={false}
+                    modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
+                    className="mySwiper"
+                >
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Bivolt 127v - 220v.Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Olá como vai?'} icone={'engrenagem'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'1 ano de garantia, quando produtos ou peças apresentarem defeitos provenientes de falha.'} icone={'certificado'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} /></SwiperSlide>
 
-            </Swiper>
+                </Swiper>                
+            </span>
+            <span className='Carousel-informacoes-02'>
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    navigation
+                    // pagination={{ clickable: true }}
+                    // scrollbar={{ hide:true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+                >
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Bivolt 127v - 220v.Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Olá como vai?'} icone={'engrenagem'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'1 ano de garantia, quando produtos ou peças apresentarem defeitos provenientes de falha.'} icone={'certificado'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} /></SwiperSlide>
+                </Swiper>     
+            </span>
         </div>
     )
 }
