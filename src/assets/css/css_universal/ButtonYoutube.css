@@ -105,7 +105,8 @@
   }
 
   .button-youtube-box {
-    width: 348px;
+    /* width: 348px; */
+    width: 65%;
   }
 
 
