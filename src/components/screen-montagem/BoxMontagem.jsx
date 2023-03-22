@@ -40,7 +40,7 @@ export const BoxMontagem = () => {
                                     modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
                                     direction={'vertical'}
                                     spaceBetween={30}
-                                    slidesPerView={3}
+                                    slidesPerView={2}
                                     // navigation
                                     // pagination={{ clickable: true }}
                                     // scrollbar={{ hide:true }}
