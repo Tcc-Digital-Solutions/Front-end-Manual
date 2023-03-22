@@ -40,3 +40,25 @@
     height: 50px;
 }
 
+
+@media only screen and (max-width: 1300px) {
+    .img360-iframe {
+        height: 375px;
+        min-width: 368px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .img360-div {
+        width: 100%;
+        z-index: 100;
+    }
+    .img360-produto-name {
+        width: 100%;
+        font-size: 25px;
+    }
+    .img360-iframe {
+        /* height: 375px; */
+    }
+}
