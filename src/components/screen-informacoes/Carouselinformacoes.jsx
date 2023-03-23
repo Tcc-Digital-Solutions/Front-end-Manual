@@ -15,9 +15,9 @@ export const Carouselinformacoes = (props) => {
         <div className='Carousel-informacoes-div' >
             <span className='Carousel-informacoes-01'>
                 <Swiper
+                    navigation={true}
                     slidesPerView={2}
                     direction={'vertical'}
-                    spaceBetween={0}
                     slidesPerGroup={2}
                     loop={false}
                     loopFillGroupWithBlank={true}
@@ -25,7 +25,7 @@ export const Carouselinformacoes = (props) => {
                         delay: 40000,
                         disableOnInteraction: false,
                     }}
-                    navigation={false}
+                    
                     modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
                     className="mySwiper"
                 >
@@ -34,7 +34,8 @@ export const Carouselinformacoes = (props) => {
                     <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'1 ano de garantia! Quando produtos ou peças apresentarem defeitos e falhas.'} icone={'garantia'} /></SwiperSlide>
                     <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Há um risco elevado de choque elétrico se seu corpo estiver aterrado.'} icone={'alerta'} /></SwiperSlide>
 
-                </Swiper>                
+                </Swiper> 
+                           
             </span>
             <span className='Carousel-informacoes-02'>
                 <Swiper
