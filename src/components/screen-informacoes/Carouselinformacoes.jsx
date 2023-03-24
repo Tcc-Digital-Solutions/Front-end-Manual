@@ -27,7 +27,7 @@ export const Carouselinformacoes = (props) => {
                     }}
                     
                     modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
-                    className="mySwiper"
+                    className="myswiper"
                 >
                     <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Bivolt 127v-220v. Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
                     <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} icone={'lampada'} /></SwiperSlide>
@@ -48,10 +48,10 @@ export const Carouselinformacoes = (props) => {
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                 >
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Bivolt 127v - 220v.Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Olá como vai?'} icone={'engrenagem'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'1 ano de garantia, quando produtos ou peças apresentarem defeitos provenientes de falha.'} icone={'certificado'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-2"><CardInformacoes texto={'Bivolt 127v-220v. Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-2"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} icone={'lampada'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-2"><CardInformacoes texto={'1 ano de garantia! Quando produtos ou peças apresentarem defeitos e falhas.'} icone={'garantia'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-2"><CardInformacoes texto={'Há um risco elevado de choque elétrico se seu corpo estiver aterrado.'} icone={'alerta'} /></SwiperSlide>
                 </Swiper>     
             </span>
         </div>

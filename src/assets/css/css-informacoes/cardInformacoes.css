@@ -27,4 +27,8 @@
         width: 219px;
         height: 151px;
     }
+    .card-texto{
+        font-size: 17px;
+        margin: 10px;
+    }
 }

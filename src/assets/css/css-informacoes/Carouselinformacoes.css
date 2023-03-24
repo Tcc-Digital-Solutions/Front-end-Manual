@@ -30,17 +30,18 @@
 
  .swiper-button-prev {       
     left: 50% !important;
-    top: 0% !important;
+    top: 0.5% !important;
     transform: rotate(90deg);
     transform-origin: left center;
+    color: black;
   }
-  .swiper-button-next {
+  .swiper-button-next{
     left: 50% !important;
-    bottom: 0% !important;
+    bottom: 0.5% !important;
     transform: rotate(90deg);
     transform-origin: left center;
     top:auto;
-
+    color: black;
   }
 
   .Carousel-informacoes-div{
