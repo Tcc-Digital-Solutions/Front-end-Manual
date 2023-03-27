@@ -16,8 +16,7 @@ function CardInformacoes({texto, icone}) {
         <>
         <div className='card-externo'>
             <div className='card-interno'>
-            
-                
+    
                     <p className='card-texto'>{texto}</p>
 
                     <i className='img-icones'>
