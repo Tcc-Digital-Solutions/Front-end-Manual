@@ -55,8 +55,10 @@ export const BoxMontagem = () => {
                         <div className='div-imgs-montagem' >
                             <div className='swiper-web'>
                                 <Swiper
-                                    modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
+                                    navigation={true}
+                                    slidesPerView={2}
                                     direction={'vertical'}
+
                                     spaceBetween={30}
                                     slidesPerView={slip}
                                     // navigation
@@ -64,6 +66,7 @@ export const BoxMontagem = () => {
                                     // scrollbar={{ hide:true }}
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
+
                                 >
 
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemA} onClick={() => setImagemMaximizada(ImgMontagemA)} /></span></SwiperSlide>
