@@ -16,9 +16,9 @@ export const Carousel = (props) => {
         <div className='Carousel_react-div' >
             <span className='Carousel_react-01'>
                 <Swiper
-                    slidesPerView={1}
+                    slidesPerView={3}
                     spaceBetween={30}
-                    slidesPerGroup={1}
+                    // slidesPerGroup={3}
                     loop={true}
                     loopFillGroupWithBlank={true}
                     autoplay={{
@@ -69,7 +69,7 @@ export const Carousel = (props) => {
                     <SwiperSlide className="swiper-slide-1"><Cardproduto/></SwiperSlide>
                 </Swiper>                
             </span>
-   
+
         </div>
     )
 }
