@@ -7,18 +7,27 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import 'swiper/css/scrollbar';
 import CardInformacoes from './CardInformacoes';
+import React, { useEffect, useState } from 'react';
 
 
 export const Carouselinformacoes = (props) => {
+    const { innerWidth: width, innerHeight: height } = window;
+    const [slip, setSlip] = useState(3)
+
+    useEffect(() => {
+        if (innerHeight < 800){
+            setSlip(2)
+        }
+    })
 
     return (
         <div className='Carousel-informacoes-div' >
             <span className='Carousel-informacoes-01'>
                 <Swiper
-                    slidesPerView={2}
+                    slidesPerView={slip}
                     direction={'vertical'}
                     spaceBetween={15}
-                    slidesPerGroup={2}
+                    slidesPerGroup={slip}
                     loop={false}
                     loopFillGroupWithBlank={true}
                     autoplay={{

@@ -135,6 +135,9 @@
     .img-principal-div {
         display: none ;
     }
+    .img-fixa-montagem-div {
+        height: 357px;
+    }
 
 }
 
@@ -159,10 +162,16 @@
         height: 158px;
     }
     .montagem-span {
-        width: 183px;
+        width: 165px;
+        /* height: 164px; */
     }
 
 }
+
+.direction-div-iped{
+    height: 100% !important;
+}
+
 
 @media only screen and (max-width: 1161px) {
     .img-principal-div {

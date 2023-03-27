@@ -17,9 +17,27 @@ import 'swiper/css/scrollbar';
 export const BoxMontagem = () => {
 
     const [imagemMaximizada, setImagemMaximizada] = useState(ImgFixaMontagem)
+    const { innerWidth: width, innerHeight: height } = window;
+    const [classd,setClassd] = useState('direction-div')
+    const [slip, setSlip] = useState(3)
+    const [swip, setSwip] = useState(1)
+    console.log(innerHeight)
+
 
     useEffect(() => {
-        console.log(imagemMaximizada)
+        if (innerHeight < 800){
+            setSlip(2)
+        }
+        if (innerHeight == 820 ){
+            setSwip(3)
+        }
+        if(innerWidth == 768){
+            setClassd('direction-div-iped')
+            setSwip(3)
+        }
+        if (innerWidth == 600){
+            setSwip(1)
+        }
     })
 
     return (
@@ -32,7 +50,7 @@ export const BoxMontagem = () => {
                 <div className='img-fixa-montagem-div'>
                     <img className='img-fixa-montagem' src={imagemMaximizada} />
                 </div>
-                <div className='direction-div'>
+                <div className={classd}>
                     <div className='box-imgs-montagem-div'>
                         <div className='div-imgs-montagem' >
                             <div className='swiper-web'>
@@ -40,7 +58,7 @@ export const BoxMontagem = () => {
                                     modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
                                     direction={'vertical'}
                                     spaceBetween={30}
-                                    slidesPerView={3}
+                                    slidesPerView={slip}
                                     // navigation
                                     // pagination={{ clickable: true }}
                                     // scrollbar={{ hide:true }}
@@ -61,14 +79,14 @@ export const BoxMontagem = () => {
                                 <Swiper
                                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                                     spaceBetween={0}
-                                    slidesPerView={1}
+                                    slidesPerView={swip}
                                     navigation
                                     // pagination={{ clickable: true }}
                                     // scrollbar={{ hide:true }}
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
                                 >
-                                    <SwiperSlide><img className='imgs-montagem' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} /></SwiperSlide>
+                                    {/* <SwiperSlide><img className='imgs-montagem' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} /></SwiperSlide> */}
                                     <SwiperSlide><img className='imgs-montagem' src={ImgMontagemA} onClick={() => setImagemMaximizada(ImgMontagemA)} /></SwiperSlide>
                                     <SwiperSlide><img className='imgs-montagem' src={ImgMontagemB} onClick={() => setImagemMaximizada(ImgMontagemB)} /></SwiperSlide>
                                     <SwiperSlide><img className='imgs-montagem' src={ImgMontagemC} onClick={() => setImagemMaximizada(ImgMontagemC)} /></SwiperSlide>
