@@ -58,6 +58,12 @@ export const NavbarHome = () => {
         setPressed5(!pressed5)
     }
 
+    const [categoria, setCategoria] = useState(0)
+
+    const exibirProdutos = (categoria) => {
+        setCategoria(categoria)
+    }
+
     return (
         <div className="box-categoria-div" >
             <ul className="box-categoria-ul">
@@ -65,73 +71,137 @@ export const NavbarHome = () => {
                     <button className="box-categoria-button" onClick={() => setMenuVisible()} onBlur={() => setMenuVisible("box-categoria-span-fechar")} >Ferramentas 12v</button>
                 </li>
                 <span className={visible}>
-                    <BoxCategoria categoria='Furadeiras e Parafusadeiras' />
-                    <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
+                    <div className='box-menu'>
+                        <ul>
+                            <li onMouseOver={() => exibirProdutos(1)}>Furadeiras e Parafusadeiras</li>
+                            <li onMouseOver={() => exibirProdutos(2)}>Chave de Impacto</li>
+                            <li onMouseOver={() => exibirProdutos(3)}>Serra Circular</li>
+                            <li onMouseOver={() => exibirProdutos(4)}>Serra Tico-Tico</li>
+                            <li onMouseOver={() => exibirProdutos(5)}>Plaina</li>
+                            <li onMouseOver={() => exibirProdutos(6)}>Aspiradores</li>
+                            <li onMouseOver={() => exibirProdutos(7)}>Barteria e Carregadores</li>
+                            <li onMouseOver={() => exibirProdutos(8)}>Lanterna</li>
+                        </ul>
+                    </div>
+                    <div className='box-produtos'>
+                        {categoria == 1 ? 
+                            <>
+                                <BoxCategoria categoria='Furadeiras' />
+                                <BoxCategoria categoria='Parafusadeiras' />
+                            </>
+                            :
+                            categoria == 2? 
+                            <>
+                                <BoxCategoria categoria='Chave de Impacto' />
+                            </>
+                            : 
+                            categoria == 3?
+                            <>
+                                <BoxCategoria categoria='Serra Circular' />
+                            </>  
+                            :
+                            categoria == 4?
+                            <>
+                                <BoxCategoria categoria='Serra Tico-Tico' />
+                            </>
+                            
+                            :
+                            categoria == 5?
+                            <>
+                                <BoxCategoria categoria='Plaina'/>
+                            </>
+                            
+                            :
+                            categoria == 6?
+                            <>
+                                <BoxCategoria categoria='Aspiradores'/>
+                            </>
+                            
+                            :
+                            categoria == 7?
+                            <>
+                                <BoxCategoria categoria='Baterias'/>
+                                <BoxCategoria categoria='Carregadores'/>
+                            </>
+                            
+                            :
+                            categoria == 8?
+                            <>
+                                <BoxCategoria categoria='Lanterna' />
+                            </>
+                            
+                            :
+                            null
+                        }
+                        
+                        {/* <BoxCategoria />
+                        <BoxCategoria />
+                        <BoxCategoria />
+                        <BoxCategoria />
+                        <BoxCategoria />
+                        <BoxCategoria /> */}
+                    </div>
+                    
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
                     <button className="box-categoria-button" onClick={() => setMenuVisible1()} onBlur={() => setMenuVisible1("box-categoria-span-fechar")}>Ferramentas 110v </button>
                 </li>
                 <span className={visible1}>
                     <BoxCategoria />
+                    {/* <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
+                    <BoxCategoria /> */}
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
                     <button className="box-categoria-button" onClick={() => setMenuVisible2()} onBlur={() => setMenuVisible2("box-categoria-span-fechar")}>Ferramentas 220V </button>
                 </li>
                 <span className={visible2}>
                     <BoxCategoria />
+                    {/* <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
+                    <BoxCategoria /> */}
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
                     <button className="box-categoria-button" onClick={() => setMenuVisible3()} onBlur={() => setMenuVisible3("box-categoria-span-fechar")}>Ferramentas 18V </button>
                 </li>
                 <span className={visible3}>
                     <BoxCategoria />
+                    {/* <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
+                    <BoxCategoria /> */}
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
                     <button className="box-categoria-button" onClick={() => setMenuVisible4()} onBlur={() => setMenuVisible4("box-categoria-span-fechar")}>Linha de Medição </button>
                 </li>
                 <span className={visible4}>
                     <BoxCategoria />
+                    {/* <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
+                    <BoxCategoria /> */}
                 </span>
                 <li className="box-categoria-li" id='li-categorias'>
                     <button className="box-categoria-button" onClick={() => setMenuVisible5()} onBlur={() => setMenuVisible5("box-categoria-span-fechar")}>Acessorios</button>
                 </li>
                 <span className={visible5}>
                     <BoxCategoria />
+                    {/* <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
                     <BoxCategoria />
-                    <BoxCategoria />
-                    <BoxCategoria />
+                    <BoxCategoria /> */}
                 </span>
             </ul>
 

@@ -24,16 +24,21 @@
 
 .box-categoria-span {
     position: fixed;
-    width: 63%;
-    height: 461px;
-    background-color: #ffffff;
-    margin-top: 112px;
+    height: 210px;
+    background-color: #CCE6FF;
+    margin-top: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     color: black;
     flex-wrap: wrap;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;
+    align-items: stretch;
 }
 
 .box-categoria-ul {
@@ -43,19 +48,47 @@
     align-items: center;
     height: inherit;
     list-style: none;
-    width: 989px;
+    width: 990px;
     padding: 0;
 
 }
 
-.box-categoria-li :hover {
-    border-bottom: 3px solid #E20015;
-    transition: 0.2s ease;
-    cursor: pointer;
-}
 
 #li-categorias {
     text-decoration: none;
+}
+
+.box-menu{
+    display: flex;
+}
+
+.box-menu ul{
+    list-style: none;
+    background: #3261a8;
+    color: #fff;
+    margin: 0;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.box-menu ul :hover{
+    list-style: none;
+    background: #18478d;
+    color: #fff;
+
+}
+
+
+.box-menu ul li{
+    padding: 30px ;
+    margin: 0px;
+
+}
+
+.box-produtos{
+    display: flex;
+    width: 700px;
+    flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 900px) {

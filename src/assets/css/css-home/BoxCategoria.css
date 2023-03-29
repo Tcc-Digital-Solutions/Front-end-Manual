@@ -17,7 +17,6 @@
     justify-content: space-evenly;
     background-color: transparent;
     border: 0;
-    cursor: pointer;
 }
 
 .box-categoria-select-img {
@@ -28,8 +27,5 @@
 .box-categoria-select-text {
     font-family: var(--fonte);
     font-weight: bolder;
-}
-
-.box-categoria-select-button:hover {
-    color: #ff0000;
+    align-items: center;
 }
