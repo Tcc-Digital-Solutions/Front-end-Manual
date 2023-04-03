@@ -1,5 +1,6 @@
 .box-categoria-select-div {
-    width: 163px;
+    /* width: 163px; */
+    width: 245px;
     height: 191px;
     display: flex;
     flex-direction: row;

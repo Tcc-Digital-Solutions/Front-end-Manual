@@ -3,23 +3,14 @@
     border-radius: 10px;
     width: 295px;
     height: 468px;
-    border: 1px solid #3261A8;
+    border: 1px solid #4970A9;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    box-shadow:23px 18px #4970A9;
 }
 
-.Cardproduto-div-01{
-    background: #4970A9;
-    transform: rotate(270deg);
-    height: 157px;
-    width: 310px;
-    border-radius: 150px 150px 0 0;
-    left: -56%;
-    top: 194px;
-    position: absolute;
-}
 .Cardproduto-div-text{
     width: 241px;
 }
@@ -43,9 +34,67 @@
     border: 0;
     color: #ffffff;
     font-size: 17px;
-    background-color: #3261A8;
+    background-color: #4970A9;
     width: 167px;
     height: 48px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.Cardproduto-button:hover{
+    
+    background-color: #2f5183;
+    transition-duration: 0.4s
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+    .box-categoria-ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: inherit;
+        list-style: none;
+        width: 900px;
+    }
+
+    .Cardproduto-div{
+        font-family: var(--font);
+        border-radius: 10px;
+        width: 250px;
+        height: 400px;
+        border: 1px solid #4970A9;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        box-shadow:20px 16px #4970A9;
+    }
+    .Cardproduto-button{
+        border: 0;
+        color: #ffffff;
+        font-size: 15px;
+        background-color: #4970A9;
+        width: 130px;
+        height: 38px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .Cardproduto-div-text{
+        width: 200px;
+    }
+
+    .img-card{
+        width: 170px ;
+        height: 160px;
+    }
+    .Cardproduto-div-03{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 110px;
+    }
 }
