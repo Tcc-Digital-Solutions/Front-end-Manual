@@ -59,4 +59,27 @@ body::-webkit-scrollbar {
 #button-lado {
   position: absolute;
 }
+.vpw-playing{
+  top: 86%;
+}
+
+.vp-bounderies{
+  display: none !important;
+}
+
+.vp-container{
+  display: none !important;
+}
+
+.vpw-stopped{
+  top:86%
+}
+
+div[vw] [vp] [vp-rate-box]{
+  display: none !important;
+}
+
+div[vw] [vp] [vp-suggestion-button].vp-enabled, div[vw] [vp] [vp-suggestion-button]{
+  display: none !important;
+}
 
