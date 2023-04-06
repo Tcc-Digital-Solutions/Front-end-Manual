@@ -6,10 +6,26 @@
     margin-top: 61px;
 }
 
-.swiper-slide-1{
-    width: 100% !important;
+.swiper-slide-card{
+    /* width: 100% !important; */
 }
 
 .Carousel_react-01{
     display: none;
 }
+
+.swiper-button-prev {       
+    left: 50% !important;
+    top: 0.5% !important;
+    transform: rotate(90deg);
+    transform-origin: left center;
+    color: black;
+  }
+  .swiper-button-next{
+    left: 50% !important;
+    bottom: 0.5% !important;
+    transform: rotate(90deg);
+    transform-origin: left center;
+    top:auto;
+    color: black;
+  }

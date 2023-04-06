@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Autoplay, Pagination, Navigation,Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import '../../assets/css/css-montagem/BoxMontagem.css';
 import ImgFixaMontagem from '../../assets/img/img-fixa-montagem.png';
@@ -55,15 +55,16 @@ export const BoxMontagem = () => {
                         <div className='div-imgs-montagem' >
                             <div className='swiper-web'>
                                 <Swiper
-                                    navigation={true}
-                                    slidesPerView={2}
+                            
                                     direction={'vertical'}
-
                                     spaceBetween={30}
                                     slidesPerView={slip}
-                                    // navigation
-                                    // pagination={{ clickable: true }}
-                                    // scrollbar={{ hide:true }}
+                                    loop={true}
+                                    loopFillGroupWithBlank={true}
+                                    navigation={true}
+                                    modules={[Autoplay,Pagination, Navigation, A11y]}
+                                    className="mySwiper"
+                                   
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
 
@@ -83,9 +84,8 @@ export const BoxMontagem = () => {
                                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                                     spaceBetween={0}
                                     slidesPerView={swip}
-                                    navigation
-                                    // pagination={{ clickable: true }}
-                                    // scrollbar={{ hide:true }}
+                                    navigation={true}
+
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
                                 >
