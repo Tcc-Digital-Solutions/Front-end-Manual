@@ -5,7 +5,7 @@ import user from '../../assets/img/user-add.svg'
 import manual from '../../assets/img/document-add.svg'
 import { CadastroComponents } from './CadastroComponents'
 import {  useState } from 'react';
-import { ComponentsProdutosCadastrados } from './componentsProdutosCadastrados'
+import { ComponentsProdutosCadastrados } from './ComponentsProdutosCadastrados'
 import { CadastroUser } from './CadastroUser'
 
 
