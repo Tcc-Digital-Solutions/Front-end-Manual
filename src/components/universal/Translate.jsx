@@ -1,6 +1,6 @@
 import '../../assets/css/css_universal/Translate.css'
 import '../../assets/css/css_universal/dropdown.css'
-import translateImg from '../../assets/img/translate.png'
+import translateImg from '../../assets/img/chat-language.svg'
 import { useState } from 'react'
 
 export const Translate = () => {
@@ -24,7 +24,7 @@ export const Translate = () => {
     }
     return (
         <div className="translate-div">
-            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()} onBlur={() => setMenuVisible("translate-box-fechar")}><img src={translateImg} alt="" className='translateimg' /></button>
+            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()} onBlur={() => setMenuVisible("translate-box-fechar")}><img src={translateImg} style={{ width:'30px'}} alt="" className='translateimg' /></button>
             <span className={visible}>
                 <span className="translate-button-text">Languages</span>
                 <span className="translate-buttons">

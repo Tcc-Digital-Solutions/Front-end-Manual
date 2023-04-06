@@ -17,11 +17,16 @@ export const HubTeste = (props) => {
 
     }
 
+    const proo = () => {
+        navigate("/cadastro-manual")
+    }
+
     return (
         <div className="HubTeste-div" >
             <button className='HubTeste-button' onClick={() => proosScreen()}>Home</button>
             <button className='HubTeste-button' onClick={() => proosScreen1()}>Login</button>
             <button className='HubTeste-button' onClick={() => proosScreen2()}>Manual</button>
+            <button className='HubTeste-button' onClick={() => proo()}>Crud</button>
         </div>
     )
 }
