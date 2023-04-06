@@ -11,13 +11,13 @@
 .box-login-mk-login {
   position: fixed;
   width: 351px;
-  height: 466px;
+  height: 435px;
   border-radius: 15px;
-  margin-top: 12%;
+  margin-top: 8%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border: 2px solid var(--cor-borda-span);
   background-color: var(--cor-fundo);
 }

@@ -1,9 +1,8 @@
 import '../../assets/css/css_universal/Navbar.css'
 import imgTop from '../../assets/img/imgTopo.png'
-import boschLogo from '../../assets/img/Bosch-logo.png'
+import boschLogo from '../../assets/img/loguinho.png'
 import { Translate } from './Translate';
 import { ButtonLogoff } from '../screen-crud/ButtonLogoff'
-import { useState } from 'react'
 import { Navbarsearch } from './Navbarsearch';
 
 export const Navbar = (props) => {
@@ -27,7 +26,6 @@ export const Navbar = (props) => {
                     <Translate />
                 </div>
             </div>
-
         </div>
     )
 }

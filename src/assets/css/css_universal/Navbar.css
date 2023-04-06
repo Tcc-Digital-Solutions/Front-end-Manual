@@ -12,6 +12,10 @@
     width: 648px;
 
 }
+.navbar-div-img-2{
+    width: 112px;
+    height: 49px;
+}
 .navbar-div-1 {
     width: 100%;
     display: flex;
@@ -35,7 +39,7 @@
 .navbar-div-2 {
     margin-left: 29px;
     margin-right: 29px;
-    margin-top: 31px;
+    margin-top: 22px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
