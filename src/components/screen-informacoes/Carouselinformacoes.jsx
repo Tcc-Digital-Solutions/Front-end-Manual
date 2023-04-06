@@ -1,6 +1,6 @@
 import {Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
+import { Autoplay, Pagination, Navigation,Scrollbar, A11y } from "swiper";
 import '../../assets/css/css-informacoes/Carouselinformacoes.css'
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,7 +12,7 @@ import React, { useEffect, useState } from 'react';
 
 export const Carouselinformacoes = (props) => {
     const { innerWidth: width, innerHeight: height } = window;
-    const [slip, setSlip] = useState(3)
+    const [slip, setSlip] = useState(2)
 
     useEffect(() => {
         if (innerHeight < 800){
@@ -26,10 +26,11 @@ export const Carouselinformacoes = (props) => {
                 <Swiper
                     slidesPerView={slip}
                     direction={'vertical'}
-                    spaceBetween={15}
+                    spaceBetween={0}
                     slidesPerGroup={slip}
 
                     loop={false}
+                    navigation={true}
                     loopFillGroupWithBlank={true}
                     autoplay={{
                         delay: 40000,
@@ -49,12 +50,16 @@ export const Carouselinformacoes = (props) => {
             </span>
             <span className='Carousel-informacoes-02'>
                 <Swiper
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={0}
                     slidesPerView={1}
-                    navigation
-                    // pagination={{ clickable: true }}
-                    // scrollbar={{ hide:true }}
+
+                    loop={true}
+                    loopFillGroupWithBlank={true}
+                    navigation={true}
+                    modules={[Autoplay,Pagination, Navigation, Scrollbar, A11y]}
+                    className="mySwiper"
+
+
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                 >

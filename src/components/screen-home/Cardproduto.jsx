@@ -5,8 +5,6 @@ import ferramenta from '../../assets/img/f12-chave-menu.png'
 export const Cardproduto = (props) => {
     return (
         <div className="Cardproduto-div" >
-            <span className='Cardproduto-div-01'>
-            </span>
             <span className='Cardproduto-div-02'>
                 <img src={ferramenta} alt="" />
                 <span className='Cardproduto-div-03'>

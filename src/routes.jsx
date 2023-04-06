@@ -22,7 +22,7 @@ export const RoutesJS = () => {
         <Route path="/informacoes/:id?" element={<Informacoes />} />
         <Route path="/login" element={<Login />} />
         <Route path="/montagem" element={<Montagem />} />
-        <Route path="/Crud" element={<Crud />} />
+        <Route path="/register-manual" element={<Crud />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/manual" element={<Manual />} />
         <Route path="/login" element={<BoxLoginMk />} />

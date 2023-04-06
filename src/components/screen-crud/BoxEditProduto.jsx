@@ -1,7 +1,7 @@
 import '../../assets/css/css-crud/BoxEditProduto.css'
-import lixeiraImg from '../../assets/img/🦆 icon _Trash_.png'
-import editImg from '../../assets/img/🦆 icon _note pencil_.png'
-import fecharImg from '../../assets/img/X.png'
+import lixeiraImg from '../../assets/img/delete.svg'
+import editImg from '../../assets/img/edit.svg'
+import fecharImg from '../../assets/img/close.svg'
 import { useState } from 'react'
 
 export const BoxEditProduto = (props) => {
@@ -18,13 +18,13 @@ export const BoxEditProduto = (props) => {
             <span className="Box-edit-produto-span">
                 <p className="Box-edit-produto-text">{props.produtoname}</p>
                 <div className="Box-edit-produto-div-button">
-                    <button className="Box-edit-produto-button" onClick={() => setMenuVisible()}><img src={editImg} alt="" /></button>
-                    <button className="Box-edit-produto-button"><img src={lixeiraImg} alt="" /></button>
+                    <button className="Box-edit-produto-button" onClick={() => setMenuVisible()}><img src={editImg} style={{ width:'30px'}} alt="" /></button>
+                    <button className="Box-edit-produto-button"><img src={lixeiraImg} style={{ width:'30px'}} alt="" /></button>
                 </div>
             </span>
             <hr className="Box-edit-produto-hr-fake"/>
             <div className={visible}>
-                <button className="Box-edit-produto-button" id='button-lado' onClick={() => setMenuVisible()}><img src={fecharImg} alt="" /></button>
+                <button className="Box-edit-produto-button" id='button-lado' onClick={() => setMenuVisible()}><img src={fecharImg} style={{ width:'30px'}} alt="" /></button>
                 <p>{props.produtoname}</p>
             </div>
         </div>
