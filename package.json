@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@djpfs/react-vlibras": "^2.0.2",
     "@react-pdf-viewer/core": "^3.11.0",
     "@react-pdf-viewer/default-layout": "^3.11.0",
     "@react-pdf-viewer/selection-mode": "^3.11.0",
