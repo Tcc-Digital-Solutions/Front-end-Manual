@@ -17,6 +17,7 @@ export const Carousel = (props) => {
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={0}
+                    direction="horizontal"
                     loop={true}
                     loopFillGroupWithBlank={true}
                     // autoplay={{
@@ -25,7 +26,7 @@ export const Carousel = (props) => {
                     // }}
                     navigation={true}
                     modules={[Autoplay,Pagination, Navigation]}
-                    className="mySwiper"
+                    className="swiper-home"
                 >
                     <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
                     <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
