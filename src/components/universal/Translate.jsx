@@ -1,39 +1,43 @@
 import '../../assets/css/css_universal/Translate.css'
 import '../../assets/css/css_universal/dropdown.css'
 import translateImg from '../../assets/img/chat-language.svg'
-import { useState } from 'react'
+import {  useState } from 'react';
+import Select from 'react-select'
+import { Speaker } from './Speaker';
 
 export const Translate = () => {
+    const [selectedOption, setSelectedOption] = useState('pt-PT');
     const [visible, setVisible] = useState("translate-box-fechar")
     const [pressed, setPressed] = useState(false)
-    // const userLocale = navigator?.languages?.length ? navigator.languages[0] : navigator.language;
-    // console.log(userLocale);
-    // console.log(navigator.languages);
 
-
+    const options = [
+        { value: 'pt-PT', label: 'Português' },
+        { value: 'en-US', label: 'English' },
+        { value: 'fr-FR', label: 'Français' },
+        { value: 'es-ES', label: 'Español' },
+        { value: 'de-DE', label: 'Germany' },
+        { value: 'ru-RU', label: 'Russian' },
+        { value: 'jp-JP', label: 'Japanese' },
+        { value: 'zh-HK', label: 'China' },
+        { value: 'it-IT', label: 'Italiano' }
+    ]
 
     const setMenuVisible = () => {
         pressed ? setVisible("translate-box-fechar") : setVisible("translate-box")
         setPressed(!pressed)
     }
+    
 
-
-    const puxarIdioma = (idioma) => {
-        // window.location.reload(false);
-        console.log(idioma);
-    }
     return (
         <div className="translate-div">
-            <button className='translate-button' id='danilo' onClick={() => setMenuVisible()} onBlur={() => setMenuVisible("translate-box-fechar")}><img src={translateImg} style={{ width:'30px'}} alt="" className='translateimg' /></button>
+            <Speaker value={selectedOption.value}></Speaker>
+            <button className='translate-button'  onClick={() => setMenuVisible()}><img src={translateImg} style={{ width:'30px'}} alt="" /></button>
             <span className={visible}>
-                <span className="translate-button-text">Languages</span>
-                <span className="translate-buttons">
-                    <button className="translate-button-active " >Português</button>
-                    <button className="translate-button-active">English</button>
-                    <button className="translate-button-active">Español</button>
-                    <button className="translate-button-active">German</button>
-                    <button className="translate-button-active">Français</button>
-                </span>
+                <Select placeholder='Linguagem'
+                isClearable={true}
+                onChange={setSelectedOption}
+                isSearchable={true}
+                options={options}  /> 
             </span>
         </div>
     )

@@ -2,19 +2,16 @@
 .card-interno{
     border-radius: 15px;
     background: #ffffff;
-    width: 194px;
-    height: 176px;
+    width: 212px;
+    height: 199px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: solid 1px #3261A8;
 }
-
-
-.card-externo{
-    background-color: #dadada;
-    border-radius: 15px;
-    border: 20px solid #dadada;
+.img-icones{
+    width: 30px;
 }
 
 .card-texto{
