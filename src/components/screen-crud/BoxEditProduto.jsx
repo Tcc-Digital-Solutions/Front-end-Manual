@@ -25,7 +25,9 @@ export const BoxEditProduto = (props) => {
             <hr className="Box-edit-produto-hr-fake"/>
             <div className={visible}>
                 <button className="Box-edit-produto-button" id='button-lado' onClick={() => setMenuVisible()}><img src={fecharImg} style={{ width:'30px'}} alt="" /></button>
-                <p>{props.produtoname}</p>
+                <span className="Box-edit-produto-drop">
+                    <p>{props.produtoname}</p>
+                </span>
             </div>
         </div>
     )

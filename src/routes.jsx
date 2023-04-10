@@ -18,13 +18,13 @@ export const RoutesJS = () => {
       <Routes>
         <Route path="/:id?" element={<Careegamento />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/to-check/:id?" element={<ToCheck />} />
+        <Route path="/to-check" element={<ToCheck />} />
         <Route path="/informacoes/:id?" element={<Informacoes />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/montagem" element={<Montagem />} />
+        <Route path="/montagem/:id?" element={<Montagem />} />
         <Route path="/register-manual" element={<Crud />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/manual" element={<Manual />} />
+        <Route path="/manual/:id?" element={<Manual />} />
         <Route path="/login" element={<BoxLoginMk />} />
         <Route path="/cadastro-manual" element={<Crud />} />
       </Routes>

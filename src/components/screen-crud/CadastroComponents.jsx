@@ -29,57 +29,54 @@ export const CadastroComponents= (props) => {
 
     return (
         <div className="components-cadastro-div" >
-            <span className='true'>
-                <p>{props.name}</p>
-                <span  className="components-cadastro-true">
-                    <span className="components-cadastro-span">
-                        <span>
-                        <p>Nome do produto</p>
-                        <input type="text" className='inputMult' />
-                        </span>
-                        <span>
-                            <p>Categoria do produto</p>
-                            <Select
-                            isClearable={true}
-                            isSearchable={true}
-                            options={options} /> 
-                        </span>
-                        <span>
-                            <p>Sub categoria do produto</p>
-                            <Select
-                            isClearable={true}
-                            isSearchable={true}
-                            options={options} /> 
-                        </span>
-                        <span>
-                        <p className='box-manual-text'>Links de vídos sobre o produto</p>
-                        <MultipleValueTextInput className='inputMult'/> 
-                        </span>
+            <form action="" className="components-cadastro-form">
+                <span className="components-cadastro-span">
+                    <span className='components-span-center'>
+                    <p>Nome do produto</p>
+                    <input type="text" className='inputMult' name="produtoname" required />
                     </span>
-                    <div style={{width:'30px'}}></div>
-                    <span className="components-cadastro-span">
-                        <span>
-                            <p>Imagens da montagem do produto</p>
-                            <input className="button-65" id='imgUpload' type="file" onChange={handleFileChange}/>
-                        </span>
-                        <span>
-                            <p>Linguagem</p>
-                            <Select
-                            isClearable={true}
-                            isSearchable={true}
-                            options={options2} /> 
-                        </span>
-                        <span>
-                            <p>Imagem 360°</p>
-                            <input type="text" className='inputMult' />
-                        </span>
-                        <span>
-                            <p>PDF  do produto</p>
-                            <button className="button-65" role="button" type="file">Clique e carregue seu arquivo </button> 
-                        </span>
-                    </span>                    
-                </span>
-            </span>
+                    <span className='components-span-center'>
+                        <p>Categoria do produto</p>
+                        <Select name="categoriaproduto" required
+                        isClearable={true}
+                        isSearchable={true}
+                        options={options} /> 
+                    </span>
+                    <span className='components-span-center'>
+                        <p>Sub categoria do produto</p>
+                        <Select name="subcategoriaproduto" required
+                        isClearable={true}
+                        isSearchable={true}
+                        options={options} /> 
+                    </span>
+                    <span className='components-span-center'>
+                        <p className='box-manual-text'>Links de vídeos sobre o produto</p>
+                        <MultipleValueTextInput className='inputMult' name="linkvideos" required/> 
+                    </span>
+                    <span className='components-span-center'>
+                        <p>Conteúdo da Embalagem</p>
+                        <MultipleValueTextInput className='inputMult' name="conteudoembalagem" required/> 
+                    </span>
+                    <span className='components-span-center'>
+                        <p>Imagem 360°</p>
+                        <input type="text" className='inputMult' name="img360" required/>
+                    </span>
+                    <span className='components-span-center'>
+                        <p>Imagens da montagem do produto</p>
+                        <input className="button-65" id='imgUpload' type="file" onChange={handleFileChange} name="imgmontagem" required/>
+                    </span>
+                    <span className='components-span-center'>
+                        <p>PDF  do produto</p>
+                        <input className="button-65" id='imgPdf' type="file" onChange={handleFileChange} name="pdfproduto" required/>
+                    </span>
+                    <span className='components-span-center-button'>
+                        <button type='submit' className='cadastro-user-form-button'>Cadastrar</button>
+                    </span>
+                    <span className='components-span-center'>
+
+                    </span>
+                </span>        
+            </form>
         </div>
     )
 }

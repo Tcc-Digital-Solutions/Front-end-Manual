@@ -1,7 +1,5 @@
 .button-logoff-div{
-    /* position: absolute; */
-    margin-top: 2%;
-    margin-left: 70%;
+
 }
 .button-logoff-button{
     width: 38px;
@@ -14,4 +12,5 @@
     justify-content: center;
     border: none;
     cursor:pointer;
+    margin-right: 10px;
 }

@@ -4,8 +4,10 @@ import boschLogo from '../../assets/img/loguinho.png'
 import { Translate } from './Translate';
 import { ButtonLogoff } from '../screen-crud/ButtonLogoff'
 import { Navbarsearch } from './Navbarsearch';
+import { AltoContraste } from './AltoContraste';
 
 export const Navbar = (props) => {
+    
 
     return (
         <div className="navbar-div" >
@@ -16,14 +18,17 @@ export const Navbar = (props) => {
                 <span className='navbar-div-2-span'>
                     <img className='navbar-div-img-2' src={boschLogo} alt="" />
                     <span className={props.search ? 'navbar-div-button-logoff' : 'hide'}>
-                            <Navbarsearch/>
+                        <Navbarsearch/>
                     </span>                    
                 </span>
                 <div  className={props.logado ? 'navbar-div-buttons' : 'navbar-div-buttons-2'}>
-                    <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
-                        <ButtonLogoff />
+                    <span className='navbar-buttons-comus'>
+                        <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
+                            <ButtonLogoff />
+                        </span>                        
+                        <AltoContraste/>
+                        <Translate />                        
                     </span>
-                    <Translate />
                 </div>
             </div>
         </div>

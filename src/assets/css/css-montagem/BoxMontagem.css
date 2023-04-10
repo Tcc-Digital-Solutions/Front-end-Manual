@@ -90,9 +90,6 @@
     /* overflow-y: scroll; */
 }
 
-.swiper-vertical {
-    overflow: auto !important;
-}
 
 .swiper-slide {
     text-align: center;

@@ -1,14 +1,12 @@
 
 import React, { Component } from 'react';
 import '../../assets/css/css-informacoes/Boxproduto.css';
-import about from '../../assets/img/sobre-nos 1.png'
 
 export const Boxproduto = (props) => {
 
     return (
         <div className='boxproduto-div' >
             <span className='boxproduto-text'>
-                <img src={about} alt="" />
                 <p>CONTEÚDO DA EMBALAGEM</p>
             </span>
             <span className='boxproduto-item'>
@@ -21,8 +19,8 @@ export const Boxproduto = (props) => {
                     <li>1 bateria 12V Max de 2,0 Ah Li-Ion</li>
                     <li>1 maleta plástica</li>
                 </ul>
-
             </span>
         </div>
+
     )
 }
