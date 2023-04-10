@@ -1,6 +1,6 @@
 import '../../assets/css/css-informacoes/BoxInformacoes.css';
 import { Img360 } from '../screen-informacoes/Img360';
-import { Boxproduto } from './Boxproduto';
+import { ButtonAbout } from './ButtonAbout';
 import { Carouselinformacoes } from './Carouselinformacoes';
 
 export const BoxInformacoes = () => {
@@ -8,7 +8,9 @@ export const BoxInformacoes = () => {
 
         <div className="container-informacoes">
             <div className="BoxInformacoes-div" >
-                <Boxproduto/>
+                <span style={{width: '320px',height: '479px'}}>
+                <ButtonAbout/>
+                </span>
                 <Img360/>
                 <Carouselinformacoes/>
             </div>

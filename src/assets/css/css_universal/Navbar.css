@@ -5,6 +5,12 @@
     position: fixed;
     z-index: 103;
 }
+.navbar-buttons-comus{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .navbar-div-2-span{
     display: flex;
     flex-direction: row;
@@ -13,8 +19,7 @@
 
 }
 .navbar-div-img-2{
-    width: 112px;
-    height: 49px;
+    height: 59px;
 }
 .navbar-div-1 {
     width: 100%;
@@ -67,20 +72,22 @@
     cursor: pointer;
 }
 .navbar-div-buttons{
-    width: 117px;
+    /* width: 117px; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-
+.translate-box .css-b62m3t-container {
+    width: 260px !important;
+}
 .navbar-div-img-1 {
     width: 100%;
     height: 7px;
 }
 @media only screen and (max-width: 700px) {
     .navbar-div-img-2 {
-        height: 22px;
+        height: 37px;
     }
 
     .navbar-div-img-1 {
