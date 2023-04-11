@@ -8,7 +8,7 @@ export const BoxInformacoes = () => {
 
         <div className="container-informacoes">
             <div className="BoxInformacoes-div" >
-                <span style={{width: '320px',height: '479px'}}>
+                <span className='span-informacoes-page'>
                 <ButtonAbout/>
                 </span>
                 <Img360/>
