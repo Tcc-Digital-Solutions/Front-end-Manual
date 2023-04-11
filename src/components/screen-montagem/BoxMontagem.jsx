@@ -59,11 +59,11 @@ export const BoxMontagem = () => {
                                     direction={'vertical'}
                                     spaceBetween={30}
                                     slidesPerView={slip}
-                                    loop={true}
+                                    loop={false}
                                     loopFillGroupWithBlank={true}
                                     navigation={true}
                                     modules={[Autoplay,Pagination, Navigation, A11y]}
-                                    className="mySwiper"
+                                    className="swiper-montagem"
                                    
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
