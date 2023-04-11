@@ -28,4 +28,8 @@
         font-size: 17px;
         margin: 10px;
     }
+    .card-interno{
+        width: 179px;
+    height: 160px;
+    }
 }
