@@ -1,5 +1,4 @@
 import {Swiper, SwiperSlide } from "swiper/react";
-
 import { Autoplay, Pagination, Navigation,Scrollbar, A11y } from "swiper";
 import '../../assets/css/css-informacoes/Carouselinformacoes.css'
 import "swiper/css";
@@ -8,6 +7,7 @@ import "swiper/css/navigation";
 import 'swiper/css/scrollbar';
 import CardInformacoes from './CardInformacoes';
 import React, { useEffect, useState } from 'react';
+import { Speaker } from "../universal/Speaker";
 
 
 export const Carouselinformacoes = (props) => {

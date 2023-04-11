@@ -2,6 +2,7 @@
     height: 100%;
     width: 100%;
     margin-top: 70px;
+    position: fixed;
 }
 
 .box-manual-cadastrados-span{
@@ -225,9 +226,20 @@
 #imgUpload::-webkit-file-upload-button {
     visibility: hidden;
   }
-  #imgUpload::before {
-    content: 'Clique e selecione as imagens';
-    padding: 5px 8px;
-    outline: none;
-    font-size: 10pt;
+  #imgPdf::-webkit-file-upload-button {
+    visibility: hidden;
   }
+#imgUpload::before {
+/* content: 'Clique e selecione as imagens'; */
+padding: 5px 8px;
+outline: none;
+font-size: 10pt;
+}
+
+#imgPdf::before {
+/* content: 'Clique e carregue seu pdf'; */
+padding: 5px 8px;
+outline: none;
+font-size: 10pt;
+}
+

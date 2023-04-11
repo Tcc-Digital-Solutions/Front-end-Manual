@@ -1,12 +1,12 @@
 .box-youtube-div {
-    width: 215px;
-    height: 119px;
-    margin-top: 17px;
+    width: 330px;
+    height: 177px;
+    margin-top: 73px;
 }
 
 iframe {
-    width: 215px;
-    height: 119px;
+    width: 329px;
+    height: 198px;
 }
 
 ::-webkit-scrollbar {

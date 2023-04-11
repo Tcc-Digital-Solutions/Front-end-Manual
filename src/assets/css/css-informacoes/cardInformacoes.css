@@ -10,6 +10,9 @@
     align-items: center;
     border: 20px solid #dadada ;
 }
+.img-icones{
+    width: 30px;
+}
 
 .card-texto{
     font-size: 19px;

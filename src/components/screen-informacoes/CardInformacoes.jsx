@@ -1,14 +1,10 @@
 
 import React, { Component } from 'react';
 import '../../assets/css/css-informacoes/cardInformacoes.css';
-import { FaLightbulb } from 'react-icons/fa';
-import {BsBatteryCharging} from 'react-icons/bs'
-import {FiSettings} from 'react-icons/fi'
-import {TbCertificate} from 'react-icons/tb';
 import imgbateria from '../../assets/img/img-bateria.png';
-import imglampada from '../../assets/img/img-lampada.png';
-import imgarantia from '../../assets/img/img-garantia.png';
-import imgalerta from '../../assets/img/img-alerta.png';
+import imglampada from '../../assets/img/lightbulb.svg';
+import imgarantia from '../../assets/img/warranty.svg';
+import imgalerta from '../../assets/img/alert-error.svg';
 
 
 function CardInformacoes({texto, icone}) {
@@ -16,18 +12,15 @@ function CardInformacoes({texto, icone}) {
         <>
         
             <div className='card-interno'>
-    
                     <p className='card-texto'>{texto}</p>
 
                     <i className='img-icones'>
                     {
-                         icone == 'bateria' ? <img src={imgbateria} /> : icone == 'lampada' ? <img src={imglampada} /> : icone == 'garantia' ? <img src={imgarantia}/> :  <img src={imgalerta}/>
+                         icone == 'bateria' ? <img src={imgbateria} style={{width:'30px'}}  /> : icone == 'lampada' ? <img src={imglampada} style={{width:'30px'}}/> : icone == 'garantia' ? <img src={imgarantia} style={{width:'30px'}}/> :  <img src={imgalerta} style={{width:'30px'}}/>
                         
-
                     }
                     </i>
-                    </div>               
-            
+             </div>               
         </>
      );
 }
