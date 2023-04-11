@@ -38,7 +38,7 @@ export const Carouselinformacoes = (props) => {
                     }}
                     
                     modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
-                    className="myswiper"
+                    className="swiper-info"
                 >
                     <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Bivolt 127v-220v. Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
                     <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} icone={'lampada'} /></SwiperSlide>
@@ -53,11 +53,11 @@ export const Carouselinformacoes = (props) => {
                     spaceBetween={0}
                     slidesPerView={1}
 
-                    loop={true}
+                    loop={false}
                     loopFillGroupWithBlank={true}
                     navigation={true}
                     modules={[Autoplay,Pagination, Navigation, Scrollbar, A11y]}
-                    className="mySwiper"
+                    className="swiper-info"
 
 
                     onSwiper={(swiper) => console.log(swiper)}

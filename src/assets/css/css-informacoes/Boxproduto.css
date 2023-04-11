@@ -32,10 +32,7 @@
 }
 
 @media only screen and (max-width: 1300px) {
-    .boxproduto-div{
-        width: 301px;
-        height: 364px;
-    }
+
     .boxproduto-text{
         font-size: 16px;
     }
@@ -43,6 +40,12 @@
 
 @media only screen and (max-width: 1200px) {
     .boxproduto-div {
-        display: none;
+        width: 329px;
+        height: 100%;
+        border: 1px solid #3261A8;
+        border-radius: 10px;
+        margin-top: 15px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
 }
