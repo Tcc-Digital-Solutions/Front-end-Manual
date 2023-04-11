@@ -104,16 +104,17 @@
     .ButtonExperience-div {
       position: fixed;
       width: 100%;
-      top: 83%;
+      top: 62%;
       left: 0px;
       display: flex;
       flex-direction: row;
       justify-content: center;
+  
     }
   
     .ButtonExperience-box {
-      /* width: 348px; */
-      width: 65%;
+      width: 90%;
+      margin-top: 100%;
     }
   
   

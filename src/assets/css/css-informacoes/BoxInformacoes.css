@@ -15,12 +15,23 @@
 
 }
 
-
+.span-informacoes-page{
+    width: 320px;
+    height: 479px;
+    z-index: 189;
+}
 @media only screen and (max-width: 1200px) {
     .BoxInformacoes-div {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 84%;
+    }
+    .span-informacoes-page{
+        position: absolute;
+        width: 320px;
+        height: 479px;
+        margin-top: 227px;
+        margin-right: 680px;
     }
 }
