@@ -10,7 +10,7 @@ import imgalerta from '../../assets/img/alert-error.svg';
 function CardInformacoes({texto, icone}) {
     return ( 
         <>
-        <div className='card-externo'>
+        
             <div className='card-interno'>
                     <p className='card-texto'>{texto}</p>
 
@@ -20,8 +20,7 @@ function CardInformacoes({texto, icone}) {
                         
                     }
                     </i>
-            </div>               
-        </div>
+             </div>               
         </>
      );
 }
