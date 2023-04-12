@@ -29,6 +29,13 @@ export const Navbar = (props) => {
                         <AltoContraste/>
                         <Translate />                        
                     </span>
+                    <span className='navbar-buttons-comus-1'>
+                        <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
+                            <ButtonLogoff />
+                        </span>                        
+                        <AltoContraste/>
+                        <Translate />                        
+                    </span>
                 </div>
             </div>
         </div>
