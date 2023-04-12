@@ -52,13 +52,13 @@
 
 
 @media only screen and (min-width: 1201px)  and (max-width:1280px){ /*Fazer as setas mudarem para cima e para baixo  */
- .swiper-button-prev {       
+
+ .swiper-info .swiper-button-prev {       
     left: 50% !important;
     top: 0.5% !important;
     transform: rotate(90deg);
     transform-origin: left center;
     color: black;
-    position: absolute;
   }
   .swiper-info .swiper-button-next{
     left: 50% !important;
@@ -67,11 +67,8 @@
     transform-origin: left center;
     top:auto;
     color: black;
-    position: absolute;
   }
 }
-
-@media only screen and (min-width: 1201px) { /*Fazer as setas mudarem para cima e para baixo  */
 
   .Carousel-informacoes-div{
     border-radius: 25px;
@@ -134,4 +131,5 @@
     }
     
 }
+
 

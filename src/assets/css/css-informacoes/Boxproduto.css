@@ -1,5 +1,5 @@
 .boxproduto-div{
-    width: 424px;
+    width: 410px;
     height: 268px;
     border: 1px solid  #3261A8;
     border-radius:10px;
@@ -29,6 +29,7 @@
     font-family: var(--fonte);
     font-size: 19px;
     margin-top: 21px;
+    margin-right: 12px;
 }
 
 @media only screen and (max-width: 1300px) {

@@ -14,7 +14,7 @@ export const ButtonAbout = () => {
 
     return (
         <div className="ButtonAbout-div" >
-            <button className='ButtonAbout-button' onClick={() => setMenuVisible()}><img src={about} alt="" /></button>
+            <button className='ButtonAbout-button' onClick={() => setMenuVisible()}><img src={about} alt="" width={30} /></button>
             <span className={visible}>
                 <Boxproduto/>
             </span>
