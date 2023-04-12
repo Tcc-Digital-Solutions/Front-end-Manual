@@ -72,7 +72,6 @@
 
   .Carousel-informacoes-div{
     border-radius: 25px;
-    padding: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,7 +128,8 @@
         top: auto;
         color: black;
     }
-
+    
 }
+
 
 
