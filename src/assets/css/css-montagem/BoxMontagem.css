@@ -151,7 +151,6 @@
     .img-fixa-montagem-div {
         height: 357px;
     }
-
 }
 
 @media  screen and (max-height: 850px) {
@@ -194,7 +193,6 @@
         object-fit: contain;
         height: auto;
         height: 190px;
-    
     }
 
     .img-principal-div {
