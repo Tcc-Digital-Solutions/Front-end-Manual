@@ -144,13 +144,46 @@
     color: black;
 }
 
-@media only screen and (max-width: 1552px) {
+@media only screen and (max-width: 1400px) {
+
+    
     .img-principal-div {
-        display: none ;
+        border-radius: 10px;
+        border: 3.5px solid #3261A8;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
+    .img-principal {
+        width: 280px;
+        height: 220px;
+        cursor: pointer;
+    
+    }
+    
     .img-fixa-montagem-div {
-        height: 357px;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
     }
+    
+    .img-fixa-montagem {
+        width: 100%;
+        height: 100%;
+        /* box-shadow: rgba(0, 0, 0, 0.356) 0px 7px 29px 0px; */
+    
+    }
+
+    .swiper-vertical>.swiper-wrapper {
+        flex-direction: column !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+
 }
 
 @media  screen and (max-height: 850px) {
@@ -212,12 +245,13 @@
         height: 226px;
         align-items: center;
         flex-direction: row;
+        margin-bottom: 20px;
     }
 
-    .img-fixa-montagem {
+    /* .img-fixa-montagem {
         width: 100%;
         height: 303px;
-    }
+    } */
 
     .box-imgs-montagem-div {
         width: 100%;
@@ -230,6 +264,7 @@
         flex-direction: row;
         justify-content: space-around;
         width: 95%;
+   
     }
 
     .swiper-vertical>.swiper-wrapper {
@@ -252,7 +287,8 @@
     }
 
     .img-fixa-montagem {
-        height: 401px;
+        margin-top: 60px ;
+        height: 380px;
     }
 
 
@@ -261,12 +297,19 @@
         height: 180px;
         cursor: pointer;
     }
-
+    .swiper-button-next:after, .swiper-button-prev:after{
+        color: black;
+    }
 }
 
 @media only screen and (max-width: 500px) {
+    .img-fixa-montagem-div {
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
     .img-fixa-montagem {
-        height: 100%;
+        height: 350px;
     }
 }
 
