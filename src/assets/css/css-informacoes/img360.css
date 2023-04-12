@@ -57,6 +57,15 @@
     }
 }
 
+/* @media only screen and (max-width: 500px){
+.img360-iframe {
+    height: 375px;
+    min-width: 277px;
+    margin: 0;
+}
+
+} */
+
 
 @media only screen and (max-width: 500px) {
     .img360-div {
