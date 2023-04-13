@@ -19,7 +19,7 @@ export const BoxMontagem = () => {
     const [imagemMaximizada, setImagemMaximizada] = useState(ImgFixaMontagem)
     const { innerWidth: width, innerHeight: height } = window;
     const [classd,setClassd] = useState('direction-div')
-    const [slip, setSlip] = useState(3)
+    const [slip, setSlip] = useState(2)
     const [swip, setSwip] = useState(1)
     console.log(innerHeight)
 

@@ -68,11 +68,10 @@
     top:auto;
     color: black;
   }
-}
+
 
   .Carousel-informacoes-div{
     border-radius: 25px;
-    padding: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,7 +92,7 @@
         padding: 0;
         height: 226px;
         align-items: center;
-        flex-direction: row;
+        flex-direction: row !important;
     }
     .Carousel-informacoes-01{
         display: none;
@@ -115,7 +114,7 @@
 
 
     .swiper-info .swiper-button-prev {
-        left: 6% !important;
+        left: 6% !important
         top: 47.5% !important;
         transform: rotate(1deg);
         transform-origin: left center;
@@ -123,13 +122,14 @@
     }
     .swiper-info .swiper-button-next {
         left: 90% !important;
-        bottom: 37.9% !important;
+        bottom: 37.8% !important;
         transform: rotate(1deg);
         transform-origin: left center;
         top: auto;
         color: black;
     }
-
+    
 }
+
 
 
