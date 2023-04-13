@@ -4,9 +4,13 @@
 }
 .translate-div{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     margin-left: 11px;
+}
+
+.translate-div-separet{
+    display: flex;
 }
 
 .translate-box{

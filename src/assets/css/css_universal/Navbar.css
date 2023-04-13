@@ -50,6 +50,9 @@
     justify-content: space-between;
     height: 36px;
 }
+.navbar-buttons-comus-1{
+    display: none;
+}
 
 .navbar-div-button-logof {
     width: 110px;
@@ -93,5 +96,14 @@
     .navbar-div-img-1 {
         width: 100%;
         height: 7px;
+    }
+    .navbar-buttons-comus{
+        display: none;
+    }
+    .navbar-buttons-comus-1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: space-between;
     }
 }

@@ -53,7 +53,7 @@
     border: solid 1px;
     height: 24%;
     position: fixed;
-    margin-top: 625px;
+    margin-top: 31%;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -104,7 +104,7 @@
     .ButtonExperience-div {
       position: fixed;
       width: 100%;
-      top: 62%;
+      top: 60%;
       left: 0px;
       display: flex;
       flex-direction: row;
