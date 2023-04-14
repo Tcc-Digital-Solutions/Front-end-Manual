@@ -39,9 +39,12 @@
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 420px) {
+    .ButtonAbout-box {
+        width: 97%;
+    }
     .boxproduto-div {
-        width: 329px;
+        width: 100%;
         height: 100%;
         border: 1px solid #3261A8;
         border-radius: 10px;
