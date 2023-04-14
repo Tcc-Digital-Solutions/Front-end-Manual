@@ -10,7 +10,7 @@ export const BoxInformacoes = () => {
             <div className="BoxInformacoes-div" >
                 <span className='span-informacoes-page'>
                 <ButtonAbout/>
-                </span>
+                </span>  
                 <Img360/>
                 <Carouselinformacoes/>
             </div>

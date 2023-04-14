@@ -1,9 +1,8 @@
 
 .AltoContraste-div{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-left: 11px;
+    flex-direction: row;
 }
 
 .AltoContraste-box{
@@ -33,4 +32,19 @@ transition-duration: .35s;
 .AltoContraste-button:active {
 transform: translateY(2px);
 transition-duration: .35s;
+}
+
+
+@media only screen and (max-width: 700px){
+    .AltoContraste-div {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    .AltoContraste-box{
+        height: 38px;
+        width: 172px;
+        position: absolute;
+        margin-top: 71px;
+    }
 }

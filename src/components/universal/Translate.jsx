@@ -4,9 +4,11 @@ import translateImg from '../../assets/img/chat-language.svg'
 import {  useState } from 'react';
 import Select from 'react-select'
 import { Speaker } from './Speaker';
+import { AltoContraste } from './AltoContraste';
 
 export const Translate = () => {
     const [selectedOption, setSelectedOption] = useState('pt-PT');
+    const [state,setState] = useState(false)
     const [visible, setVisible] = useState("translate-box-fechar")
     const [pressed, setPressed] = useState(false)
 
@@ -23,14 +25,20 @@ export const Translate = () => {
     ]
 
     const setMenuVisible = () => {
-        pressed ? setVisible("translate-box-fechar") : setVisible("translate-box")
+        pressed ? setVisible("translate-box-fechar") : setVisible("translate-box") ,setState(true)
         setPressed(!pressed)
+        teste()
     }
-    
+    const teste = () =>{
+        if (setVisible == "translate-box-fechar"){
+        setState(false)
+      }
+    }
 
     return (
         <div className="translate-div">
             <Speaker value={selectedOption.value}></Speaker>
+            <AltoContraste/>
             <span className="translate-div-separet">
                 <span className={visible}>
                     <Select placeholder='Linguagem'

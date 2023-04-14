@@ -5,8 +5,9 @@ import '../../assets/css/css_universal/Speaker.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export function Speaker({children, value}){
-    const notify = () => toast.info('Reproduzindo áudio', {
+export function Speaker({children,text, value}){
+    const artyom = new Artyom();
+    const notifyInfo = () => toast.info('Reproduzindo áudio', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -15,11 +16,22 @@ export function Speaker({children, value}){
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+    });
+    
+    const notifyError = () => toast.error('Error Nenhum text Selecionado', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    });
     
     function initializerSpeaker(){
-        const artyom = new Artyom();
-        console.log(value);
+        if(value === undefined)
+            value = "pt-PT"
         setTimeout(()=>{
             artyom.initialize({
                 lang: value,
@@ -32,17 +44,29 @@ export function Speaker({children, value}){
                 console.error("Artyom couldn't be initialized: ", err);
             });
             setTimeout(()=>{
-                const selection = window.getSelection().toString().trim();
-                speak(artyom, selection);
+                var selection = window.getSelection().toString().trim();
+                console.log(selection)
+                if((text === "" || text === undefined) && selection === ""){
+                    notifyError()
+                }
+                if((text === "" || text === undefined) && selection !== ""){
+                    text = selection
+                    notifyInfo()
+                }
+                console.log(text);
+                speak(artyom,text);
+                selection = ""
+                text = ""
             }, 250);
         }, 250);
     }
     
     function speak(speaker, value){
-        notify()
         console.log(speaker);
         console.log(value);
-        speaker.say(value);
+        speaker.say(value,{
+            onEnd: speaker.shutUp()
+        });
     }
     return(
         <>
@@ -52,7 +76,7 @@ export function Speaker({children, value}){
             </div>
             <div className="div-audio">
                 <button className="button-audio" alt="Clique para escutar" onClick={initializerSpeaker}>
-                    <img src={SoundSpeak} style={{width:'30px'}} ></img>
+                    <img src={SoundSpeak} style={{width:'30px'}}  onClick={initializerSpeaker}  ></img>
                 </button>
             </div>
         </>

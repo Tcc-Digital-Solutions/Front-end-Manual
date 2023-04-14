@@ -5,13 +5,16 @@
 .translate-div{
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    margin-left: 11px;
+    align-items: flex-start;
 }
 
 .translate-div-separet{
     display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
+
 
 .translate-box{
     height: 38px;
@@ -46,4 +49,24 @@
   .translate-button:active {
     transform: translateY(2px);
     transition-duration: .35s;
+  }
+
+
+  @media only screen and (max-width: 700px){
+    
+    .translate-box .css-b62m3t-container {
+        width: 204px !important;
+    }
+    .translate-div-separet{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .translate-box{
+        height: 38px;
+        width: 212px;
+        position: absolute;
+        margin-top: 71px;
+    }
   }
