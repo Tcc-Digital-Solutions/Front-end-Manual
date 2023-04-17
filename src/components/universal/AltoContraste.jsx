@@ -3,9 +3,11 @@ import imgsunMoon from '../../assets/img/sun-moon.svg'
 import { useState } from 'react';
 
 
-export const AltoContraste = () => {
+export const AltoContraste = (props) => {
     const [visible, setVisible] = useState("AltoContraste-box-fechar")
     const [pressed, setPressed] = useState(false)
+
+    console.log(props.text)
 
 
     const setMenuVisible = () => {

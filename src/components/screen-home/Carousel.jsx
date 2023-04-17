@@ -20,10 +20,6 @@ export const Carousel = (props) => {
                     direction="horizontal"
                     loop={true}
                     loopFillGroupWithBlank={true}
-                    // autoplay={{
-                    //     delay: 4000,
-                    //     disableOnInteraction: false,
-                    // }}
                     navigation={true}
                     modules={[Autoplay,Pagination, Navigation]}
                     className="swiper-home"

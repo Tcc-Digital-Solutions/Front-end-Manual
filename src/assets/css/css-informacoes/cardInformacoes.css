@@ -60,3 +60,15 @@
             margin: 10px;
         }
     }
+
+
+    @media only screen and (max-width: 380px){
+        .card-interno {
+            width: 150px;
+            height: 92px;
+        }
+        .card-texto {
+            font-size: 10px;
+        }
+    }
+    

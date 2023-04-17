@@ -48,9 +48,8 @@
     font-family: var(--fonte);
   }
   .ButtonExperience-box {
-    background-color: #dedede;
+    background-color: var(--cor-menu-ilha);
     width: 367px;
-    border: solid 1px;
     height: 24%;
     position: fixed;
     margin-top: 31%;
@@ -104,7 +103,7 @@
     .ButtonExperience-div {
       position: fixed;
       width: 100%;
-      top: 60%;
+      top: 63%;
       left: 0px;
       display: flex;
       flex-direction: row;
@@ -120,8 +119,8 @@
   
   }
   
-  @media only screen and (max-width: 320px){
+  @media only screen and (max-width: 380px){
     .ButtonExperience-div{
-      top: 78%;
+      top: 60%;
     }
   }

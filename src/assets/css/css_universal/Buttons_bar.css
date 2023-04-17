@@ -6,7 +6,7 @@
   position: fixed;
   top: initial;
   bottom: 0;
-  z-index: 1;
+  z-index: 102;
 }
 
 .buttons-bar-ilha {
@@ -86,7 +86,7 @@
   }
 
   .buttons-bar-click {
-    width: 120px;
+    width: 107px;
     height: 39px;
     display: flex;
     flex-direction: row;
@@ -99,10 +99,7 @@
     width: 23px;
   }
 
-  /* 
-  .buttons-bar-ilha-button-acessibilidade {
-    display: none;
-  } */
+
 }
 
 @media only screen and (max-width: 320px){
