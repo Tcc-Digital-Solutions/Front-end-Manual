@@ -9,7 +9,7 @@ class Informaçoes extends Component {
     render() {
         return (
             <>
-                <Navbar />
+                <Navbar visible='button-menu-box-fechar'  />
                 <BoxInformacoes />
                 <ButtonsBar />
                 <ButtonExperience/>
