@@ -8,6 +8,9 @@
 .AltoContraste-box{
     height: 38px;
     width: 172px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .AltoContraste-box-fechar{
     display: none;
