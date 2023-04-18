@@ -4,7 +4,7 @@ import {useEffect, useState } from 'react'
 import fecharImg from '../../assets/img/close.svg'
 import menuImg from '../../assets/img/list-view-mobile.svg'
 import lupa from '../../assets/img/search.svg'
-import { Carousel } from './Carousel'
+import {Carousel} from './Carousel'
 
 
 export const NavbarHome = (props) => {
@@ -148,7 +148,7 @@ export const NavbarHome = (props) => {
                 </ul>
             </span>
             <span className={visibleBox}>
-                {/* <Carousel/> */}
+                <Carousel/>
             </span>
         </div>
     )
