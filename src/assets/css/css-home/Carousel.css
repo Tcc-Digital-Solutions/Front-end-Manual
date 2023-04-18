@@ -6,31 +6,16 @@
     margin-top: 61px;
 }
 
-.swiper-slide-card{
-    /* width: 100% !important; */
-}
 
 .Carousel_react-01{
     display: none;
 }
 
-.swiper-home .swiper-button-prev {       
-    left: 50% !important;
-    top: 0.5% !important;
-    transform: rotate(90deg);
-    transform-origin: left center;
-    color: black;
-  }
-  .swiper-home .swiper-button-next{
-    left: 50% !important;
-    bottom: 0.5% !important;
-    transform: rotate(90deg);
-    transform-origin: left center;
-    top:auto;
-    color: black;
-  }
+.swiper {
+  height: 70vh !important;
+}
 
-  @media only screen and (min-width: 1201px) { /*Fazer as setas mudarem para cima e para baixo  */
+  @media only screen and (min-width: 1250px) { /*Fazer as setas mudarem para cima e para baixo  */
 
     .swiper-home .swiper-button-prev {       
        left: 3% !important;
