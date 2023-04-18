@@ -8,7 +8,7 @@ class Montagem extends Component {
     render() {
         return (
             <>
-                <Navbar  visible='button-menu-box-fechar' />
+                <Navbar  visible='button-menu-box-fechar' search='button-menu-box-fechar' />
                 <BoxMontagem />
                 <ButtonsBar />
             </>

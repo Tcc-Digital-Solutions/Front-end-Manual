@@ -1,39 +1,93 @@
+.navbarsearch-button{
+    display: none;
+}
 .navbarsearch-div{
-    width: 329px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    position: absolute;
-    top: 37px;
-    left: 228px;
 }
-.navbarsearch-button{
-    background-color: #ffffff00;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    width: 52px;
-    height: 36px;
-}
-.navbarsearch-button:hover{
-    opacity: 1;
-    transform: translateY(0);
-    transition-duration: .35s;
-}
+
 .navbarsearch-span{
     display: flex;
     border-bottom: 1px solid #000;
+    position: absolute;
+    top: 37px;
+    left: 228px;
 
 }
+
 
 .navbarsearch-input{
     width: 258px;
     border: 0;
     font-family: var(--fonte);
     font-size: 18px;
+    background: #f0f8ff00;
 }
 
+.navbarsearch-span-fechar {
+    opacity: 0;
+    transition: all .3s linear;
+    display: flex;
+    position: absolute;
+    top: -90px;
+    left: 0;
+    height: 44px;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.navbarsearch-button:hover{
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+@media only screen and (max-width: 1000px) {
+    .navbarsearch-button .navbarsearch-span:active{
+        opacity: 1;
+        transform: translateY(100%);
+        pointer-events: auto;
+        transition: all .3s linear;
+    }
+    .navbarsearch-button{
+        background-color: #ffffff00;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        width: 52px;
+        height: 36px;
+    }
+    .navbarsearch-span {
+        opacity: 1;
+        transform: translateY(100%);
+        pointer-events: auto;
+        transition: all .3s linear;
+        background-color: white;
+        display: flex;
+        border-bottom: 1px solid #000;
+        position: absolute;
+        top: 71px;
+        left: 0;
+        height: 44px;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .box-categoria-div {
+        display: flex;
+    }
+    .translate-div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    input.navbarsearch-input {
+        font-size: 14px;
+    }
+
+}
