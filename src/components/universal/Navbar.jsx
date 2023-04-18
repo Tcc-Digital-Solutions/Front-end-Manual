@@ -31,7 +31,7 @@ export const Navbar = (props) => {
                         </span>  
                         <Translate /> 
                         <div className={props.menu ? 'active-home' : 'no-active-home'}>
-                            <NavbarHome visible={props.visible} box={props.box} menu={props.menuTrue}/>
+                            <NavbarHome visible={props.visible} box={props.box} menu={props.menuTrue} search={props.search} />
                         </div>                                               
                     </span>
                    

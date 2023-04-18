@@ -9,7 +9,7 @@ class Manual extends Component {
     render() {
         return (
             <>
-                <Navbar visible='button-menu-box-fechar'/>
+                <Navbar visible='button-menu-box-fechar' search='button-menu-box-fechar'/>
                 <BoxManual/>
                 <ButtonsBar />
                 <ButtonYoutube />
