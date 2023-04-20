@@ -48,13 +48,12 @@ export const NavbarHome = (props) => {
                 setVisibleButtonX('button-youtube-button-x')
             }            
         }
-    })
+    },[])
     const [categoria, setCategoria] = useState(1)
 
     const exibirProdutos = (categoria) => {
         setCategoria(categoria)
     }
-    },[])
     
     
     const handleMouseOver = (props) => {
