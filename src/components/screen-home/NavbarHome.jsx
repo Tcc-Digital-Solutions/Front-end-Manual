@@ -2,8 +2,7 @@ import '../../assets/css/css-home/NavbarHome.css'
 import '../../assets/css/css_universal/Navbarsearch.css'
 import {useEffect, useState } from 'react'
 import fecharImg from '../../assets/img/close.svg'
-import menuImg from '../../assets/img/menu-aberto.png'
-import { Navbarsearch } from '../universal/Navbarsearch';
+import menuImg from '../../assets/img/list-view-mobile.svg'
 import lupa from '../../assets/img/search.svg'
 import { Carousel } from './Carousel'
 import { BoxCategoria } from './BoxCategoria'
@@ -18,32 +17,45 @@ export const NavbarHome = (props) => {
 
     const { innerWidth: width, innerHeight: height } = window;
     const [visible, setVisible] = useState(props.visible)
+    const [visibleSearch, setVisibleSearch] = useState('navbarsearch-span')
+    const [visibleIMG, setVisibleIMG] = useState(lupa)
     const [visibleBox, setVisibleBox] = useState(props.box)
     const [visibleButton, setVisibleButton] = useState("button-menu-click-hide")
     const [visibleButtonX, setVisibleButtonX] = useState("button-youtube-button-x-hide")
     const [pressed, setPressed] = useState(false)
+    const [pressed2, setPressed2] = useState(false)
 
     const setMenuVisible = () => {
         pressed ? setVisible("button-menu-box-fechar") : setVisible("button-menu-box")
         setPressed(!pressed)
     }
 
+    const setMenuVisibleSearch = () => {
+        pressed2 ? setVisibleSearch("navbarsearch-span-fechar") : setVisibleSearch("navbarsearch-span") 
+        setPressed2(!pressed2),setWidth()
+    }
+
+    const setWidth = () =>{
+        pressed2 ? setVisibleIMG(lupa) : setVisibleIMG(fecharImg)  
+    }
 
     useEffect(() => {
         if (props.menu == 'true'){
             if (innerWidth < 1000){
+                setVisibleSearch('navbarsearch-span-fechar')
+                setVisible('button-menu-box-fechar')
                 setVisibleButton('button-menu-click')
                 setVisibleButtonX('button-youtube-button-x')
-                console.log(innerWidth)
             }            
         }
-    })
+    },[])
     const [categoria, setCategoria] = useState(1)
 
     const exibirProdutos = (categoria) => {
         setCategoria(categoria)
     }
-
+    
+    
     const handleMouseOver = (props) => {
         if (props == 1){
             setIsHoverring_1(true);
@@ -85,12 +97,13 @@ export const NavbarHome = (props) => {
     };
     return (
         <div className="box-categoria-div" >
-            {/* <div className="navbarsearch-div" >
-                <button className='navbarsearch-button'> <img  src={lupa} style={{ width:'30px'}} alt="" /></button>
-                <span  className='navbarsearch-span'>
+            <div className={props.search} >
+                <button className='navbarsearch-button' onClick={() => setMenuVisibleSearch( () => setWidth()) }> <img  src={visibleIMG} style={{ width:'24px'}} alt="" /></button>
+                <span  className={visibleSearch}>
                     <input className='navbarsearch-input' type="text" placeholder='O que você esta buscando ?'  />
+                    <img  src={lupa} style={{ width:'20px'}} alt="" />
                 </span>
-            </div> */}
+            </div>
             <button className={visibleButton} onClick={() => setMenuVisible()}><img className="button-menu-img" src={menuImg} alt="" /></button>
             <span className={visible}>
             <button className={visibleButtonX} id='button-lado' onClick={() => setMenuVisible()}><img className="button-youtube-button-x-img" src={fecharImg} alt="" /></button>
@@ -339,7 +352,7 @@ export const NavbarHome = (props) => {
                 </ul>
             </span>
             <span className={visibleBox}>
-                {/* <Carousel/> */}
+                <Carousel/>
             </span>
         </div>
     )
