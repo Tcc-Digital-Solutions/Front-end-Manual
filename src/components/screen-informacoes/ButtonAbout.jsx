@@ -14,7 +14,7 @@ export const ButtonAbout = () => {
     }
 
     useEffect(() => {
-        if (innerHeight < 1000){
+        if (innerWidth < 1151){
             setVisible('ButtonAbout-box-fechar')
         }
     },[])

@@ -56,6 +56,11 @@
 
 
 @media only screen and (max-width: 500px) {
+    .img360-iframe {
+        height: 325px;
+        min-width: 100px;
+        margin: 0;
+    }
     .img360-div {
         width: 85%;
         z-index: 100;

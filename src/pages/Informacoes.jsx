@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BoxInformacoes } from '../components/screen-informacoes/BoxInformacoes';
-import { ButtonsBar } from '../components/universal/ButtonsBar';
 import { Navbar } from '../components/universal/Navbar';
+import { ButtonsBar } from '../components/universal/ButtonsBar'
+
 
 class Informaçoes extends Component {
     state = {}
@@ -10,7 +11,7 @@ class Informaçoes extends Component {
             <>
                 <Navbar visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar' />
                 <BoxInformacoes />
-                <ButtonsBar />
+                <ButtonsBar/>
             </>
         );
     }
