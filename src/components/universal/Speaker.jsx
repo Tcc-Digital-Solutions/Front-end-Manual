@@ -29,7 +29,7 @@ export function Speaker({children,text, value}){
         theme: "light",
     });
     
-    function initializerSpeaker(){
+    const initializerSpeaker = () =>{
         if(value === undefined)
             value = "pt-PT"
         setTimeout(()=>{
@@ -76,7 +76,7 @@ export function Speaker({children,text, value}){
             </div>
             <div className="div-audio">
                 <button className="button-audio" alt="Clique para escutar" onClick={initializerSpeaker}>
-                    <img src={SoundSpeak} style={{width:'30px'}}  onClick={initializerSpeaker}  ></img>
+                    <img src={SoundSpeak} style={{width:'30px'}} />
                 </button>
             </div>
         </>
