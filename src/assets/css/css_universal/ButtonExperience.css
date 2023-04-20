@@ -1,8 +1,8 @@
 .ButtonExperience-div {
     position: fixed;
-    top: 91%;
+    top: 86%;
     left: 4%;
-    z-index: 105;
+    z-index: 200;
   }
   
   .ButtonExperience-button {
@@ -50,9 +50,9 @@
   .ButtonExperience-box {
     background-color: var(--cor-menu-ilha);
     width: 367px;
-    height: 24%;
+    height: 170px;
     position: fixed;
-    margin-top: 31%;
+    margin-top: 456px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -99,11 +99,14 @@
     justify-content: space-evenly;
   }
   
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 1151px) {
+    .ButtonExperience-div{
+      z-index: 105;
+    }
     .ButtonExperience-div {
       position: fixed;
       width: 100%;
-      top: 63%;
+      top: 59%;
       left: 0px;
       display: flex;
       flex-direction: row;
