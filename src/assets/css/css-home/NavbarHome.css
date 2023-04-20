@@ -43,15 +43,51 @@
 .button-youtube-button-x-hide{
     display: none;
 }
+.box-menu{
+
+    display: flex;
+}
+
+.box-menu ul{
+    list-style: none;
+    background: #3261a8;
+    color: #fff;
+    margin: 0;
+    padding: 0px;
+    cursor: pointer;
+    width: 250px;
+}
+
+.box-menu ul :hover{
+    list-style: none;
+    background: #18478d;
+    color: #fff;
+
+}
+
+
+.box-menu ul li{
+    padding: 30px ;
+    margin: 0px;
+
+}
 
 .box-produtos{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    /* width: 300px; */
+
+}
+
+/* .box-produtos{
     position: fixed;
     width: 100%;
     height: 100%;
     top: 158px;
     right: 0;
     z-index: 100;
-}
+} */
 
 .box-categoria-ul {
     display: flex;
@@ -62,7 +98,9 @@
     list-style: none;
     padding: 0;
 }
-
+.box-categoria-li{
+    position: relative;
+}
 button.box-categoria-button {
     width: 162px;
     height: 52px;
@@ -73,6 +111,7 @@ button.box-categoria-button {
     display: none;
 }
 .box-categoria-menu{
+    position: relative;
     display: flex;
     height: 57px;
     flex-direction: column;
@@ -80,18 +119,30 @@ button.box-categoria-button {
     cursor: pointer;
     align-items: center;
 }
-.menu-button{
+/* .menu-button{
     width: 232px;
     height: 550px;
     background-color:  #4970A9;
     position: absolute;
     margin-top: 60px;
+} */
+.menu-button {
+    position: absolute;
+    left: -29%;
+    height: 180px;
+    margin-top: 58px;
+    padding-bottom: 20px;
+    background-color: #CCE6FF;
+    display: flex;
+    color: black;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-width: 500px;
+    /* width: 750px; */
+    align-items: stretch;
+    justify-content: space-between;
 }
 
-
-#box-categoria-menu-border:hover{
-    border-bottom: 3px solid #E20015;
-}
 
 
 @media only screen and (max-width: 1000px) {
