@@ -381,7 +381,7 @@ height: 135px;
 
 }
 
-@media only screen and (min-width: 375px) and (max-height:812px) {
+@media only screen and (max-width: 375px) and (max-height:812px) {
 
     .montagem-components {
     height: 520px;
@@ -398,11 +398,11 @@ height: 135px;
     @media only screen and (min-width: 360px) and (max-height:812px) {
 
         .montagem-components {
-        height: 400px;
+        height: 430px;
         }
         .img-fixa-montagem {
-        width: 230px;
-        height: 230px;
+        width: 250px;
+        height: 250px;
         }
         .swiper-slide .imgs-montagem {
         height: 135px;
@@ -609,8 +609,8 @@ height: 500px;
 
 @media only screen and (min-width:375px) and (max-height:790px) {
     .img-fixa-montagem {
-        width: 230px;
-        height: 230px;
+        width: 250px;
+        height: 250px;
     }
     .montagem-components {
         height: 450px;
