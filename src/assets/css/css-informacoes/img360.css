@@ -1,3 +1,4 @@
+/* TODO na responsividade alterar o min-width da classe abaixo */
 .img360-iframe {
     height: 483px;
     width: inherit;
@@ -6,6 +7,9 @@
 }
 
 .img360-div{
+    /* width: 500px;
+    height: 500px; */
+    /* margin-bottom:130px ; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -54,13 +58,7 @@
 }
 
 
-
 @media only screen and (max-width: 500px) {
-    .img360-iframe {
-        height: 325px;
-        min-width: 100px;
-        margin: 0;
-    }
     .img360-div {
         width: 85%;
         z-index: 100;
@@ -76,26 +74,3 @@
         margin: 0;
     }
 }
-@media only screen and (max-width: 380px){
-    .img360-iframe {
-        height: 267px;
-        min-width: 271px;
-    }
-    .img360-produto-name {
-        height: 27px;
-        font-size: 20px;
-    }
-}
-
-
-@media only screen and (max-width: 350px) {
-    .img360-iframe {
-        height: 346px;
-        min-width: 316px;
-    }
-    .img360-produto-name {
-        height: 36px;
-        font-size: 21px;
-    }
-}
-

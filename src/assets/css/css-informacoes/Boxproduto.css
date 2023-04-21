@@ -1,5 +1,5 @@
 .boxproduto-div{
-    width: 410px;
+    width: 424px;
     height: 268px;
     border: 1px solid  #3261A8;
     border-radius:10px;
@@ -29,7 +29,6 @@
     font-family: var(--fonte);
     font-size: 19px;
     margin-top: 21px;
-    margin-right: 12px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -39,12 +38,9 @@
     }
 }
 
-@media only screen and (max-width: 420px) {
-    .ButtonAbout-box {
-        width: 97%;
-    }
+@media only screen and (max-width: 1200px) {
     .boxproduto-div {
-        width: 100%;
+        width: 329px;
         height: 100%;
         border: 1px solid #3261A8;
         border-radius: 10px;
