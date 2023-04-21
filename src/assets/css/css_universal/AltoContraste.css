@@ -1,29 +1,29 @@
 
 .AltoContraste-div{
     display: flex;
-    align-items: center;
     flex-direction: row;
+    align-items: center;
+    margin-left: 11px;
 }
 
 .AltoContraste-box{
-    height: 38px;
+    height: 27px;
     width: 172px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 .AltoContraste-box-fechar{
     display: none;
 }
 .AltoContraste-button{
-    background-color: #ffffff00;
-    border-radius: 12px;
+    width: 46px !important;
+    height: 46px;
+    background-color: #ffffff;
+    border-radius: 28px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border: none;
-    cursor: pointer;
+
 }
 
 .AltoContraste-button:hover {
@@ -35,19 +35,4 @@ transition-duration: .35s;
 .AltoContraste-button:active {
 transform: translateY(2px);
 transition-duration: .35s;
-}
-
-
-@media only screen and (max-width: 700px){
-    .AltoContraste-div {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-end;
-    }
-    .AltoContraste-box{
-        height: 38px;
-        width: 172px;
-        position: absolute;
-        margin-top: 71px;
-    }
 }

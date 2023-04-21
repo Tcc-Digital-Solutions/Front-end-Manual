@@ -4,7 +4,6 @@
     height: 100%;
     align-items: center;
     position: fixed;
-    z-index: 999;
 }
 
 .BoxInformacoes-div {
@@ -17,7 +16,8 @@
 }
 
 .span-informacoes-page{
-    width: 400px;
+    width: 320px;
+    height: 479px;
     z-index: 189;
 }
 @media only screen and (max-width: 1200px) {
