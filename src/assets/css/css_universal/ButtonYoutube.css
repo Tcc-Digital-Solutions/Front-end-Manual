@@ -44,8 +44,9 @@
 }
 
 .button-youtube-box {
-  background-color: var(--cor-menu-ilha);
+  background-color: #dedede;
   width: 442px;
+  border: solid 1px;
   height: 77%;
   position: fixed;
   margin-top: 85px;

@@ -5,6 +5,7 @@
     height: 468px;
     border: 1px solid #4970A9;
     background-color: rgb(255, 255, 255);
+    background-color: var(--cor-bg);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -13,6 +14,8 @@
 
 .Cardproduto-div-text{
     width: 241px;
+    color: var(--cor-texto);
+    font-size: var(--tamanho-fonte2);
 }
 .Cardproduto-div-02{
     width: 100%;
@@ -56,6 +59,7 @@
         align-items: center;
         height: inherit;
         list-style: none;
+        width: 900px;
     }
 
     .Cardproduto-div{
