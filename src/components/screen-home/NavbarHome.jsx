@@ -1,118 +1,83 @@
 import '../../assets/css/css-home/NavbarHome.css'
-import '../../assets/css/css_universal/Navbarsearch.css'
-import {useEffect, useState } from 'react'
-import fecharImg from '../../assets/img/close.svg'
-import menuImg from '../../assets/img/list-view-mobile.svg'
-import lupa from '../../assets/img/search.svg'
-import { Carousel } from './Carousel'
 import { BoxCategoria } from './BoxCategoria'
+import { useEffect, useState } from 'react'
 
 
-export const NavbarHome = (props) => {
-    const[isHovering_0, setIsHoverring_0] = useState(false);
-    const[isHovering_1, setIsHoverring_1] = useState(false);
-    const[isHovering_2, setIsHoverring_2] = useState(false);
-    const[isHovering_3, setIsHoverring_3] = useState(false);
-    const[isHovering_4, setIsHoverring_4] = useState(false);
 
-    const { innerWidth: width, innerHeight: height } = window;
-    const [visible, setVisible] = useState(props.visible)
-    const [visibleSearch, setVisibleSearch] = useState('navbarsearch-span')
-    const [visibleIMG, setVisibleIMG] = useState(lupa)
-    const [visibleBox, setVisibleBox] = useState(props.box)
-    const [visibleButton, setVisibleButton] = useState("button-menu-click-hide")
-    const [visibleButtonX, setVisibleButtonX] = useState("button-youtube-button-x-hide")
-    const [pressed, setPressed] = useState(false)
+export const NavbarHome = () => {
+
+    const [visible1, setVisible1] = useState("box-categoria-span-fechar")
+    const [pressed1, setPressed1] = useState(false)
+
+    const [visible2, setVisible2] = useState("box-categoria-span-fechar")
     const [pressed2, setPressed2] = useState(false)
 
-    const setMenuVisible = () => {
-        pressed ? setVisible("button-menu-box-fechar") : setVisible("button-menu-box")
-        setPressed(!pressed)
-    }
+    const [visible3, setVisible3] = useState("box-categoria-span-fechar")
+    const [pressed3, setPressed3] = useState(false)
 
-    const setMenuVisibleSearch = () => {
-        pressed2 ? setVisibleSearch("navbarsearch-span-fechar") : setVisibleSearch("navbarsearch-span") 
-        setPressed2(!pressed2),setWidth()
-    }
+    const [visible4, setVisible4] = useState("box-categoria-span-fechar")
+    const [pressed4, setPressed4] = useState(false)
 
-    const setWidth = () =>{
-        pressed2 ? setVisibleIMG(lupa) : setVisibleIMG(fecharImg)  
-    }
+    useEffect(() =>{
+        setPressed2(false)
+        setPressed3(false)
+        setPressed4(false)
+    }, [visible1])
 
-    useEffect(() => {
-        if (props.menu == 'true'){
-            if (innerWidth < 1000){
-                setVisibleSearch('navbarsearch-span-fechar')
-                setVisible('button-menu-box-fechar')
-                setVisibleButton('button-menu-click')
-                setVisibleButtonX('button-youtube-button-x')
-            }            
+    useEffect(() =>{
+        setPressed1(false)
+        setPressed3(false)
+        setPressed4(false)
+    }, [visible2])
+
+    useEffect(() =>{
+        setPressed1(false)
+        setPressed2(false)
+        setPressed4(false)
+    }, [visible3])
+
+    useEffect(() =>{
+        setPressed1(false)
+        setPressed2(false)
+        setPressed3(false)
+    }, [visible4])
+
+    const setMenuVisible = (num) => {
+        setCategoria(1)
+        if (num == 1){
+            pressed1 ? setVisible1("box-categoria-span-fechar") : setVisible1("box-categoria-span")
+            setPressed1(!pressed1)
         }
-    },[])
+        if (num == 2){
+            pressed2 ? setVisible2("box-categoria-span-fechar") : setVisible2("box-categoria-span")
+            setPressed2(!pressed2)
+        }
+        if (num == 3){
+         
+            pressed3 ? setVisible3("box-categoria-span-fechar") : setVisible3("box-categoria-span")
+            setPressed3(!pressed3)
+        }
+
+        if (num == 4){
+            pressed4 ? setVisible4("box-categoria-span-fechar") : setVisible4("box-categoria-span")
+            setPressed4(!pressed4)
+           
+        }
+    }
+    
     const [categoria, setCategoria] = useState(1)
 
     const exibirProdutos = (categoria) => {
         setCategoria(categoria)
     }
-    
-    
-    const handleMouseOver = (props) => {
-        if (props == 1){
-            setIsHoverring_1(true);
-            console.log(props)
-        };
-        if(props == 2){
-            setIsHoverring_2(true); 
-        };
-        if(props == 0){
-            setIsHoverring_0(true); 
-        };
-        if(props == 3){
-            setIsHoverring_3(true); 
-        };
-        if(props == 4){
-            setIsHoverring_4(true); 
-        };
-           
-    };
 
-    const handleMouseOut = (props) => {
-        if (props == 1){
-            setIsHoverring_1(false);
-        };
-        if(props == 2){
-          setIsHoverring_2(false);  
-        };
-        if(props == 0){
-            setIsHoverring_0(false);  
-          };
-        if(props == 3){
-        setIsHoverring_3(false);  
-        };
-        if(props == 4){
-            setIsHoverring_4(false);  
-            };
-         
-        
-    };
     return (
         <div className="box-categoria-div" >
-            <div className={props.search} >
-                <button className='navbarsearch-button' onClick={() => setMenuVisibleSearch( () => setWidth()) }> <img  src={visibleIMG} style={{ width:'24px'}} alt="" /></button>
-                <span  className={visibleSearch}>
-                    <input className='navbarsearch-input' type="text" placeholder='O que você esta buscando ?'  />
-                    <img  src={lupa} style={{ width:'20px'}} alt="" />
-                </span>
-            </div>
-            <button className={visibleButton} onClick={() => setMenuVisible()}><img className="button-menu-img" src={menuImg} alt="" /></button>
-            <span className={visible}>
-            <button className={visibleButtonX} id='button-lado' onClick={() => setMenuVisible()}><img className="button-youtube-button-x-img" src={fecharImg} alt="" /></button>
-                <ul className="box-categoria-ul">
-                    <li className="box-categoria-li" id='li-categorias'>
-                        <div className="box-categoria-menu"  id='box-categoria-menu-border'   onMouseOver={() => handleMouseOver(0)} onMouseOut={() => handleMouseOut (0)}>
-                            Ferramentas 12v
-                            <span  className={isHovering_0 ? 'menu-button' : 'menu-escondido'}>
-                            <div className='box-menu'>
+            <ul className="box-categoria-ul">
+                <li className="box-categoria-li" id='li-categorias'>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible(1)} onBlur={() => setMenuVisible(1)} >Ferramentas 12v</button>
+                    <span className={visible1}>
+                    <div className='box-menu'>
                         <ul>
                             <li className={categoria == 1 ? 'active' : null} onMouseOver={() => exibirProdutos(1)}>Furadeiras e Parafusadeiras</li>
                             <li onMouseOver={() => exibirProdutos(2)}>Chave de Impacto</li>
@@ -176,15 +141,14 @@ export const NavbarHome = (props) => {
                         }
                         
                     </div>
-                            </span>
-                        </div>
-                    </li>
                     
-                    <li className="box-categoria-li" id='li-categorias'>
-                        <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(1)} onMouseOut={() => handleMouseOut (1)} >
-                            Ferramentas 18v 
-                            <span className={isHovering_1 ? 'menu-button' : 'menu-escondido'}>
-                            <div className='box-menu'>
+                </span>
+                </li>
+                
+                <li className="box-categoria-li" id='li-categorias'>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible(2)} onBlur={() => setMenuVisible(2)}>Ferramentas 18v </button>
+                    <span className={visible2}>
+                <div className='box-menu'>
                         <ul>
                             <li className={categoria == 1 ? 'active' : null} onMouseOver={() => exibirProdutos(1)}>Furadeiras e Parafusadeiras</li>
                             <li onMouseOver={() => exibirProdutos(2)}>Chave de Impacto</li>
@@ -253,15 +217,15 @@ export const NavbarHome = (props) => {
                         }
                         
                     </div>
-                            </span>
-                        </div>
-                    </li>
-                    
-                    <li className="box-categoria-li" id='li-categorias'>
-                        <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(2)} onMouseOut={() => handleMouseOut (2)}>
-                            Linha de Medição
-                            <span className={isHovering_2 ? 'menu-button' : 'menu-escondido'}>
-                            <div className='box-menu'>
+                </span>
+                
+                </li>
+               
+                
+                <li className="box-categoria-li" id='li-categorias'>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible(3)} onBlur={() => setMenuVisible(3)}>Linha de Medição </button>
+                    <span className={visible3}>
+                <div className='box-menu'>
                         <ul>
                             <li className={categoria == 1 ? 'active' : null} onMouseOver={() => exibirProdutos(1)}>Niveladores</li>
                             <li onMouseOver={() => exibirProdutos(2)}>Medidores</li>
@@ -295,15 +259,15 @@ export const NavbarHome = (props) => {
                         }
                         
                     </div>
-                            </span>
-                        </div>
-                    </li>
-                    
-                    <li className="box-categoria-li" id='li-categorias'>
-                        <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(3)} onMouseOut={() => handleMouseOut (3)}>
-                            Acessórios
-                            <span className={isHovering_3 ? 'menu-button' : 'menu-escondido'}>
-                            <div className='box-menu'>
+                </span>
+                </li>
+                
+                <li className="box-categoria-li" id='li-categorias'>
+                    <button className="box-categoria-button" onClick={() => setMenuVisible(4)} onBlur={() => setMenuVisible(4)}>Acessórios</button>
+                     {/* flex-direction: row-reverse;
+                     margin-left: -300px; */}
+                    <span className={visible4}>
+                <div className='box-menu'>
                         <ul>
                             <li className={categoria == 1 ? 'active' : null} onMouseOver={() => exibirProdutos(1)}>Perfurar e Parafusar</li>
                             <li onMouseOver={() => exibirProdutos(2)}>Serrar</li>
@@ -338,22 +302,11 @@ export const NavbarHome = (props) => {
                         }
                         
                     </div>
-                            </span>
-                        </div>
-                    </li>
-                    <li className="box-categoria-li" id='li-categorias'>
-                        <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(4)} onMouseOut={() => handleMouseOut (4)}>
-                            Outros
-                            <span className={isHovering_4 ? 'menu-button' : 'menu-escondido'}>
-    
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-            </span>
-            <span className={visibleBox}>
-                <Carousel/>
-            </span>
+                </span>
+                </li>
+                
+            </ul>
+
         </div>
     )
 }
