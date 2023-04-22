@@ -95,7 +95,7 @@ export const AltoContraste = () => {
 
     return (
         <div className="AltoContraste-div">
-            <button className='AltoContraste-button'  onClick={() => setMenuVisible()}><img src={imgsunMoon} style={{ width:'30px'}} alt="" /></button>
+            <button className='AltoContraste-button'  onClick={() => setMenuVisible()}><img src={imgsunMoon} style={{ width:'24px'}} alt="" /></button>
             <span className={visible}>
             <div class="jumbotron">
         <div class="container">
@@ -106,11 +106,12 @@ export const AltoContraste = () => {
             <div class="col-md-12">
               <button class="btn btn-primary bt-custom" id="contraste" onClick={() => alterar()} ><VscCircleLargeFilled color={!escuro? '#000': '#fff'}/></button>
               <button class="btn btn-primary bt-custom" id="grayescale" onClick={() => alterarGrey() }><VscColorMode color={!escuro? '#000': '#fff'}/></button>
-              <div class = 'btns-primaries'>
+              {/* <div class = 'btns-primaries'>
                 <button class="btn1 btn-primary" id="increaseFont">A+</button>
                 <button class="btn1 btn-primary" id="decreaseFont">A-</button>
-                <button class="btn1 btn-primary" id="resetFont">A</button></div>
-              </div>
+                <button class="btn1 btn-primary" id="resetFont">A</button>
+              </div> */}
+            </div>
         </div>
       </div>
             </span>

@@ -1,21 +1,18 @@
 .Cardproduto-div{
     font-family: var(--font);
     border-radius: 10px;
-    width: 295px;
-    height: 468px;
+    width: 278px;
+    height: 412px;
     border: 1px solid #4970A9;
     background-color: rgb(255, 255, 255);
-    background-color: var(--cor-bg);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    box-shadow:23px 18px #4970A9;
+    box-shadow: 23px 18px #4970A9;
 }
 
 .Cardproduto-div-text{
     width: 241px;
-    color: var(--cor-texto);
-    font-size: var(--tamanho-fonte2);
 }
 .Cardproduto-div-02{
     width: 100%;
@@ -59,7 +56,6 @@
         align-items: center;
         height: inherit;
         list-style: none;
-        width: 900px;
     }
 
     .Cardproduto-div{

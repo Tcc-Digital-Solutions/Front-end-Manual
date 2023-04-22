@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import 'swiper/css/scrollbar';
 import CardInformacoes from './CardInformacoes';
 import React, { useEffect, useState } from 'react';
-import { Speaker } from "../universal/Speaker";
 
 
 export const Carouselinformacoes = (props) => {

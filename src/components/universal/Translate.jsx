@@ -4,6 +4,7 @@ import translateImg from '../../assets/img/chat-language.svg'
 import {  useState } from 'react';
 import Select from 'react-select'
 import { Speaker } from './Speaker';
+import { AltoContraste } from './AltoContraste'
 
 export const Translate = () => {
     const [selectedOption, setSelectedOption] = useState('pt-PT');
@@ -39,6 +40,7 @@ export const Translate = () => {
                 isSearchable={true}
                 options={options}  /> 
             </span>
+            <AltoContraste/>
         </div>
     )
 }
