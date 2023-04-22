@@ -5,8 +5,6 @@ import { Translate } from './Translate';
 import { ButtonLogoff } from '../screen-crud/ButtonLogoff'
 import { NavbarHome } from '../screen-home/NavbarHome';
 
-
-
 export const Navbar = (props) => {
     
 
@@ -24,6 +22,8 @@ export const Navbar = (props) => {
                         <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
                             <ButtonLogoff />
                         </span>                        
+                        <Translate />                        
+
                     </span>
                     <span className='navbar-buttons-comus-1'>
                         <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
