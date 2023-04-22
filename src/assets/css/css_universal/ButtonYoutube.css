@@ -1,6 +1,6 @@
 .button-youtube-div {
   position: fixed;
-  top: 91%;
+  top: 86%;
   left: 4%;
   z-index: 105;
 }
@@ -44,10 +44,9 @@
 }
 
 .button-youtube-box {
-  background-color: #dedede;
+  background-color: var(--cor-menu-ilha);
   width: 442px;
-  border: solid 1px;
-  height: 77%;
+  height: 73%;
   position: fixed;
   margin-top: 85px;
   border-radius: 12px;

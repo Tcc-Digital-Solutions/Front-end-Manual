@@ -6,12 +6,13 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 88px;
+    /* position: fixed; */
 }
 
 .pdf-container{
     width: 97%;
-    height: 769px;
+    height: 668px;
     background-color: #ffffff;
     overflow-y: auto;
     display: flex;
