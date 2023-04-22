@@ -5,7 +5,7 @@ import logooo from '../../assets/img/loguinho.png'
 import { Translate } from './Translate';
 import { ButtonLogoff } from '../screen-crud/ButtonLogoff'
 import { Navbarsearch } from './Navbarsearch';
-import { AltoContraste } from './AltoContraste';
+
 
 export const Navbar = (props) => {
     
@@ -27,7 +27,7 @@ export const Navbar = (props) => {
                         <span className={props.logado ? 'navbar-div-button-logoff' : 'hide' }>
                             <ButtonLogoff />
                         </span>                        
-                        <AltoContraste/>
+        
                         <Translate />                        
                     </span>
                 </div>
