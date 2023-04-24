@@ -14,8 +14,7 @@ export const ScreenEspera = () => {
     const { id } = useParams();
 
 
-    if (!animado) {
-        if (!id) {
+    if (!animado) {        if (!id) {
             // window.location.reload(false);
         }
         if (id) navigate('/informacoes/' + id)
