@@ -8,7 +8,7 @@ class Crud extends Component {
     render() {
         return (
             <>
-                <Navbar logado='false' visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar' />
+                <Navbar logado='false' visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar' nave="navbar-div" />
                 <BoxAddsProdutos />
             </>
         );
