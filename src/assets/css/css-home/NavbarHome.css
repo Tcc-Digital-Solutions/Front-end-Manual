@@ -82,6 +82,7 @@
 }
 
 .box-categoria-ul {
+    width: 1728px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

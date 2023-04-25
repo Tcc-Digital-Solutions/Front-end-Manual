@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return (
             <>
-            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" />
+            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" />
             </>
         );
     }

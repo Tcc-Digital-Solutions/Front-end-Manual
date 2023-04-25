@@ -11,7 +11,7 @@ export const Navbar = (props) => {
     
 
     return (
-        <div className="navbar-div" >
+        <div className={props.nave} >
             <div className='navbar-div-1'>
                 <img className='navbar-div-img-1' src={imgTop} alt="" />
             </div>
@@ -20,11 +20,6 @@ export const Navbar = (props) => {
                     <img className='navbar-div-img-2' src={boschLogo} alt="" />                   
                 </span>
                 <div  className={props.logado ? 'navbar-div-buttons' : 'navbar-div-buttons-2'}>
-                    <span className='navbar-buttons-comus'>
-                        <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
-                            <ButtonLogoff />
-                        </span>                        
-                    </span>
                     <span className='navbar-buttons-comus-1'>
                         <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
                             <ButtonLogoff />
@@ -34,7 +29,6 @@ export const Navbar = (props) => {
                             <NavbarHome visible={props.visible} box={props.box} menu={props.menuTrue} search={props.search} />
                         </div>                                               
                     </span>
-                   
                 </div>
             </div>
         </div>
