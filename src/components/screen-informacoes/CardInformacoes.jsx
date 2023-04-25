@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import '../../assets/css/css-informacoes/cardInformacoes.css';
 import imgbateria from '../../assets/img/battery-loading.svg';
-import imglampada from '../../assets/img/lightbulb.svg';
+import imgsegurança from '../../assets/img/security.svg';
 import imggarantia from '../../assets/img/warranty.svg';
 import imgalerta from '../../assets/img/alert-error.svg';
 
@@ -16,7 +16,7 @@ function CardInformacoes({texto, icone}) {
 
                     <i className='img-icones'>
                     {
-                         icone == 'bateria' ? <img src={imgbateria} style={{width:'35px'}}  /> : icone == 'lampada' ? <img src={imglampada} style={{width:'30px'}}/> : icone == 'garantia' ? <img src={imggarantia} style={{width:'30px'}}/> :  <img src={imgalerta} style={{width:'30px'}}/>
+                         icone == 'bateria' ? <img src={imgbateria} style={{width:'35px'}}  /> : icone == 'security' ? <img src={imgsegurança} style={{width:'35px'}}/> : icone == 'garantia' ? <img src={imggarantia} style={{width:'35px'}}/> :  <img src={imgalerta} style={{width:'30px'}}/>
                         
                     }
                     </i>
