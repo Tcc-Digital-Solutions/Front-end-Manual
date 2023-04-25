@@ -16,6 +16,9 @@ export const ButtonYoutube = () => {
         <div className="button-youtube-div" >
             <button className='button-youtube-button' onClick={() => setMenuVisible()}>Bosch Youtube</button>
             <span className={visible}>
+                <span className='box-youtube-name'>
+
+                </span>
                 <button className="button-youtube-button-x" id='button-lado' onClick={() => setMenuVisible()}><img className="button-youtube-button-x-img" src={fecharImg} alt="" /></button>
                 <div className="button-youtube-button-scroll">
                     <BoxYoutube youtube='Bptf9MTqsAU' />
