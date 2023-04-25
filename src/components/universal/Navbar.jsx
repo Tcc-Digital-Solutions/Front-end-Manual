@@ -11,7 +11,7 @@ export const Navbar = (props) => {
     
 
     return (
-        <div className="navbar-div" >
+        <div className={props.nave} >
             <div className='navbar-div-1'>
                 <img className='navbar-div-img-1' src={imgTop} alt="" />
             </div>

@@ -47,10 +47,23 @@ transition-duration: .35s;
     }
     .AltoContraste-box{
         height: 37px;
-        width: 80px;
+        width: 94px;
+        margin-right: 3%;
         position: absolute;
         margin-top: 71px;
         border-radius: 12px;
         background-color: #dadada;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    button#contraste {
+        display: flex;
+        align-items: center;
+    }
+    button#grayescale {
+        display: flex;
+        align-items: center;
     }
 }
