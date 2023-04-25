@@ -2,13 +2,13 @@
 .card-interno{
     border-radius: 10px;
     background: #ffffff;
-    width: 214px;
-    height: 186px;
+    width: 203px;
+    height: 171px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 20px solid #dadada ;
+    border: 14px solid #dadada;
 }
 .img-icones{
     width: 30px;
