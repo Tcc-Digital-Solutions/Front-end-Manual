@@ -62,14 +62,25 @@
         }
     }
 
+    @media only screen and (max-width: 414px){
+        .card-interno {
+            width: 164px;
+            height: 120px;
+            border: 13px solid #dadada ;
+        }
+        .card-texto {
+            font-size: 13px;
+        }
+    }
 
     @media only screen and (max-width: 380px){
         .card-interno {
-            width: 150px;
-            height: 92px;
+            width: 154px;
+            height: 108px;
+            border: 13px solid #dadada ;
         }
         .card-texto {
-            font-size: 10px;
+            font-size: 12px;
         }
     }
     
