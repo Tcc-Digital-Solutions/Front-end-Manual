@@ -10,6 +10,10 @@
     /* position: fixed; */
 }
 
+.rpv-core__viewer.rpv-core__viewer--light {
+    position: fixed !important;
+    margin-top: 87px;
+}
 .pdf-container{
     width: 97%;
     height: 668px;

@@ -5,6 +5,12 @@
     position: fixed;
     z-index: 9999;
 }
+.navbar-div-manual{
+    top: 0;
+    width: 100%;
+    height: 67px;
+    z-index: 9999;
+}
 .navbar-buttons-comus{
     display: flex;
     flex-direction: row;
