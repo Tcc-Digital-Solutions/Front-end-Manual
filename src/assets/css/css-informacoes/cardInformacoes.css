@@ -36,7 +36,7 @@
     }
     
         .card-texto{
-            font-size: 15px;
+            font-size: 13px;
             margin: 10px;
         }
 
@@ -57,7 +57,7 @@
 
     
     .card-texto{
-        font-size: 17px;
+        font-size: 13px;
         margin: 10px;
     }
 }
@@ -69,7 +69,7 @@
             border: 13px solid #dadada ;
         }
         .card-texto {
-            font-size: 13px;
+            font-size: 10px;
         }
     }
 

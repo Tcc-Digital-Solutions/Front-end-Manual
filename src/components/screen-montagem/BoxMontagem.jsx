@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { ButtonMontagem } from './ButtonMontagem';
 
 
 export const BoxMontagem = () => {
@@ -46,11 +47,10 @@ export const BoxMontagem = () => {
         <div className="BoxMontagem-div" >
             <div className='montagem-components'>
                 <div className='img-principal-div'>
-                    <img className='img-principal' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} />
+                    <ButtonMontagem/>
                 </div>
                 <div className='img-fixa-montagem-div'>
                     <img className='img-fixa-montagem' src={imagemMaximizada} />
-                    {/* <Speaker buttonTrue='---'  text=''/>  */}
                 </div>
                 <div className={classd}>
                     <div className='box-imgs-montagem-div'>
