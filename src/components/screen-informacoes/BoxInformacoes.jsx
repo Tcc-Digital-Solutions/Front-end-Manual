@@ -1,4 +1,4 @@
-import '../../assets/css/css-informacoes/BoxInformacoes.css';
+import '../../styles/css-informacoes/BoxInformacoes.css';
 import { Img360 } from '../screen-informacoes/Img360';
 import { ButtonAbout } from './ButtonAbout';
 import { Carouselinformacoes } from './Carouselinformacoes';

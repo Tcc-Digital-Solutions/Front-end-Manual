@@ -1,6 +1,6 @@
-import '../../assets/css/css_universal/Navbarsearch.css'
+import '../../styles/css_universal/Navbarsearch.css'
 import {useEffect, useState } from 'react'
-import lupa from '../../assets/img/search.svg'
+import lupa from '../../../public/img/search.svg'
 
 export const Navbarsearch = (props) => {
     const [visible, setVisible] = useState('navbarsearch-span')

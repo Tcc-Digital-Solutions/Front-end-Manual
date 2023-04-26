@@ -9,7 +9,7 @@ class Informaçoes extends Component {
     render() {
         return (
             <>
-                <Navbar visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar' nave="navbar-div"/>
+                <Navbar visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar'/>
                 <BoxInformacoes />
                 <ButtonsBar />
             </>

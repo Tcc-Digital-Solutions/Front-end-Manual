@@ -1,5 +1,5 @@
-import '../../assets/css/css-home/BoxCategoria.css'
-import moldeImg1 from '../../assets/img/f12-furadeiras-menu.png'
+import '../../styles/css-home/BoxCategoria.css'
+import moldeImg1 from '../../../public/img/f12-furadeiras-menu.png'
 
 
 export const BoxCategoria = (props) => {

@@ -1,4 +1,4 @@
-import '../../assets/css/css-informacoes/img360.css';
+import '../../styles/css-informacoes/img360.css';
 import { Speaker } from '../universal/Speaker'
 
 export const Img360 = () => {

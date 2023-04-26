@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom"
-import Home from "./pages/Home"
-import Login from "./pages/Login"
-import Informacoes from "./pages/Informacoes"
-import Montagem from "./pages/Montagem";
-import Crud from "./pages/Crud";
-import Settings from "./pages/Settings"
-import Manual from "./pages/Manual"
-import Careegamento from "./pages/Carregamento"
-import { BoxLoginMk } from "./components/screen-login-mk/BoxLoginMk";
-import ToCheck from "./pages/ToCheck";
+import Home from "./src/pages/Home"
+import Login from "./src/pages/Login"
+import Informacoes from "./src/pages/Informacoes"
+import Montagem from "./src/pages/Montagem";
+import Crud from "./src/pages/Crud";
+import Settings from "./src/pages/Settings"
+import Manual from "./src/pages/Manual"
+import Careegamento from "./src/pages/Carregamento"
+import { BoxLoginMk } from "./src/components/screen-login-mk/BoxLoginMk";
+import ToCheck from "./src/pages/ToCheck";
 
 
 export const RoutesJS = () => {

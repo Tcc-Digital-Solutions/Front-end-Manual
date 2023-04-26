@@ -1,7 +1,7 @@
-import '../../assets/css/css-login-mk/BoxLoginMk.css'
-import boschLogo from '../../assets/img/Meu projeto 1.png'
-import userImg from '../../assets/img/user.svg'
-import passImg from '../../assets/img/lock-closed.svg'
+import '../../styles/css-login-mk/BoxLoginMk.css'
+import boschLogo from '../../../public/img/Meu projeto 1.png'
+import userImg from '../../../public/img/user.svg'
+import passImg from '../../../public/img/lock-closed.svg'
 
 export const BoxLoginMk = () => {
     return (

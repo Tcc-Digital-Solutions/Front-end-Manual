@@ -1,4 +1,4 @@
-import '../../assets/css/css-crud/componentsCadastro.css'
+import '../../styles/css-crud/componentsCadastro.css'
 import { ChangeEvent, useState } from 'react';
 import Select from 'react-select'
 import MultipleValueTextInput from 'react-multivalue-text-input';

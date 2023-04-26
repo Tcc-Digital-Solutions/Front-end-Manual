@@ -1,4 +1,4 @@
-import '../../assets/css/css_universal/Buttons_bar.css'
+import '../../styles/css_universal/Buttons_bar.css'
 import {useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 

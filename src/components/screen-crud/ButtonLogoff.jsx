@@ -1,5 +1,5 @@
-import '../../assets/css/css-crud/ButtonLogoff.css'
-import logoffImg from '../../assets/img/logout.svg'
+import '../../styles/css-crud/ButtonLogoff.css'
+import logoffImg from '../../../public/img/logout.svg'
 
 export const ButtonLogoff = () => {
     return (

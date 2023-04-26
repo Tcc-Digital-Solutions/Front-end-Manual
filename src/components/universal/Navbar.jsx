@@ -1,6 +1,6 @@
-import '../../assets/css/css_universal/Navbar.css'
-import imgTop from '../../assets/img/imgTopo.png'
-import boschLogo from '../../assets/img/Group 72.png'
+import '../../styles/css_universal/Navbar.css'
+import imgTop from '../../../public/img/imgTopo.png'
+import boschLogo from '../../../public/img/Group 72.png'
 import { Translate } from './Translate';
 import { ButtonLogoff } from '../screen-crud/ButtonLogoff'
 import { NavbarHome } from '../screen-home/NavbarHome';
@@ -11,7 +11,7 @@ export const Navbar = (props) => {
     
 
     return (
-        <div className={props.nave} >
+        <div className="navbar-div" >
             <div className='navbar-div-1'>
                 <img className='navbar-div-img-1' src={imgTop} alt="" />
             </div>

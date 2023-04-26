@@ -1,8 +1,8 @@
-import '../../assets/css/css-crud/BoxPesquisaCadastro.css'
-import lupa from '../../assets/img/search.svg'
-import casa from '../../assets/img/home.svg'
-import user from '../../assets/img/user-add.svg'
-import manual from '../../assets/img/document-add.svg'
+import '../../styles/css-crud/BoxPesquisaCadastro.css'
+import lupa from '../../../public/img/search.svg'
+import casa from '../../../public/img/home.svg'
+import user from '../../../public/img/user-add.svg'
+import manual from '../../../public/img/document-add.svg'
 import { CadastroComponents } from './CadastroComponents'
 import {  useState } from 'react';
 import { ComponentsProdutosCadastrados } from './ComponentsProdutosCadastrados'

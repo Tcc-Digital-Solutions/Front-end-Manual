@@ -1,5 +1,5 @@
-import '../../assets/css/css_universal/Loading.css'
-import furadeiraImg from '../../assets/img/furadeira 1.png'
+import '../../styles/css_universal/Loading.css'
+import furadeiraImg from '../../../public/img/furadeira 1.png'
 
 
 export const Loading = (props) => {

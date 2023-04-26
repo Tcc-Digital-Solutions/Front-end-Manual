@@ -1,4 +1,4 @@
-import '../../assets/css/css_universal/Introducao.css'
+import '../../styles/css_universal/Introducao.css'
 import { HubTeste } from './HubTeste';
 
 

@@ -1,6 +1,6 @@
 import {Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation,Scrollbar, A11y } from "swiper";
-import '../../assets/css/css-informacoes/Carouselinformacoes.css'
+import '../../styles/css-informacoes/Carouselinformacoes.css'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -39,10 +39,10 @@ export const Carouselinformacoes = (props) => {
                     modules={[Navigation, Pagination, Scrollbar, A11y, Scrollbar]}
                     className="swiper-info"
                 >
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Possui 650W de potência, é super leve e compacta!'} icone={'bateria'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Vem com empunhadeira emborrachada para o agarre seguro e confortável'} icone={'security'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Uso industrial com 2 anos de garantia.'} icone={'garantia'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Possui interruptor de velocidade variável e botão trava para trabalhos contínuos.'} icone={'alerta'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Bivolt 127v-220v. Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} icone={'lampada'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'1 ano de garantia! Quando produtos ou peças apresentarem defeitos e falhas.'} icone={'garantia'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Há um risco elevado de choque elétrico se seu corpo estiver aterrado.'} icone={'alerta'} /></SwiperSlide>
 
                 </Swiper> 
                            
@@ -62,10 +62,10 @@ export const Carouselinformacoes = (props) => {
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                 >
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Possui 650W de potência, é super leve e compacta!'} icone={'bateria'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Vem com empunhadeira emborrachada para o agarre seguro e confortável'} icone={'security'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Uso industrial com 2 anos de garantia.'} icone={'garantia'} /></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-1"><CardInformacoes texto={'Possui interruptor de velocidade variável e botão trava para trabalhos contínuos.'} icone={'alerta'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-2"><CardInformacoes texto={'Bivolt 127v-220v. Pode ficar ligado até 18 horas.'} icone={'bateria'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-2"><CardInformacoes texto={'Luz de LED, para trabalhar em áreas menos iluminadas.'} icone={'lampada'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-2"><CardInformacoes texto={'1 ano de garantia! Quando produtos ou peças apresentarem defeitos e falhas.'} icone={'garantia'} /></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-2"><CardInformacoes texto={'Há um risco elevado de choque elétrico se seu corpo estiver aterrado.'} icone={'alerta'} /></SwiperSlide>
                 </Swiper>     
             </span>
         </div>

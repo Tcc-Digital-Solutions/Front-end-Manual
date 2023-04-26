@@ -1,6 +1,6 @@
-import '../../assets/css/css_universal/Translate.css'
-import '../../assets/css/css_universal/dropdown.css'
-import translateImg from '../../assets/img/chat-language.svg'
+import '../../styles/css_universal/Translate.css'
+import '../../styles/css_universal/dropdown.css'
+import translateImg from '../../../public/img/chat-language.svg'
 import {  useState } from 'react';
 import Select from 'react-select'
 import { Speaker } from './Speaker';

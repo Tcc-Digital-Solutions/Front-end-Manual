@@ -4,14 +4,6 @@
     align-items: center;
     flex-direction: row;
 }
-button#contraste {
-    display: flex;
-    align-items: center;
-}
-button#grayescale {
-    display: flex;
-    align-items: center;
-}
 
 .AltoContraste-box{
     height: 38px;
@@ -19,9 +11,6 @@ button#grayescale {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #e2e2e3;
-    border-radius: 12px;
-    justify-content: center;
 }
 .AltoContraste-box-fechar{
     display: none;
@@ -58,23 +47,10 @@ transition-duration: .35s;
     }
     .AltoContraste-box{
         height: 37px;
-        width: 94px;
-        margin-right: 3%;
+        width: 80px;
         position: absolute;
         margin-top: 71px;
         border-radius: 12px;
         background-color: #dadada;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    button#contraste {
-        display: flex;
-        align-items: center;
-    }
-    button#grayescale {
-        display: flex;
-        align-items: center;
     }
 }

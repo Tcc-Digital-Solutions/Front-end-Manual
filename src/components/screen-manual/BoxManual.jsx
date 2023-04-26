@@ -1,4 +1,4 @@
-import '../../assets/css/css-manual/BoxManual.css';
+import '../../styles/css-manual/BoxManual.css';
 import React, { useState } from 'react';
 // Import the main component
 import { Viewer } from '@react-pdf-viewer/core'; // install this library
@@ -9,8 +9,8 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 // Worker
 import { Worker } from '@react-pdf-viewer/core'; // install this library
-import PDF from '../../pdf.pdf';
-import PDF2 from '../../gfhjk.pdf'
+import PDF from '../../pdf/pdf.pdf';
+import PDF2 from '../../pdf/gfhjk.pdf'
 export const BoxManual = () => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
@@ -18,7 +18,7 @@ export const BoxManual = () => {
     <>
       <div className='BoxManual-container'>
         <div className='pdf-container'>
-          <Worker  workerUrl="https://unpkg.com/pdfjs-dist@3.5.141/build/pdf.worker.min.js">
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.5.141/build/pdf.worker.min.js">
             <Viewer fileUrl={PDF}
               plugins={[defaultLayoutPluginInstance]} />
           </Worker>

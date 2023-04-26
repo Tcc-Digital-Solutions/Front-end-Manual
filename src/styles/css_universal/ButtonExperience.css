@@ -14,14 +14,14 @@
     cursor: pointer;
     display: inline-block;
     font-family: var(--fonte);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     height: 40px;
     line-height: 20px;
     list-style: none;
     margin: 0;
     outline: none;
-    padding: 22px 4px;
+    padding: 10px 16px;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -30,7 +30,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 190px;
+    width: 160px;
     height: 32px;
     display: flex;
     flex-direction: row;
@@ -52,7 +52,7 @@
     width: 367px;
     height: 170px;
     position: fixed;
-    margin-top: 30%;
+    margin-top: 34%;
     border-radius: 12px;
     display: flex;
     align-items: center;

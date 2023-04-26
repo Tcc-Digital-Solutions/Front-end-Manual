@@ -1,7 +1,7 @@
-import '../../assets/css/css_universal/Screen-espera.css'
-import '../../assets/css/css_universal/dropdown.css'
-import bosch from '../../assets/img/loguinho.png'
-import errorImg from '../../assets/img/ERROR.png'
+import '../../styles/css_universal/Screen-espera.css'
+import '../../styles/css_universal/dropdown.css'
+import bosch from '../../../public/img/loguinho.png'
+import errorImg from '../../../public/img/ERROR.png'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
@@ -14,9 +14,7 @@ export const ScreenEspera = () => {
     const { id } = useParams();
 
 
-    if (!animado) { 
-        if (!id) {
-            navigate('/home')
+    if (!animado) {        if (!id) {
             // window.location.reload(false);
         }
         if (id) navigate('/informacoes/' + id)

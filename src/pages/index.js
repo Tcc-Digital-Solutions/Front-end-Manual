@@ -1,9 +1,6 @@
-import {RoutesJS} from './routes'
+import {RoutesJS} from '../../routes'
 import VLibras from '@djpfs/react-vlibras';
-             
-
 function App() {
-
   return (
     <div>
       <RoutesJS />
@@ -11,5 +8,4 @@ function App() {
     </div>
   )
 }
-
 export default App

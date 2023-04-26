@@ -1,5 +1,5 @@
-import '../../assets/css/css-crud/BoxPesquisaCrud.css'
-import lupaImg from '../../assets/img/search.svg'
+import '../../styles/css-crud/BoxPesquisaCrud.css'
+import lupaImg from '../../../public/img/search.svg'
 
 export const BoxPesquisaCrud = () => {
     return (

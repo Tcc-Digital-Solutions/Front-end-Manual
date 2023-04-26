@@ -1,8 +1,8 @@
 import React from "react";
-import SoundSpeak from "../../assets/img/audio-loudspeaker-public.svg";
-import Descrição from '../../assets/img/descricao-de-audio.png'
+import SoundSpeak from "../../../public/img/audio-loudspeaker-public.svg";
+import Descrição from '../../../public/img/descricao-de-audio.png'
 import Artyom from "artyom.js";
-import '../../assets/css/css_universal/Speaker.css'
+import '../../styles/css_universal/Speaker.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

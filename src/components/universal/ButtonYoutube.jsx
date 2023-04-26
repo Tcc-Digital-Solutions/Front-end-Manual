@@ -1,5 +1,5 @@
-import '../../assets/css/css_universal/ButtonYoutube.css'
-import fecharImg from '../../assets/img/close.svg'
+import '../../styles/css_universal/ButtonYoutube.css'
+import fecharImg from '../../../public/img/close.svg'
 import { useState } from 'react'
 import { BoxYoutube } from './BoxYoutube'
 

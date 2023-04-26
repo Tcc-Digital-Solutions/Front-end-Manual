@@ -1,7 +1,7 @@
-import '../../assets/css/css-crud/BoxEditProduto.css'
-import lixeiraImg from '../../assets/img/delete.svg'
-import editImg from '../../assets/img/edit.svg'
-import fecharImg from '../../assets/img/close.svg'
+import '../../styles/css-crud/BoxEditProduto.css'
+import lixeiraImg from '../../../public/img/delete.svg'
+import editImg from '../../../public/img/edit.svg'
+import fecharImg from '../../../public/img/close.svg'
 import { useState } from 'react'
 
 export const BoxEditProduto = (props) => {

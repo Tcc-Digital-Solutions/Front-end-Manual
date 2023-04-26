@@ -1,9 +1,8 @@
-import '../../assets/css/css_universal/AltoContraste.css'
-import '../../index.css';
+import '../../styles/css_universal/AltoContraste.css'
 import $ from 'jquery';
 import React, { useState } from 'react';
 import { VscCircleLargeFilled, VscColorMode } from "react-icons/vsc";
-import imgsunMoon from '../../assets/img/sun-moon.svg'
+import imgsunMoon from '../../../public/img/sun-moon.svg'
 
 
 
@@ -97,19 +96,23 @@ export const AltoContraste = () => {
         <div className="AltoContraste-div">
             <button className='AltoContraste-button'  onClick={() => setMenuVisible()}><img src={imgsunMoon} style={{ width:'24px'}} alt="" /></button>
             <span className={visible}>
-                <div class="container py-2">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <button class="btn btn-primary bt-custom" id="contraste" onClick={() => alterar()} ><VscCircleLargeFilled color={!escuro? '#000': '#fff'}/></button>
-                      <button class="btn btn-primary bt-custom" id="grayescale" onClick={() => alterarGrey() }><VscColorMode color={!escuro? '#000': '#fff'}/></button>
-                      {/* <div class = 'btns-primaries'>
-                        <button class="btn1 btn-primary" id="increaseFont">A+</button>
-                        <button class="btn1 btn-primary" id="decreaseFont">A-</button>
-                        <button class="btn1 btn-primary" id="resetFont">A</button>
-                      </div> */}
-                    </div>
-                </div>
-              </div>
+            <div class="jumbotron">
+        <div class="container">
+        </div>
+        </div>
+        <div class="container py-2">
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-primary bt-custom" id="contraste" onClick={() => alterar()} ><VscCircleLargeFilled color={!escuro? '#000': '#fff'}/></button>
+              <button class="btn btn-primary bt-custom" id="grayescale" onClick={() => alterarGrey() }><VscColorMode color={!escuro? '#000': '#fff'}/></button>
+              {/* <div class = 'btns-primaries'>
+                <button class="btn1 btn-primary" id="increaseFont">A+</button>
+                <button class="btn1 btn-primary" id="decreaseFont">A-</button>
+                <button class="btn1 btn-primary" id="resetFont">A</button>
+              </div> */}
+            </div>
+        </div>
+      </div>
             </span>
         </div>
     )
