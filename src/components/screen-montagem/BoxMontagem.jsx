@@ -71,7 +71,7 @@ export const BoxMontagem = () => {
                                     onSlideChange={() => console.log('slide change')}
 
                                 >
-
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemA} onClick={() => setImagemMaximizada(ImgMontagemA)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemB} onClick={() => setImagemMaximizada(ImgMontagemB)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemC} onClick={() => setImagemMaximizada(ImgMontagemC)} /></span></SwiperSlide>
