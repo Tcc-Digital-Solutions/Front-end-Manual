@@ -10,12 +10,23 @@
     align-items: center;
     border: 14px solid #dadada;
 }
+/* .card-interno {
+    border-radius: 10px;
+    background: #ffffff;
+    width: 194px;
+    height: 182px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #dadada;
+} */
 .img-icones{
     width: 30px;
 }
 
 .card-texto{
-    font-size: 19px;
+    font-size: 16px;
     margin: 10px;
 }
 
