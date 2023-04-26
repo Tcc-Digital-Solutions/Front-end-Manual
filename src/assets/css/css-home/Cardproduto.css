@@ -10,7 +10,9 @@
     justify-content: flex-end;
     box-shadow: 23px 18px #4970A9;
 }
-
+img.img-card {
+    width: 166px;
+}
 .Cardproduto-div-text{
     width: 241px;
 }

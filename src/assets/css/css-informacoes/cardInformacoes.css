@@ -2,13 +2,13 @@
 .card-interno{
     border-radius: 10px;
     background: #ffffff;
-    width: 214px;
-    height: 186px;
+    width: 203px;
+    height: 171px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 20px solid #dadada ;
+    border: 14px solid #dadada;
 }
 .img-icones{
     width: 30px;
@@ -56,20 +56,38 @@
     }
 
     
-        .card-texto{
-            font-size: 17px;
-            margin: 10px;
-        }
+    .card-texto{
+        font-size: 17px;
+        margin: 10px;
     }
+}
 
-
-    @media only screen and (max-width: 380px){
+    @media only screen and (max-width: 414px){
         .card-interno {
-            width: 150px;
-            height: 92px;
+            width: 164px;
+            height: 120px;
+            border: 13px solid #dadada ;
         }
         .card-texto {
-            font-size: 10px;
+            font-size: 13px;
         }
     }
-    
+
+@media only screen and (max-height: 750px) and (max-width: 500px){
+    .card-interno {
+        width: 150px;
+        height: 92px;
+    }
+    .card-texto {
+        font-size: 10px;
+    }
+}
+
+/* @media only screen and (max-width: 500px) and (max-height: 400px){
+    .card-interno {
+        width: 184px;
+        height: 113px;
+    }
+}
+
+     */
