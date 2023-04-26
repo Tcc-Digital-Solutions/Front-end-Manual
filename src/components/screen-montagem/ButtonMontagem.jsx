@@ -24,7 +24,7 @@ export const ButtonMontagem = () => {
         <div className="ButtonMontagem-div" >
             <button className='ButtonMontagem-button' onClick={() => setMenuVisible()}><img src={config} alt="" width={30} /></button>
             <span className={visible}>
-                <Boxproduto nome='DESCRIÇÃO DE MONTAGEM' montaSet='components-box-produtos' informSet='components-box-produtos-hide'/>
+                <Boxproduto nome='DESCRIÇÃO DE MONTAGEM' montaSet='components-box-produtos-monta' informSet='components-box-produtos-hide'/>
             </span>
         </div>
     )
