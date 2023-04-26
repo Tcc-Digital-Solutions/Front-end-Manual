@@ -283,6 +283,8 @@ cursor: pointer;
 }
 .swiper-button-next:after, .swiper-button-prev:after{
 color: black;
+color: var(--cor-texto);
+
 }
 
 .img-fixa-montagem-div {
