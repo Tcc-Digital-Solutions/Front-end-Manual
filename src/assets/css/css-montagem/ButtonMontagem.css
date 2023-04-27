@@ -1,20 +1,21 @@
-.ButtonAbout-div {
-    top: 80%;
+.ButtonMontagem-div {
+    position: fixed;
+    top: 26%;
     left: 4%;
     z-index: 105;
   }
   
   
-.ButtonAbout-box-fechar {
+.ButtonMontagem-box-fechar {
   display: none;
 }
 
-.ButtonAbout-button{
+.ButtonMontagem-button{
   display:  none;
 }
   
 @media only screen and (max-width: 1151px) {
-  .ButtonAbout-button{
+  .ButtonMontagem-button{
     border: 0;
     border-radius: 28px;
     width: 45px;
@@ -28,34 +29,35 @@
     margin-top: 25px;
 }
 
-.ButtonAbout-button:hover {
+.ButtonMontagem-button:hover {
 opacity: 1;
 transform: translateY(0);
 transition-duration: .35s;
 }
   
-.ButtonAbout-button:active {
+.ButtonMontagem-button:active {
 transform: translateY(2px);
 transition-duration: .35s;
 }
 
 
-  .ButtonAbout-div {
+  .ButtonMontagem-div {
     position: fixed;
-    top: 20%;
+    top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     z-index: 108;
+    width: 100%;
   }
 
-  .ButtonAbout-box {
-    width: 100%;
+  .ButtonMontagem-box {
+    width: 91%;
   }
 }
 
 @media only screen and (max-width: 320px){
-  .ButtonAbout-div{
+  .ButtonMontagem-div{
     top: 78%;
   }
 }
