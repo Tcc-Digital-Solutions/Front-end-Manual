@@ -1,7 +1,7 @@
 import '../../styles/css_universal/ButtonExperience.css'
 import fecharImg from '../../../public/img/close.svg'
 import { useState } from 'react'
-import furadeira from '../../audio/SOM - FURADEIRA... (320 kbps).mp3'
+// import furadeira from '../../audio/SOM - FURADEIRA... (320 kbps).mp3'
 
 export const ButtonExperience = () => {
     const [visible, setVisible] = useState("ButtonExperience-box-fechar")
@@ -20,7 +20,7 @@ export const ButtonExperience = () => {
                 <div className="ButtonExperience-button-scroll">
                     <span className="ButtonExperience-text">Som Reproduzido pela ferramenta ligada em uso</span>
                     <audio id="myAudio" controls>
-                        <source src={furadeira} type="audio/mpeg"/>
+                        {/* <source src={furadeira} type="audio/mpeg"/> */}
                     </audio>
                 </div>
             </span>
