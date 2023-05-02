@@ -16,7 +16,7 @@ function CardInformacoes({texto, icone}) {
 
                     <i className='img-icones'>
                     {
-                         icone == 'bateria' ? <img src={imgbateria} style={{width:'35px'}}  /> : icone == 'security' ? <img src={imgsegurança} style={{width:'35px'}}/> : icone == 'garantia' ? <img src={imggarantia} style={{width:'35px'}}/> :  <img src={imgalerta} style={{width:'30px'}}/>
+                         icone == 'bateria' ? <img src={imgbateria} style={{width:'30px'}}  /> : icone == 'security' ? <img src={imgsegurança} style={{width:'30px'}}/> : icone == 'garantia' ? <img src={imggarantia} style={{width:'30px'}}/> :  <img src={imgalerta} style={{width:'30px'}}/>
                         
                     }
                     </i>
