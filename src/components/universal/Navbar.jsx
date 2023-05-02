@@ -1,4 +1,4 @@
-import '../../styles/css_universal/Navbar.css'
+import '../../styles/css_universal/Navbar.module.css'
 import imgTop from '../../../public/img/imgTopo.png'
 import boschLogo from '../../../public/img/Group 72.png'
 import { Translate } from './Translate';

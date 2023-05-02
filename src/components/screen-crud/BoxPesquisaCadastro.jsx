@@ -1,4 +1,4 @@
-import '../../styles/css-crud/BoxPesquisaCadastro.css'
+import '../../styles/css-crud/BoxPesquisaCadastro.module.css'
 import lupa from '../../../public/img/search.svg'
 import casa from '../../../public/img/home.svg'
 import user from '../../../public/img/user-add.svg'

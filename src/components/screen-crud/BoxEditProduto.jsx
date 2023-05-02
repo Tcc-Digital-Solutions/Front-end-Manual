@@ -1,4 +1,4 @@
-import '../../styles/css-crud/BoxEditProduto.css'
+import '../../styles/css-crud/BoxEditProduto.module.css'
 import lixeiraImg from '../../../public/img/delete.svg'
 import editImg from '../../../public/img/edit.svg'
 import fecharImg from '../../../public/img/close.svg'

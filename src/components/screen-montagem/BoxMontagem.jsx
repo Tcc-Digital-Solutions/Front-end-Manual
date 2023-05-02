@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Autoplay, Pagination, Navigation,Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Speaker } from '../universal/Speaker'
-import '../../styles/css-montagem/BoxMontagem.css';
+import '../../styles/css-montagem/BoxMontagem.module.css';
 import ImgFixaMontagem from '../../../public/img/img-fixa-montagem.png';
 import ImgMontagemA from '../../../public/img/img-furadeira-A.png';
 import ImgMontagemB from '../../../public/img/img-furadeira-B.png';

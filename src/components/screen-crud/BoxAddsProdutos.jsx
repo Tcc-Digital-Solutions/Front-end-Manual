@@ -1,4 +1,4 @@
-import '../../styles/css-crud/BoxAddsProdutos.css'
+import '../../styles/css-crud/BoxAddsProdutos.module.css'
 import { BoxManualCadastrados } from './BoxManualCadastrados'
 
 export const BoxAddsProdutos = () => {

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import '../../styles/css-informacoes/Boxproduto.css';
+import '../../styles/css-informacoes/Boxproduto.module.css';
 
 export const Boxproduto = (props) => {
 

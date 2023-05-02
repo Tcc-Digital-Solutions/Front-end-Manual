@@ -1,4 +1,4 @@
-import '../../styles/css-home/Cardproduto.css'
+import '../../styles/css-home/Cardproduto.module.css'
 import ferramenta from '../../../public/img/f12-chave-menu.png'
 
 

@@ -1,4 +1,4 @@
-import '../../styles/css-login-mk/BoxLoginMk.css'
+import '../../styles/css-login-mk/BoxLoginMk.module.css'
 import boschLogo from '../../../public/img/Meu projeto 1.png'
 import userImg from '../../../public/img/user.svg'
 import passImg from '../../../public/img/lock-closed.svg'

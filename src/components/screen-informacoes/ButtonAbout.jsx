@@ -1,4 +1,4 @@
-import '../../styles/css-informacoes/ButtonAbout.css'
+import '../../styles/css-informacoes/ButtonAbout.module.css'
 import about from '../../../public/img/sobre-nos 1.png'
 import { useState ,useEffect} from 'react'
 import { Boxproduto } from './Boxproduto'

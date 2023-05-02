@@ -1,4 +1,4 @@
-import '../../styles/css-crud/BoxManualCadastrados.css'
+import '../../styles/css-crud/BoxManualCadastrados.module.css'
 import { BoxPesquisaCadastro } from './BoxPesquisaCadastro';
 
 export const BoxManualCadastrados = () => {

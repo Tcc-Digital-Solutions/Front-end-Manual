@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import '../../styles/css-informacoes/cardInformacoes.css';
+import '../../styles/css-informacoes/cardInformacoes.module.css';
 import imgbateria from '../../../public/img/battery-loading.svg';
 import imglampada from '../../../public/img/lightbulb.svg';
 import imggarantia from '../../../public/img/warranty.svg';

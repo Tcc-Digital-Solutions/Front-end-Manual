@@ -1,10 +1,10 @@
-* {
+/* * {
     user-select: none;
-}
+} */
 
-*:focus {
+/* *:focus {
     outline: none;
-}
+} */
 
 .brd {
     border: 1px solid #e2eded;
@@ -170,7 +170,7 @@
     bottom: 0;
 }
 
-input[type="radio"] {
+/* input[type="radio"] {
     position: absolute;
     right: 0;
     left: 0;
@@ -179,7 +179,7 @@ input[type="radio"] {
     margin: 0;
     opacity: 0;
     cursor: pointer;
-}
+} */
 
 .s-c:hover~i {
     color: #fff;

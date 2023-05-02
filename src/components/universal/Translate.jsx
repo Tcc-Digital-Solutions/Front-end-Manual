@@ -1,5 +1,5 @@
-import '../../styles/css_universal/Translate.css'
-import '../../styles/css_universal/dropdown.css'
+import '../../styles/css_universal/Translate.module.css'
+import '../../styles/css_universal/dropdown.module.css'
 import translateImg from '../../../public/img/chat-language.svg'
 import {  useState } from 'react';
 import Select from 'react-select'

@@ -1,4 +1,4 @@
-import '../../styles/css-crud/BoxPesquisaCrud.css'
+import '../../styles/css-crud/BoxPesquisaCrud.module.css'
 import lupaImg from '../../../public/img/search.svg'
 
 export const BoxPesquisaCrud = () => {

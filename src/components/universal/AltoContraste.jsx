@@ -1,4 +1,4 @@
-import '../../styles/css_universal/AltoContraste.css'
+import '../../styles/css_universal/AltoContraste.module.css'
 import $ from 'jquery';
 import React, { useState } from 'react';
 import { VscCircleLargeFilled, VscColorMode } from "react-icons/vsc";
@@ -53,10 +53,10 @@ export const AltoContraste = () => {
         setPressed(!pressed)
     }
      //Reseta o tamanho da fonte
-     let originalFontSize = $('html').css('font-size');
+     let originalFontSize = $('html').module.css('font-size');
      $("body").on("click", "#resetFont", () => {
       resetar()
-      //  $('html').css('font-size', originalFontSize);
+      //  $('html').module.css('font-size', originalFontSize);
      });
      //Aumenta o Tamanho da Fonte
      $("body").on("click", "#increaseFont", () => {
@@ -76,18 +76,18 @@ export const AltoContraste = () => {
       document.documentElement.style.setProperty('--tamanho-fonte2', tamanho2 + 'px');
 
 
-      //  let currentFontSize = $('html').css('font-size');
+      //  let currentFontSize = $('html').module.css('font-size');
       //  let currentFontSizeNum = parseFloat(currentFontSize, 10);
       //  let newFontSize = currentFontSizeNum*1.1;
-      //  $('html').css('font-size', newFontSize);
+      //  $('html').module.css('font-size', newFontSize);
        return false;
      });
      //Diminui o tamanho da fonte
      $("body").on("click", "#decreaseFont", () => {
-       let currentFontSize = $('html').css('font-size');
+       let currentFontSize = $('html').module.css('font-size');
        let currentFontSizeNum = parseFloat(currentFontSize, 10);
        let newFontSize = currentFontSizeNum*0.9;
-       $('html').css('font-size', newFontSize);
+       $('html').module.css('font-size', newFontSize);
        return false;
      });
     

@@ -1,4 +1,4 @@
-import '../../styles/css_universal/BoxYoutube.css'
+import '../../styles/css_universal/BoxYoutube.module.css'
 import YouTube from 'react-youtube';
 
 export const BoxYoutube = (props) => {

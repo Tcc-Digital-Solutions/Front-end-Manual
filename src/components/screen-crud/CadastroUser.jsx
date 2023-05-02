@@ -1,4 +1,4 @@
-import '../../styles/css-crud/CadastroUser.css'
+import '../../styles/css-crud/CadastroUser.module.css'
 
 export const CadastroUser = (props) => {
 

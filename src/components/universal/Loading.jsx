@@ -1,4 +1,4 @@
-import '../../styles/css_universal/Loading.css'
+import '../../styles/css_universal/Loading.module.css'
 import furadeiraImg from '../../../public/img/furadeira 1.png'
 
 

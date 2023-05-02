@@ -1,5 +1,5 @@
-import '../../styles/css_universal/Screen-espera.css'
-import '../../styles/css_universal/dropdown.css'
+import '../../styles/css_universal/Screen-espera.module.css'
+import '../../styles/css_universal/dropdown.module.css'
 import bosch from '../../../public/img/loguinho.png'
 import errorImg from '../../../public/img/ERROR.png'
 import { useState } from 'react';

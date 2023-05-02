@@ -1,4 +1,4 @@
-import '../../styles/css_universal/HubTeste.css'
+import '../../styles/css_universal/HubTeste.module.css'
 import { useNavigate } from "react-router-dom";
 
 export const HubTeste = (props) => {

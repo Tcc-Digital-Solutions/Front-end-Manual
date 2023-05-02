@@ -1,4 +1,4 @@
-import '../../styles/css_universal/ButtonExperience.css'
+import '../../styles/css_universal/ButtonExperience.module.css'
 import fecharImg from '../../../public/img/close.svg'
 import { useState } from 'react'
 // import furadeira from '../../audio/SOM - FURADEIRA... (320 kbps).mp3'

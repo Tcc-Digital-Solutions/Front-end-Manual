@@ -1,4 +1,4 @@
-import '../../styles/css-home/BoxCategoria.css'
+import '../../styles/css-home/BoxCategoria.module.css'
 import moldeImg1 from '../../../public/img/f12-furadeiras-menu.png'
 
 

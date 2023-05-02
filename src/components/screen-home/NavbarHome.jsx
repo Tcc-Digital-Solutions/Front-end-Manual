@@ -1,5 +1,5 @@
-import '../../styles/css-home/NavbarHome.css'
-import '../../styles/css_universal/Navbarsearch.css'
+import '../../styles/css-home/NavbarHome.module.css'
+import '../../styles/css_universal/Navbarsearch.module.css'
 import {useEffect, useState } from 'react'
 import fecharImg from '../../../public/img/close.svg'
 import menuImg from '../../../public/img/list-view-mobile.svg'

@@ -2,7 +2,7 @@ import React from "react";
 import SoundSpeak from "../../../public/img/audio-loudspeaker-public.svg";
 import Descrição from '../../../public/img/descricao-de-audio.png'
 import Artyom from "artyom.js";
-import '../../styles/css_universal/Speaker.css'
+import '../../styles/css_universal/Speaker.module.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

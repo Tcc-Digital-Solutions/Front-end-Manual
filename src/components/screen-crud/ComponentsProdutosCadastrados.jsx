@@ -1,4 +1,4 @@
-import '../../styles/css-crud/componentsProdutosCadastrados.css'
+import '../../styles/css-crud/componentsProdutosCadastrados.module.css'
 import { BoxEditProduto } from './BoxEditProduto'
 import { BoxPesquisaCrud } from './BoxPesquisaCrud'
 

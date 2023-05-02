@@ -1,4 +1,4 @@
-import '../../styles/css_universal/Navbarsearch.css'
+import '../../styles/css_universal/Navbarsearch.module.css'
 import {useEffect, useState } from 'react'
 import lupa from '../../../public/img/search.svg'
 
