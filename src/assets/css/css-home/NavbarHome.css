@@ -69,7 +69,7 @@
 
 
 .box-menu ul li{
-    padding: 28px ;
+    padding: 30px ;
     margin: 0px;
 
 }
@@ -112,14 +112,28 @@ button.box-categoria-button {
     cursor: pointer;
     align-items: center;
 }
-
+/* .menu-button{
+    width: 232px;
+    height: 550px;
+    background-color:  #4970A9;
+    position: absolute;
+    margin-top: 60px;
+} */
 .menu-button {
     position: absolute;
+    left: -29%;
+    height: 180px;
     margin-top: 58px;
+    padding-bottom: 20px;
+    background-color: #CCE6FF;
     display: flex;
     color: black;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    min-width: 500px;
+    /* width: 750px; */
+    align-items: stretch;
+    justify-content: space-between;
 }
 
 

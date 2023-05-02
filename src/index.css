@@ -22,6 +22,7 @@
 
   /* --cor-bg: #000000; */
   /*paleta button youtube*/
+  --cor-texto: #ffffff;
   --cot-button-vermelho: #DA2228;
   --tamanho-fonte1: 16px;
   --tamanho-fonte2: 18px;
@@ -101,7 +102,7 @@ div[vw] {
 
 .escuro{
   background-color: #000;
-  color: #000000;
+  color: #000000 !important;
   font-family: var(--fonte)
 }
 .claro{
