@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { ButtonMontagem } from './ButtonMontagem';
 
 
 export const BoxMontagem = () => {
@@ -46,11 +47,10 @@ export const BoxMontagem = () => {
         <div className="BoxMontagem-div" >
             <div className='montagem-components'>
                 <div className='img-principal-div'>
-                    <img className='img-principal' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} />
+                    <ButtonMontagem/>
                 </div>
                 <div className='img-fixa-montagem-div'>
                     <img className='img-fixa-montagem' src={imagemMaximizada} />
-                    {/* <Speaker buttonTrue='---'  text=''/>  */}
                 </div>
                 <div className={classd}>
                     <div className='box-imgs-montagem-div'>
@@ -71,7 +71,7 @@ export const BoxMontagem = () => {
                                     onSlideChange={() => console.log('slide change')}
 
                                 >
-
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemA} onClick={() => setImagemMaximizada(ImgMontagemA)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemB} onClick={() => setImagemMaximizada(ImgMontagemB)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemC} onClick={() => setImagemMaximizada(ImgMontagemC)} /></span></SwiperSlide>
