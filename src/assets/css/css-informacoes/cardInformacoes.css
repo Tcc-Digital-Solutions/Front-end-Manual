@@ -1,4 +1,4 @@
-
+/* 
 .card-interno{
     border-radius: 10px;
     background: #ffffff;
@@ -9,8 +9,8 @@
     justify-content: center;
     align-items: center;
     border: 14px solid #dadada;
-}
-/* .card-interno {
+} */
+.card-interno {
     border-radius: 10px;
     background: #ffffff;
     width: 194px;
@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     border: 5px solid #dadada;
-} */
+}
 .img-icones{
     width: 30px;
 }
