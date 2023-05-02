@@ -125,58 +125,6 @@ export const NavbarHome = (props) => {
                             <li onMouseOver={() => exibirProdutos(8)}>Lanterna</li>
                         </ul>
                     </div>
-                    <div className='box-produtos'>
-                        {categoria == 1 ? 
-                            <>
-                                <BoxCategoria categoria='Furadeiras' />
-                                <BoxCategoria categoria='Parafusadeiras' />
-                            </>
-                            :
-                            categoria == 2? 
-                            <>
-                                <BoxCategoria categoria='Chave de Impacto' />
-                            </>
-                            : 
-                            categoria == 3?
-                            <>
-                                <BoxCategoria categoria='Serra Circular' />
-                            </>  
-                            :
-                            categoria == 4?
-                            <>
-                                <BoxCategoria categoria='Serra Tico-Tico' />
-                            </>
-                            
-                            :
-                            categoria == 5?
-                            <>
-                                <BoxCategoria categoria='Plaina'/>
-                            </>
-                            
-                            :
-                            categoria == 6?
-                            <>
-                                <BoxCategoria categoria='Aspiradores'/>
-                            </>
-                            
-                            :
-                            categoria == 7?
-                            <>
-                                <BoxCategoria categoria='Baterias'/>
-                                <BoxCategoria categoria='Carregadores'/>
-                            </>
-                            
-                            :
-                            categoria == 8?
-                            <>
-                                <BoxCategoria categoria='Lanterna' />
-                            </>
-                            
-                            :
-                            null
-                        }
-                        
-                    </div>
                             </span>
                         </div>
                     </li>
@@ -198,62 +146,6 @@ export const NavbarHome = (props) => {
 
                         </ul>
                     </div>
-                    <div className='box-produtos'>
-                        {categoria == 1 ? 
-                            <>
-                                <BoxCategoria categoria='Furadeiras' />
-                                <BoxCategoria categoria='Parafusadeiras' />
-                            </>
-                            :
-                            categoria == 2? 
-                            <>
-                                <BoxCategoria categoria='Chave de Impacto' />
-                            </>
-                            : 
-                            categoria == 3?
-                            <>
-                                <BoxCategoria categoria='Serra Circular' />
-                                <BoxCategoria categoria='Serra Tico-Tico' />
-                            </>  
-                            :
-                            categoria == 4?
-                            <>
-                                <BoxCategoria categoria='Plaina' />
-                            </>
-                            
-                            :
-                            categoria == 5?
-                            <>
-                                <BoxCategoria categoria='Aspiradores'/>
-                                <BoxCategoria categoria='Soprador'/>
-                            </>
-                            
-                            :
-                            categoria == 6?
-                            <>
-                                <BoxCategoria categoria='Baterias'/>
-                                <BoxCategoria categoria='Carregadores'/>
-                            </>
-                            
-                            :
-                            categoria == 7?
-                            <>
-                                <BoxCategoria categoria='Lixadeiras'/>
-                                <BoxCategoria categoria='Lanternas'/>
-                            </>
-                            
-                            :
-                            categoria == 8?
-                            <>
-                                <BoxCategoria categoria='Esmelhiradeiras' />
-                                <BoxCategoria categoria='Marteletes' />
-                            </>
-                             
-                            :
-                            null
-                        }
-                        
-                    </div>
                             </span>
                         </div>
                     </li>
@@ -269,32 +161,6 @@ export const NavbarHome = (props) => {
                             <li onMouseOver={() => exibirProdutos(3)}>Detectores</li>
                             <li onMouseOver={() => exibirProdutos(4)}>Acessórios</li>
                         </ul>
-                    </div>
-                    <div className='box-produtos'>
-                        {categoria == 1 ? 
-                            <>
-                                <BoxCategoria categoria='Niveladores' />
-                            </>
-                            :
-                            categoria == 2? 
-                            <>
-                                <BoxCategoria categoria='Medidores' />
-                            </>
-                            : 
-                            categoria == 3?
-                            <>
-                                <BoxCategoria categoria='Detectores' />
-                            </>  
-                            :
-                            categoria == 4?
-                            <>
-                                <BoxCategoria categoria='Acessórios' />
-                            </>
-                            
-                            :
-                            null
-                        }
-                        
                     </div>
                             </span>
                         </div>
@@ -312,32 +178,6 @@ export const NavbarHome = (props) => {
                             <li onMouseOver={() => exibirProdutos(4)}>Acabamento</li>
 
                         </ul>
-                    </div>
-                    <div className='box-produtos'>
-                        {categoria == 1 ? 
-                            <>
-                                <BoxCategoria categoria='Perfurar e Parafusar' />
-                            </>
-                            :
-                            categoria == 2? 
-                            <>
-                                <BoxCategoria categoria='Serrar' />
-                            </>
-                            : 
-                            categoria == 3?
-                            <>
-                                <BoxCategoria categoria='Cortar e Desbastar' />
-                            </>  
-                            :
-                            categoria == 4?
-                            <>
-                                <BoxCategoria categoria='Acabamento' />
-                            </>
-                            
-                            :
-                            null
-                        }
-                        
                     </div>
                             </span>
                         </div>
