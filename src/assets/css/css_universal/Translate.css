@@ -2,6 +2,9 @@
     margin-top: 0px !important;
     width: 186px !important;
 }
+.css-13cymwt-control {
+    margin-left: 14px;
+}
 .translate-div{
     display: flex;
     flex-direction: row-reverse;
