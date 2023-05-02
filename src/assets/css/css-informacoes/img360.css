@@ -19,7 +19,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    color: rgb(0, 0, 0);
+    color: var(--cor-texto);
     font-weight: bold;
     font-size: 31px;
 }
