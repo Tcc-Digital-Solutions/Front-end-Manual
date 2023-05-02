@@ -1,5 +1,6 @@
 .box-categoria-select-div {
-    width: 163px;
+    /* width: 163px; */
+    width: 245px;
     height: 191px;
     display: flex;
     flex-direction: row;
@@ -17,7 +18,6 @@
     justify-content: space-evenly;
     background-color: transparent;
     border: 0;
-    cursor: pointer;
 }
 
 .box-categoria-select-img {
@@ -28,8 +28,25 @@
 .box-categoria-select-text {
     font-family: var(--fonte);
     font-weight: bolder;
+    align-items: center;
 }
 
-.box-categoria-select-button:hover {
-    color: #ff0000;
+
+@media only screen and (min-width: 1000px) and (max-width: 1250px) {
+
+.box-categoria-select-div {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.box-categoria-select-img {
+    width: 80px;
+    height: 80px;
+}
+
 }

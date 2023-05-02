@@ -4,6 +4,7 @@
     height: 100%;
     align-items: center;
     position: fixed;
+    z-index: 999;
 }
 
 .BoxInformacoes-div {
@@ -15,12 +16,22 @@
 
 }
 
-
+.span-informacoes-page{
+    width: 400px;
+    z-index: 189;
+}
 @media only screen and (max-width: 1200px) {
     .BoxInformacoes-div {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 84%;
+    }
+    .span-informacoes-page{
+        position: absolute;
+        width: 320px;
+        height: 479px;
+        margin-top: 227px;
+        margin-right: 680px;
     }
 }

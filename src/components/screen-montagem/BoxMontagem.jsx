@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Autoplay, Pagination, Navigation,Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Speaker } from '../universal/Speaker'
 import '../../assets/css/css-montagem/BoxMontagem.css';
 import ImgFixaMontagem from '../../assets/img/img-fixa-montagem.png';
 import ImgMontagemA from '../../assets/img/img-furadeira-A.png';
@@ -12,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { ButtonMontagem } from './ButtonMontagem';
 
 
 export const BoxMontagem = () => {
@@ -45,7 +47,7 @@ export const BoxMontagem = () => {
         <div className="BoxMontagem-div" >
             <div className='montagem-components'>
                 <div className='img-principal-div'>
-                    <img className='img-principal' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} />
+                    <ButtonMontagem/>
                 </div>
                 <div className='img-fixa-montagem-div'>
                     <img className='img-fixa-montagem' src={imagemMaximizada} />
@@ -57,19 +59,19 @@ export const BoxMontagem = () => {
                                 <Swiper
                             
                                     direction={'vertical'}
-                                    spaceBetween={30}
+                                    spaceBetween={15}
                                     slidesPerView={slip}
-                                    loop={true}
+                                    loop={false}
                                     loopFillGroupWithBlank={true}
                                     navigation={true}
                                     modules={[Autoplay,Pagination, Navigation, A11y]}
-                                    className="mySwiper"
+                                    className="swiper-montagem"
                                    
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
 
                                 >
-
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemA} onClick={() => setImagemMaximizada(ImgMontagemA)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemB} onClick={() => setImagemMaximizada(ImgMontagemB)} /></span></SwiperSlide>
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={ImgMontagemC} onClick={() => setImagemMaximizada(ImgMontagemC)} /></span></SwiperSlide>
@@ -90,6 +92,7 @@ export const BoxMontagem = () => {
                                     onSlideChange={() => console.log('slide change')}
                                 >
                                     {/* <SwiperSlide><img className='imgs-montagem' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} /></SwiperSlide> */}
+                                    <SwiperSlide><img className='imgs-montagem' src={ImgFixaMontagem} onClick={() => setImagemMaximizada(ImgFixaMontagem)} /></SwiperSlide>
                                     <SwiperSlide><img className='imgs-montagem' src={ImgMontagemA} onClick={() => setImagemMaximizada(ImgMontagemA)} /></SwiperSlide>
                                     <SwiperSlide><img className='imgs-montagem' src={ImgMontagemB} onClick={() => setImagemMaximizada(ImgMontagemB)} /></SwiperSlide>
                                     <SwiperSlide><img className='imgs-montagem' src={ImgMontagemC} onClick={() => setImagemMaximizada(ImgMontagemC)} /></SwiperSlide>

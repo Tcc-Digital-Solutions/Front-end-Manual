@@ -1,31 +1,104 @@
 
 .card-interno{
-    border-radius: 15px;
+    border-radius: 10px;
     background: #ffffff;
-    width: 212px;
-    height: 199px;
+    width: 203px;
+    height: 171px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid 1px #3261A8;
+    border: 14px solid #dadada;
 }
+/* .card-interno {
+    border-radius: 10px;
+    background: #ffffff;
+    width: 194px;
+    height: 182px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #dadada;
+} */
 .img-icones{
     width: 30px;
 }
 
 .card-texto{
-    font-size: 19px;
+    font-size: 16px;
     margin: 10px;
 }
 
-@media only screen and (max-width: 1200px) {
-    .card {
-        width: 219px;
-        height: 151px;
+
+@media only screen and (max-width: 1230px) {
+    
+
+    .card-interno{
+        border-radius: 10px;
+        background: #ffffff;
+        width: 164px;
+        height: 146px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 17px solid #dadada ;
     }
+    
+        .card-texto{
+            font-size: 13px;
+            margin: 10px;
+        }
+
+}
+
+@media only screen and (min-width: 1231px) and (max-width:1320px) {
+    .card-interno{
+        border-radius: 10px;
+        background: #ffffff;
+        width: 174px;
+        height: 156px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 20px solid #dadada ;
+    }
+
+    
     .card-texto{
-        font-size: 17px;
+        font-size: 13px;
         margin: 10px;
     }
 }
+
+    @media only screen and (max-width: 414px){
+        .card-interno {
+            width: 164px;
+            height: 120px;
+            border: 13px solid #dadada ;
+        }
+        .card-texto {
+            font-size: 10px;
+        }
+    }
+
+@media only screen and (max-height: 750px) and (max-width: 500px){
+    .card-interno {
+        width: 150px;
+        height: 92px;
+    }
+    .card-texto {
+        font-size: 10px;
+    }
+}
+
+/* @media only screen and (max-width: 500px) and (max-height: 400px){
+    .card-interno {
+        width: 184px;
+        height: 113px;
+    }
+}
+
+     */

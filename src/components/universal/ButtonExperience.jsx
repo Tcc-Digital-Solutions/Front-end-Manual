@@ -15,7 +15,7 @@ export const ButtonExperience = () => {
 
     return (
         <div className="ButtonExperience-div" >
-            <button className='ButtonExperience-button' onClick={() => setMenuVisible()}>Bosch Experience</button>
+            <button className='ButtonExperience-button' onClick={() => setMenuVisible()}>Experiência Sonora</button>
             <span className={visible}>
                 <button className="ButtonExperience-button-x" id='button-lado' onClick={() => setMenuVisible()}><img className="ButtonExperience-button-x-img" src={fecharImg} alt="" /></button>
                 <div className="ButtonExperience-button-scroll">

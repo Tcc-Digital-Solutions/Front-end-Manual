@@ -26,28 +26,21 @@
     display: none;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    position: absolute;
-}
- .swiper-button-prev {       
+.swiper-info .swiper-button-prev {       
     left: 50% !important;
     top: 0.5% !important;
     transform: rotate(90deg);
     transform-origin: left center;
     color: black;
-    position: absolute;
   }
-  .swiper-button-next{
+  .swiper-info .swiper-button-next{
     left: 50% !important;
     bottom: 0.5% !important;
     transform: rotate(90deg);
     transform-origin: left center;
     top:auto;
     color: black;
-    position: absolute;
   }
-
-@media only screen and (min-width: 1201px) { /*Fazer as setas mudarem para cima e para baixo  */
 
   .Carousel-informacoes-div{
     border-radius: 25px;
@@ -57,16 +50,48 @@
     align-items: center;
 }
 
+@media only screen and (min-width: 1201px)  and (max-width:1280px){ /*Fazer as setas mudarem para cima e para baixo  */
+
+ .swiper-info .swiper-button-prev {       
+    left: 50% !important;
+    top: 0.5% !important;
+    transform: rotate(90deg);
+    transform-origin: left center;
+    color: black;
+  }
+  .swiper-info .swiper-button-next{
+    left: 50% !important;
+    bottom: 0.5% !important;
+    transform: rotate(90deg);
+    transform-origin: left center;
+    top:auto;
+    color: black;
+  }
+
+
+  .Carousel-informacoes-div{
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 }
 
 
 @media only screen and (max-width: 1200px) {
+    .swiper-info {
+        width: 100%;
+        height: 22vh !important;
+        overflow-y: scroll;
+    }
     .Carousel-informacoes-div {
         display: flex;
         width: 100%;
-        height: 226px;
+        padding: 0;
+        /* height: 226px; */
         align-items: center;
-        flex-direction: row;
+        flex-direction: row !important;
     }
     .Carousel-informacoes-01{
         display: none;
@@ -85,20 +110,25 @@
         display: flex !important;
         align-items: center !important;
     }
-    .swiper-button-prev {       
+
+
+    .swiper-info .swiper-button-prev {
         left: 6% !important;
-        top: 48.5% !important;
-        transform: rotate(1deg) !important;
+        top: 47.5% !important;
+        transform: rotate(1deg);
         transform-origin: left center;
         color: black;
-      }
-      .swiper-button-next{
-        left: 88% !important;
-        bottom: 48.5%  !important;
-        transform: rotate(1deg) !important;
+    }
+    .swiper-info .swiper-button-next {
+        left: 90% !important;
+        bottom: 37.8% !important;
+        transform: rotate(1deg);
         transform-origin: left center;
-        top:auto;
+        top: auto;
         color: black;
-      }
+    }
     
 }
+
+
+
