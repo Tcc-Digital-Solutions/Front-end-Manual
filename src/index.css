@@ -22,7 +22,9 @@
 
   /* --cor-bg: #000000; */
   /*paleta button youtube*/
-  --cor-texto: #ffffff;
+  --cor-texto: #000000;
+  --cor-bg: #000000;
+  --cor-manual: #fff;
   --cot-button-vermelho: #DA2228;
   --tamanho-fonte1: 16px;
   --tamanho-fonte2: 18px;

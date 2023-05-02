@@ -3,6 +3,8 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
 }
 button#contraste {
     display: flex;
@@ -15,7 +17,7 @@ button#grayescale {
 
 .AltoContraste-box{
     height: 38px;
-    width: 100%;
+    width: 82px;
     display: flex;
     flex-direction: row;
     align-items: center;
