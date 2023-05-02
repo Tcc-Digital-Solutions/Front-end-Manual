@@ -31,12 +31,18 @@
     font-weight: 600;
   }
 
+button.rpv-core__minimal-button {
+    background-color: white;
+}
+.rpv-core__inner-page {
+    background-color: var(--cor-manual)!important;
+}
 .rpv-default-layout__toolbar {
-    background-color: #fff !important;
+    background-color: var(--cor-manual)!important;
     border: 0 !important;
 }
 .rpv-default-layout__sidebar-headers {
-    background-color: #fff !important;
+    background-color: var(--cor-manual)!important;
 }
 .rpv-default-layout__sidebar--ltr {
     border: 0 !important;
