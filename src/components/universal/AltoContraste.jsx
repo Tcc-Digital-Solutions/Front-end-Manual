@@ -4,9 +4,6 @@ import React, { useState } from 'react';
 import { VscCircleLargeFilled, VscColorMode } from "react-icons/vsc";
 import imgsunMoon from '../../../public/img/sun-moon.svg'
 
-
-
-
 export const AltoContraste = () => {
     const [visible, setVisible] = useState("AltoContraste-box-fechar")
     const [pressed, setPressed] = useState(false)
@@ -14,7 +11,6 @@ export const AltoContraste = () => {
     const [tamanho, setTamanho]= useState(16)
     const [tamanho2, setTamanho2] =useState(18)
     const listaTamanhos = [16, 18, 22]
-    
 
     const resetar = () => {
       setTamanho(listaTamanhos[0])
