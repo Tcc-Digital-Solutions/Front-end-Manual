@@ -5,9 +5,9 @@ import {useEffect, useState } from 'react'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Cardproduto } from "./Cardproduto";
+import Cardproduto from "./Cardproduto";
 
-export const Carousel = () => {
+const Carousel = () => {
     const { innerWidth: width, innerHeight: height } = window;
     const [slip, setSlip] = useState(3)
 
@@ -88,3 +88,4 @@ export const Carousel = () => {
         </div>
     )
 }
+export default Carousel

@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from 'react';
 import Select from 'react-select'
 import MultipleValueTextInput from 'react-multivalue-text-input';
 
-export const CadastroComponents= (props) => {
+const CadastroComponents = (props) => {
     const [file, setFile] = useState({})
 
     const handleFileChange = (e) => {
@@ -80,3 +80,4 @@ export const CadastroComponents= (props) => {
         </div>
     )
 }
+export default CadastroComponents

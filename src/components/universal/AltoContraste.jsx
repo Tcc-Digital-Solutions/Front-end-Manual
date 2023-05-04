@@ -1,10 +1,13 @@
 import '../../styles/css_universal/AltoContraste.module.css'
-import $ from 'jquery';
+// import $ from 'jquery';
 import React, { useState } from 'react';
 import { VscCircleLargeFilled, VscColorMode } from "react-icons/vsc";
 import imgsunMoon from '../../../public/img/sun-moon.svg'
 
-export const AltoContraste = () => {
+var jsdom = require('jsdom')
+$ = require('jquery')(new jsdom.JSDOM().window)
+
+const AltoContraste = () => {
     const [visible, setVisible] = useState("AltoContraste-box-fechar")
     const [pressed, setPressed] = useState(false)
     const [escuro, setEscuro] = useState(false)
@@ -114,4 +117,4 @@ export const AltoContraste = () => {
     )
 }
 
-export default  AltoContraste;
+export default AltoContraste;

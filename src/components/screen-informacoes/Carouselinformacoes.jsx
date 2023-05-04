@@ -9,7 +9,7 @@ import CardInformacoes from './CardInformacoes';
 import React, { useEffect, useState } from 'react';
 
 
-export const Carouselinformacoes = (props) => {
+const Carouselinformacoes = (props) => {
     const { innerWidth: width, innerHeight: height } = window;
     const [slip, setSlip] = useState(2)
 
@@ -71,3 +71,4 @@ export const Carouselinformacoes = (props) => {
         </div>
     )
 }
+export default Carouselinformacoes

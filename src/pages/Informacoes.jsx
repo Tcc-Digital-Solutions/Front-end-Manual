@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BoxInformacoes } from '../components/screen-informacoes/BoxInformacoes';
-import { ButtonsBar } from '../components/universal/ButtonsBar';
-import { Navbar } from '../components/universal/Navbar';
+import BoxInformacoes from '../components/screen-informacoes/BoxInformacoes';
+import ButtonsBar from '../components/universal/ButtonsBar';
+import Navbar from '../components/universal/Navbar';
 
 
-class Informaçoes extends Component {
+class informaçoes extends Component {
     state = {}
     render() {
         return (
@@ -17,4 +17,4 @@ class Informaçoes extends Component {
     }
 }
 
-export default Informaçoes;
+export default informaçoes;

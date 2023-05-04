@@ -1,8 +1,7 @@
 import '../../styles/css-home/Cardproduto.module.css'
 import ferramenta from '../../../public/img/f12-chave-menu.png'
 
-
-export const Cardproduto = (props) => {
+const Cardproduto = (props) => {
     return (
         <div className="Cardproduto-div" >
             <span className='Cardproduto-div-02'>
@@ -15,3 +14,4 @@ export const Cardproduto = (props) => {
         </div>
     )
 }
+export default Cardproduto

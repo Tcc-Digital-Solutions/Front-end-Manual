@@ -4,7 +4,7 @@ import editImg from '../../../public/img/edit.svg'
 import fecharImg from '../../../public/img/close.svg'
 import { useState } from 'react'
 
-export const BoxEditProduto = (props) => {
+const BoxEditProduto = (props) => {
     const [visible, setVisible] = useState("Box-edit-produto-div-button-clik-fechar")
     const [pressed, setPressed] = useState(false)
 
@@ -32,3 +32,4 @@ export const BoxEditProduto = (props) => {
         </div>
     )
 }
+export default BoxEditProduto

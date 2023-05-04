@@ -1,9 +1,9 @@
 import '../../styles/css_universal/ButtonYoutube.module.css'
 import fecharImg from '../../../public/img/close.svg'
 import { useState } from 'react'
-import { BoxYoutube } from './BoxYoutube'
+import BoxYoutube from './BoxYoutube'
 
-export const ButtonYoutube = () => {
+const ButtonYoutube = () => {
     const [visible, setVisible] = useState("button-youtube-box-fechar")
     const [pressed, setPressed] = useState(false)
 
@@ -36,3 +36,4 @@ export const ButtonYoutube = () => {
         </div>
     )
 }
+export default ButtonYoutube

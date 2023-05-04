@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BoxManual } from '../components/screen-manual/BoxManual';
-import { ButtonsBar } from '../components/universal/ButtonsBar';
-import { ButtonYoutube } from '../components/universal/ButtonYoutube';
-import { Navbar } from '../components/universal/Navbar';
+import BoxManual from '../components/screen-manual/BoxManual';
+import ButtonsBar from '../components/universal/ButtonsBar';
+import ButtonYoutube from '../components/universal/ButtonYoutube';
+import Navbar from '../components/universal/Navbar';
 
-class Manual extends Component {
+class manual extends Component {
     state = {}
     render() {
         return (
@@ -18,4 +18,4 @@ class Manual extends Component {
     }
 }
 
-export default Manual;
+export default manual;

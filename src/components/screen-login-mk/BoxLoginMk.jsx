@@ -3,7 +3,7 @@ import boschLogo from '../../../public/img/Meu projeto 1.png'
 import userImg from '../../../public/img/user.svg'
 import passImg from '../../../public/img/lock-closed.svg'
 
-export const BoxLoginMk = () => {
+const BoxLoginMk = () => {
     return (
         <div className="box-login-mk-div" >
 
@@ -30,3 +30,4 @@ export const BoxLoginMk = () => {
         </div>
     )
 }
+export default BoxLoginMk

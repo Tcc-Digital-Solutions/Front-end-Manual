@@ -1,13 +1,13 @@
 import React from "react";
 import SoundSpeak from "../../../public/img/audio-loudspeaker-public.svg";
 import Descrição from '../../../public/img/descricao-de-audio.png'
-import Artyom from "artyom.js";
+// import artyom from "artyom.js";
 import '../../styles/css_universal/Speaker.module.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export function Speaker({children,text, value ,buttonTrue}){
-    const artyom = new Artyom();
+export default function Speaker({children,text, value ,buttonTrue}){
+    const artyom = require('artyom.js').default; 
     const notifyInfo = () => toast.info('Reproduzindo áudio', {
         position: "top-center",
         autoClose: 5000,

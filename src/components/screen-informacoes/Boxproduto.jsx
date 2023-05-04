@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import '../../styles/css-informacoes/Boxproduto.module.css';
 
-export const Boxproduto = (props) => {
+const Boxproduto = (props) => {
 
     return (
         <div className='boxproduto-div' >
@@ -24,3 +24,4 @@ export const Boxproduto = (props) => {
 
     )
 }
+export default Boxproduto

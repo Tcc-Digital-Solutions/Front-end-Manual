@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Loading } from '../components/universal/Loading';
+import Loading from '../components/universal/Loading';
 
-
-class ToCheck extends Component {
+class toCheck extends Component {
     state = {}
     render() {
         return (
@@ -12,5 +11,4 @@ class ToCheck extends Component {
         );
     }
 }
-
-export default ToCheck;
+export default toCheck;

@@ -3,7 +3,7 @@ import fecharImg from '../../../public/img/close.svg'
 import { useState } from 'react'
 // import furadeira from '../../audio/SOM - FURADEIRA... (320 kbps).mp3'
 
-export const ButtonExperience = () => {
+const ButtonExperience = () => {
     const [visible, setVisible] = useState("ButtonExperience-box-fechar")
     const [pressed, setPressed] = useState(false)
 
@@ -27,3 +27,4 @@ export const ButtonExperience = () => {
         </div>
     )
 }
+export default ButtonExperience

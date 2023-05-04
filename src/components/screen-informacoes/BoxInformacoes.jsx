@@ -1,10 +1,10 @@
 import '../../styles/css-informacoes/BoxInformacoes.module.css';
-import { Img360 } from '../screen-informacoes/Img360';
-import { ButtonAbout } from './ButtonAbout';
-import { Carouselinformacoes } from './Carouselinformacoes';
-import { ButtonExperience } from '../universal/ButtonExperience';
+import Img360 from '../screen-informacoes/Img360';
+import ButtonAbout from './ButtonAbout';
+import Carouselinformacoes from './Carouselinformacoes';
+import ButtonExperience from '../universal/ButtonExperience';
 
-export const BoxInformacoes = () => {
+const BoxInformacoes = () => {
     return (
 
         <div className="container-informacoes">
@@ -19,3 +19,4 @@ export const BoxInformacoes = () => {
         </div>
     )
 }
+export default BoxInformacoes

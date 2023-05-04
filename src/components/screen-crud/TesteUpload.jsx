@@ -2,7 +2,7 @@ import React from 'react';
 import {MultipleFileUpload, MultipleFileUploadMain, MultipleFileUploadStatus, MultipleFileUploadStatusItem, Modal, Checkbox} from '@patternfly/react-core';
 import UploadIcon from '@patternfly/react-icons/dist/esm/icons/upload-icon';
 
-export const MultipleFileUploadBasic = () => {
+const MultipleFileUploadBasic = () => {
   const [isHorizontal, setIsHorizontal] = React.useState(false);
   const [currentFiles, setCurrentFiles] = React.useState([]);
   const [readFileData, setReadFileData] = React.useState([]);
@@ -71,3 +71,4 @@ export const MultipleFileUploadBasic = () => {
       <Checkbox id="horizontal-checkbox" label="Show as horizontal" isChecked={isHorizontal} onChange={() => setIsHorizontal(!isHorizontal)} />
     </>;
 };
+export default MultipleFileUploadBasic

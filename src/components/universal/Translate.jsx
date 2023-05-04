@@ -1,12 +1,12 @@
 import '../../styles/css_universal/Translate.module.css'
 import '../../styles/css_universal/dropdown.module.css'
 import translateImg from '../../../public/img/chat-language.svg'
-import {  useState } from 'react';
+import { useState } from 'react';
 import Select from 'react-select'
-import { Speaker } from './Speaker';
-import { AltoContraste } from './AltoContraste'
+import Speaker from './Speaker';
+import AltoContraste from './AltoContraste'
 
-export const Translate = () => {
+const Translate = () => {
     const [selectedOption, setSelectedOption] = useState('pt-PT');
     const [visible, setVisible] = useState("translate-box-fechar")
     const [pressed, setPressed] = useState(false)
@@ -27,8 +27,6 @@ export const Translate = () => {
         pressed ? setVisible("translate-box-fechar") : setVisible("translate-box")
         setPressed(!pressed)
     }
-    
-
     return (
         <div className="translate-div">
             <Speaker value={selectedOption.value}></Speaker>
@@ -44,3 +42,4 @@ export const Translate = () => {
         </div>
     )
 }
+export default Translate;

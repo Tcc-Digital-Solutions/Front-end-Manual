@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { BoxLoginMk } from '../components/screen-login-mk/BoxLoginMk';
+import BoxLoginMk from '../components/screen-login-mk/BoxLoginMk';
 
-class Login extends Component {
+class login extends Component {
     state = {}
     render() {
         return (
@@ -12,4 +12,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default login;

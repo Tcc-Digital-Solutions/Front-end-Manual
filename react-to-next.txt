@@ -1,0 +1,12 @@
+css  -- .module.css
+trocar tags para classes ou ids
+
+pdf -- refazer e checar as vesões
+
+artyom -- mudar a maneira do import para require
+
+jquery -- install jsdom
+
+alterar a criação e importação dos components
+
+instalação de algumas bibliotecas mesmo que não estejam sendo importadas isso não instala pacotes aleatórios conforme assumido abaixo. Se você deseja que o front-end tenha algum nível de processamento não autoritativo a ser feito no lado do cliente dessas dependências necessárias, essa é a opção a ser considerada.

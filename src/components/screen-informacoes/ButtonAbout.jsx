@@ -3,7 +3,7 @@ import about from '../../../public/img/sobre-nos 1.png'
 import { useState ,useEffect} from 'react'
 import { Boxproduto } from './Boxproduto'
 
-export const ButtonAbout = () => {
+const ButtonAbout = () => {
     const { innerWidth: width, innerHeight: height } = window;
     const [visible, setVisible] = useState("ButtonAbout-box")
     const [pressed, setPressed] = useState(false)
@@ -29,3 +29,4 @@ export const ButtonAbout = () => {
         </div>
     )
 }
+export default ButtonAbout

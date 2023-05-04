@@ -2,7 +2,7 @@ import '../../styles/css_universal/Buttons_bar.module.css'
 import {useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-export const ButtonsBar = () => {
+const ButtonsBar = () => {
     const { id } = useParams();
     const navigate = useNavigate()
 
@@ -17,3 +17,4 @@ export const ButtonsBar = () => {
         </div>
     )
 }
+export default ButtonsBar

@@ -1,10 +1,7 @@
 import '../../styles/css_universal/Loading.module.css'
 import furadeiraImg from '../../../public/img/furadeira 1.png'
 
-
-export const Loading = (props) => {
-
-
+const Loading = (props) => {
     return (
         <div className="loading-div" >
             <div class="lds-default">
@@ -25,3 +22,4 @@ export const Loading = (props) => {
         </div>
     )
 }
+export default Loading

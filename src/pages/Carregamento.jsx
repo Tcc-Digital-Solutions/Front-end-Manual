@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ScreenEspera } from '../components/universal/ScreenEspera';
+import ScreenEspera from '../components/universal/ScreenEspera';
 
-class Carregamento extends Component {
+class carregamento extends Component {
     state = {}
     render() {
         return (
@@ -12,4 +12,4 @@ class Carregamento extends Component {
     }
 }
 
-export default Carregamento;
+export default carregamento;

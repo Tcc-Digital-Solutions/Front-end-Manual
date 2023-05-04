@@ -1,8 +1,8 @@
 import '../../styles/css-crud/componentsProdutosCadastrados.module.css'
-import { BoxEditProduto } from './BoxEditProduto'
-import { BoxPesquisaCrud } from './BoxPesquisaCrud'
+import BoxEditProduto from './BoxEditProduto'
+import BoxPesquisaCrud from './BoxPesquisaCrud'
 
-export const ComponentsProdutosCadastrados = () => {
+const ComponentsProdutosCadastrados = () => {
     return (
         <div className="components-Produtos-Cadastrados-div" >
             <BoxPesquisaCrud/>
@@ -37,3 +37,4 @@ export const ComponentsProdutosCadastrados = () => {
         </div>
     )
 }
+export default ComponentsProdutosCadastrados

@@ -1,7 +1,7 @@
 import '../../styles/css-crud/BoxPesquisaCrud.module.css'
 import lupaImg from '../../../public/img/search.svg'
 
-export const BoxPesquisaCrud = () => {
+const BoxPesquisaCrud = () => {
     return (
         <div className="box-pesquisa-crud-div" >
             <span className="box-pesquisa-crud-span">
@@ -11,3 +11,4 @@ export const BoxPesquisaCrud = () => {
         </div>
     )
 }
+export default BoxPesquisaCrud

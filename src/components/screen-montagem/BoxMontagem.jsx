@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Autoplay, Pagination, Navigation,Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Speaker } from '../universal/Speaker'
+import Speaker from '../universal/Speaker'
 import '../../styles/css-montagem/BoxMontagem.module.css';
 import ImgFixaMontagem from '../../../public/img/img-fixa-montagem.png';
 import ImgMontagemA from '../../../public/img/img-furadeira-A.png';
@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
-export const BoxMontagem = () => {
+const BoxMontagem = () => {
 
     const [imagemMaximizada, setImagemMaximizada] = useState(ImgFixaMontagem)
     const { innerWidth: width, innerHeight: height } = window;
@@ -23,7 +23,6 @@ export const BoxMontagem = () => {
     const [slip, setSlip] = useState(3)
     const [swip, setSwip] = useState(1)
     console.log(innerHeight)
-
 
     useEffect(() => {
         if (innerHeight < 800){
@@ -109,4 +108,5 @@ export const BoxMontagem = () => {
         </div>
     )
 }
+export default BoxMontagem
 

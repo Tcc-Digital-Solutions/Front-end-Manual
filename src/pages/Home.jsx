@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Navbar } from '../components/universal/Navbar';
+import Navbar from '../components/universal/Navbar';
 
 
-class Home extends Component {
+class home extends Component {
     state = {}
     render() {
         return (
@@ -13,4 +13,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default home;

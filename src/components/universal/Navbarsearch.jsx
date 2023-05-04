@@ -2,7 +2,7 @@ import '../../styles/css_universal/Navbarsearch.module.css'
 import {useEffect, useState } from 'react'
 import lupa from '../../../public/img/search.svg'
 
-export const Navbarsearch = (props) => {
+const Navbarsearch = (props) => {
     const [visible, setVisible] = useState('navbarsearch-span')
     const [visibleButtonX, setVisibleButtonX] = useState("button-youtube-button-x-hide")
     const { innerWidth: width, innerHeight: height } = window;
@@ -33,3 +33,4 @@ export const Navbarsearch = (props) => {
         </div>
     )
 }
+export default Navbarsearch

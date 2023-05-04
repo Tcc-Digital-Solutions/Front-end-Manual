@@ -1,7 +1,7 @@
 import '../../styles/css_universal/HubTeste.module.css'
 import { useNavigate } from "react-router-dom";
 
-export const HubTeste = (props) => {
+const HubTeste = (props) => {
     const navigate = useNavigate();
 
     const proosScreen = () => {
@@ -30,3 +30,4 @@ export const HubTeste = (props) => {
         </div>
     )
 }
+export default HubTeste

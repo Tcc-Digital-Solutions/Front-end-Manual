@@ -3,8 +3,9 @@ import VLibras from '@djpfs/react-vlibras';
 function App() {
   return (
     <div>
-      <RoutesJS />
+      {/* <RoutesJS /> */}
       <VLibras forceOnload={true}   />
+
     </div>
   )
 }

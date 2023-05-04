@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { BoxMontagem } from '../components/screen-montagem/BoxMontagem';
-import { ButtonsBar } from '../components/universal/ButtonsBar';
-import { Navbar } from '../components/universal/Navbar';
+import BoxMontagem from '../components/screen-montagem/BoxMontagem';
+import ButtonsBar from '../components/universal/ButtonsBar';
+import Navbar from '../components/universal/Navbar';
 
-class Montagem extends Component {
+class montagem extends Component {
     state = {}
     render() {
         return (
@@ -16,4 +16,4 @@ class Montagem extends Component {
     }
 }
 
-export default Montagem;
+export default montagem;

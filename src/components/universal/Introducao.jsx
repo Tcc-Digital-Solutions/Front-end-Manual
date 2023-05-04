@@ -1,8 +1,8 @@
 import '../../styles/css_universal/Introducao.module.css'
-import { HubTeste } from './HubTeste';
+import HubTeste from './HubTeste';
 
 
-export const Introducao = (props) => {
+const Introducao = (props) => {
 
     return (
         <div className="Introducao-div" >
@@ -11,3 +11,4 @@ export const Introducao = (props) => {
         </div>
     )
 }
+export default Introducao

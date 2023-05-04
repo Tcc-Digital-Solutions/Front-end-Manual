@@ -1,15 +1,11 @@
 import '../../styles/css_universal/Navbar.module.css'
 import imgTop from '../../../public/img/imgTopo.png'
 import boschLogo from '../../../public/img/Group 72.png'
-import { Translate } from './Translate';
-import { ButtonLogoff } from '../screen-crud/ButtonLogoff'
-import { NavbarHome } from '../screen-home/NavbarHome';
+import Translate from './Translate';
+import ButtonLogoff from '../screen-crud/ButtonLogoff'
+import NavbarHome from '../screen-home/NavbarHome';
 
-
-
-export const Navbar = (props) => {
-    
-
+const Navbar = (props) => {
     return (
         <div className="navbar-div" >
             <div className='navbar-div-1'>
@@ -22,7 +18,7 @@ export const Navbar = (props) => {
                 <div  className={props.logado ? 'navbar-div-buttons' : 'navbar-div-buttons-2'}>
                     <span className='navbar-buttons-comus-1'>
                         <span className={props.logado ? 'navbar-div-button-logoff' : 'hide'}>
-                            <ButtonLogoff />
+                            <ButtonLogoff/>
                         </span> 
                         <Translate /> 
                         <div className={props.menu ? 'active-home' : 'no-active-home'}>
@@ -34,3 +30,4 @@ export const Navbar = (props) => {
         </div>
     )
 }
+export default Navbar

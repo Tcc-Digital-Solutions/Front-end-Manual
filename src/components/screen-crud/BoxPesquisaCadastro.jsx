@@ -3,13 +3,13 @@ import lupa from '../../../public/img/search.svg'
 import casa from '../../../public/img/home.svg'
 import user from '../../../public/img/user-add.svg'
 import manual from '../../../public/img/document-add.svg'
-import { CadastroComponents } from './CadastroComponents'
+import CadastroComponents from './CadastroComponents'
 import {  useState } from 'react';
-import { ComponentsProdutosCadastrados } from './ComponentsProdutosCadastrados'
-import { CadastroUser } from './CadastroUser'
+import ComponentsProdutosCadastrados from './ComponentsProdutosCadastrados'
+import CadastroUser from './CadastroUser'
 
 
-export const BoxPesquisaCadastro = () => {
+const BoxPesquisaCadastro = () => {
   
     const [danilo, setDanilo] = useState(true)
     const [danilo1, setDanilo1] = useState(false)
@@ -65,3 +65,4 @@ export const BoxPesquisaCadastro = () => {
         </div>
     )
 }
+export default BoxPesquisaCadastro

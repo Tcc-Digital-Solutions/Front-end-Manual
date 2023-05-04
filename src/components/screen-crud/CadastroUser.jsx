@@ -1,6 +1,6 @@
 import '../../styles/css-crud/CadastroUser.module.css'
 
-export const CadastroUser = (props) => {
+const CadastroUser = (props) => {
 
     return (
         <div className="components-cadastro-div" >
@@ -29,3 +29,4 @@ export const CadastroUser = (props) => {
         </div>
     )
 }
+export default CadastroUser

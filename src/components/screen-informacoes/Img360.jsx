@@ -1,7 +1,7 @@
 import '../../styles/css-informacoes/img360.module.css';
-import { Speaker } from '../universal/Speaker'
+import Speaker from '../universal/Speaker'
 
-export const Img360 = () => {
+const Img360 = () => {
 
     const basePath = "https://fastly-production.24c.in/webin/360";
     return (
@@ -17,3 +17,4 @@ export const Img360 = () => {
         </div>
     )
 }
+export default Img360

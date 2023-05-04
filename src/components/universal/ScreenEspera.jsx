@@ -5,10 +5,10 @@ import errorImg from '../../../public/img/ERROR.png'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import { Introducao } from './Introducao'
-import { Speaker } from "../universal/Speaker";
+import Introducao from './Introducao'
+import Speaker from "../universal/Speaker";
 
-export const ScreenEspera = () => {
+const ScreenEspera = () => {
     const [animado, setAnimado] = useState(true)
     const navigate = useNavigate()
     const { id } = useParams();
@@ -41,3 +41,4 @@ export const ScreenEspera = () => {
         </div>
     )
 }
+export default ScreenEspera

@@ -4,11 +4,11 @@ import {useEffect, useState } from 'react'
 import fecharImg from '../../../public/img/close.svg'
 import menuImg from '../../../public/img/list-view-mobile.svg'
 import lupa from '../../../public/img/search.svg'
-import { Carousel } from './Carousel'
-import { BoxCategoria } from './BoxCategoria'
+import Carousel from './Carousel'
+import BoxCategoria from './BoxCategoria'
 
 
-export const NavbarHome = (props) => {
+const NavbarHome = (props) => {
     const[isHovering_0, setIsHoverring_0] = useState(false);
     const[isHovering_1, setIsHoverring_1] = useState(false);
     const[isHovering_2, setIsHoverring_2] = useState(false);
@@ -350,3 +350,4 @@ export const NavbarHome = (props) => {
         </div>
     )
 }
+export default NavbarHome

@@ -1,7 +1,7 @@
 import '../../styles/css-crud/BoxManualCadastrados.module.css'
-import { BoxPesquisaCadastro } from './BoxPesquisaCadastro';
+import BoxPesquisaCadastro from './BoxPesquisaCadastro';
 
-export const BoxManualCadastrados = () => {
+const BoxManualCadastrados = () => {
 
     return (
         <div className="box-manual-cadastrados-div" >
@@ -13,3 +13,4 @@ export const BoxManualCadastrados = () => {
         </div>
     )
 }
+export default BoxManualCadastrados
