@@ -31,10 +31,12 @@ export const AltoContraste = () => {
           $("body").children().removeClass("claro").addClass("escuro");
           document.documentElement.style.setProperty('--cor-texto', '#fff');
           document.documentElement.style.setProperty('--cor-bg', '#000');
+          document.documentElement.style.setProperty('--cor-manual','#000')
     
         } else {
           document.documentElement.style.setProperty('--cor-texto', '#000');
           document.documentElement.style.setProperty('--cor-bg', '#fff');
+          document.documentElement.style.setProperty('--cor-manual','#fff')
     
           $("body").removeClass("escuro").addClass("claro");
           $("body").children().removeClass("escuro");
