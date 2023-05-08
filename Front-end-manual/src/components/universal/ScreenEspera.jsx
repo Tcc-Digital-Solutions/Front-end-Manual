@@ -7,19 +7,27 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { Introducao } from './Introducao'
 import { Speaker } from "../universal/Speaker";
+import { useSWR } from "swr";
 
 export const ScreenEspera = () => {
+
+    const fetcher = (...args) => fetch(...args, { method: 'GET' }).then(res => res.json())
+    const { data, error, loading } = useSWR('http://localhost:3000')
+
     const [animado, setAnimado] = useState(true)
     const navigate = useNavigate()
     const { id } = useParams();
-
 
     if (!animado) { 
         if (!id) {
             navigate('/home')
             // window.location.reload(false);
         }
-        if (id) navigate('/informacoes/' + id)
+        if (id) {
+
+            navigate('/informacoes/' + id)
+        }
+
     };
 
     setTimeout(() => {
