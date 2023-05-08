@@ -12,7 +12,7 @@ import { useSWR } from "swr";
 export const ScreenEspera = () => {
 
     const fetcher = (...args) => fetch(...args, { method: 'GET' }).then(res => res.json())
-    const { data, error, loading } = useSWR('http://localhost:3000')
+    const { data, error, loading } = useSWR('http://localhost:3000/api/produtos/{}')
 
     const [animado, setAnimado] = useState(true)
     const navigate = useNavigate()
