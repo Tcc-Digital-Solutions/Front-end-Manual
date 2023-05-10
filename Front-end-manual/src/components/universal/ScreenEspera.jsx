@@ -7,44 +7,29 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { Introducao } from './Introducao'
 import { Speaker } from "../universal/Speaker";
-import useSWR from 'swr';
-// react load
 
 export const ScreenEspera = () => {
     const [animado, setAnimado] = useState(true)
     const navigate = useNavigate()
     const { id } = useParams();
-    
-    // const buscar_id = (busca, id) =>{
-    //     const fetcher = (...args) => fetch(...args, { method: 'GET' }).then(res => res.json())
-    //     const { data, error, isLoading } = useSWR(`http://localhost:3000/api/${busca}/${id}`, fetcher)
-    //     if ( error ) return <div>falhou ao carregar</div>
-    //     if ( isLoading ) return <div>carregando...</div>// mostrar nossa página de carregamento
-    //     console.log(data)
-    // }
 
-
-        if (!animado) { 
-            if (!id) {
-                console.log('não passe id')
-                const data =  fetch('http://localhost:3000/api/produtos/',{
-                    method: 'GET',
-                    headers: {"Content-Type": "application/json"}  
-                })
-                navigate('/home')
+    useEffect(() =>{
+        (async function (){
+            if (!animado) { 
+                if (!id) {
+                    // const data = await fetch('http://localhost:3000/api/produtos').json()
+                    navigate('/home')
+                }
+                else if (id) {
+                    navigate('/informacoes/' + id)
+                }
             }
-            else if (id) {
-                console.log("passei id")
-                const data =  fetch(`http://localhost:3000/api/produto/${id}`,{
-                    method: 'GET',
-                    headers: {"Content-Type": "application/json"}  
-                })
-                navigate('/informacoes/' + id)
-            }
-        }
-    setTimeout(() => {
-        setAnimado(false)
-    }, 2000); // fazer de acordo com a busca na api
+            // *** quando pega direto de informações ele não faz a requisição, só se não tem nada na url
+        })()
+        setTimeout(() => {
+            setAnimado(false)
+        }, 2000); // fazer de acordo com a busca na api
+    }, [])
     
     return (
         <div className="screnn-espera-div" >
