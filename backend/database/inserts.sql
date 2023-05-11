@@ -30,10 +30,13 @@ INSERT INTO montage VALUES(idMontage, 'img_principal01', 1);
 INSERT INTO montage VALUES(idMontage, 'img_principal01', 2);
 
 SELECT * FROM product;
-INSERT INTO product VALUES('4556159-000', 'img_360', 1, 1);
+INSERT INTO product VALUES('4556159-000', 'img_principal.png', 'img_360.png', 1, 1);
 
 SELECT * FROM productsinfo;
 INSERT INTO productsinfo VALUES(idProd, 'Furadeira Angular', 'audio.mp3', 'equipamento de cor azul com textura plástica','4556159-000', 1);
+INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'audio.mp3', 'equipamento de cor azul com textura plástica','4556159-000', 1);
+
+
 
 
 

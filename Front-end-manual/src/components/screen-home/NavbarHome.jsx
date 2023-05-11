@@ -9,6 +9,7 @@ import { BoxCategoria } from './BoxCategoria'
 
 
 export const NavbarHome = (props) => {
+    {props.allProdutos}
     const[isHovering_0, setIsHoverring_0] = useState(false);
     const[isHovering_1, setIsHoverring_1] = useState(false);
     const[isHovering_2, setIsHoverring_2] = useState(false);
@@ -185,7 +186,7 @@ export const NavbarHome = (props) => {
                 </ul>
             </span>
             <span className={visibleBox}>
-                <Carousel/>
+                <Carousel allProdutos={props.allProdutos}/>
             </span>
         </div>
     )

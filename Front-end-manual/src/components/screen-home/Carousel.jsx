@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Cardproduto } from "./Cardproduto";
 
-export const Carousel = () => {
+export const Carousel = ( props ) => {
     const { innerWidth: width, innerHeight: height } = window;
     const [slip, setSlip] = useState(3)
 
@@ -20,6 +20,7 @@ export const Carousel = () => {
         }
     })
 
+    {console.log(props.allProdutos)}
     return (
         <div className='Carousel_react-div' >
             <span className='Carousel_react-02'>
@@ -33,54 +34,7 @@ export const Carousel = () => {
                     modules={[Autoplay,Pagination, Navigation]}
                     className="swiper-home"
                 >
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto/></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-card"><Cardproduto allProdutos={props.allProdutos}/></SwiperSlide>
 
                 </Swiper>                 
             </span>

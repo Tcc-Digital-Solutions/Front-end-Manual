@@ -5,17 +5,16 @@ import { Navbar } from '../components/universal/Navbar';
 import { useParams } from 'react-router-dom';
 
 const Informaçoes = () =>{
-    const { id } = useParams();
+    const { id } = useParams()
     const [nome, setNome] = useState('')
-
+    
     const apiProduto = async() => {
         const data = (await fetch(`http://localhost:3000/api/produto/${id}`).then(res => res.json()))
-            localStorage.setItem('produto', JSON.stringify(data))
-            setNome(data['name'])
+        localStorage.setItem('produto', JSON.stringify(data))
+        setNome(data['name'])
+        // aplicar local storage e dps ver como remover e quando
     }
-
     useEffect(() => {
-        (async function (){
             //antes de consultar a api, verificar a localStorage
             //SE o ID na url (/1) é o mesmo do produto que está salvo na localStorage
             let dadosLS = localStorage.getItem('produto')
@@ -32,17 +31,7 @@ const Informaçoes = () =>{
             else{
                 apiProduto()
             }
-            
-        })()
-        // let prods = () => {
-        //     return fetch(`http://localhost:3000/api/produto/${id}`)
-        //     .then(res => {
-        //         res.json()
-        //     })
-        // }
     }, [])
-    // quando atualiza a página ele puxa duas vezes e quando salva o arquivo ele puxa uma só****** resolver lulu
-    // aplicar local storage e dps ver como remover
     return (
         <>
             <Navbar visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar' nave="navbar-div"/>
