@@ -4,7 +4,7 @@ import { ButtonAbout } from './ButtonAbout';
 import { Carouselinformacoes } from './Carouselinformacoes';
 import { ButtonExperience } from '../universal/ButtonExperience';
 
-export const BoxInformacoes = () => {
+export const BoxInformacoes = ({nomeProduto}) => {
     return (
 
         <div className="container-informacoes">
@@ -12,7 +12,7 @@ export const BoxInformacoes = () => {
                 <span className='span-informacoes-page'>
                 <ButtonAbout/>
                 </span>  
-                <Img360/>
+                <Img360 nomeProduto={nomeProduto}/>
                 <Carouselinformacoes/>
                 <ButtonExperience/>
             </div>

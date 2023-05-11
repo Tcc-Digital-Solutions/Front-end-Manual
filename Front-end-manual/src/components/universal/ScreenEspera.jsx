@@ -13,24 +13,20 @@ export const ScreenEspera = () => {
     const navigate = useNavigate()
     const { id } = useParams();
 
-    useEffect(() =>{
-        (async function (){
-            if (!animado) { 
-                if (!id) {
-                    // const data = await fetch('http://localhost:3000/api/produtos').json()
-                    navigate('/home')
-                }
-                else if (id) {
-                    navigate('/informacoes/' + id)
-                }
-            }
-            // *** quando pega direto de informações ele não faz a requisição, só se não tem nada na url
-        })()
-        setTimeout(() => {
-            setAnimado(false)
-        }, 2000); // fazer de acordo com a busca na api
-    }, [])
-    
+    if (!animado) { 
+        if (!id) {
+            // const data = await fetch('http://localhost:3000/api/produtos').json()
+            navigate('/home')
+        }
+        else if (id) {
+            navigate('/informacoes/' + id)
+        }
+    }
+        // *** quando pega direto de informações ele não faz a requisição, só se não tem nada na url
+    setTimeout(() => {
+        setAnimado(false)
+    }, 2000); // fazer de acordo com a busca na api
+
     return (
         <div className="screnn-espera-div" >
             <img className={animado ? 'screnn-espera-img animar' : ' screnn-espera-img- '} src={bosch} alt="" />
