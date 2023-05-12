@@ -5,11 +5,9 @@ import fecharImg from '../../assets/img/close.svg'
 import menuImg from '../../assets/img/list-view-mobile.svg'
 import lupa from '../../assets/img/search.svg'
 import { Carousel } from './Carousel'
-import { BoxCategoria } from './BoxCategoria'
-
 
 export const NavbarHome = (props) => {
-    {props.allProdutos}
+    {console.log((props.allProdutos))}
     const[isHovering_0, setIsHoverring_0] = useState(false);
     const[isHovering_1, setIsHoverring_1] = useState(false);
     const[isHovering_2, setIsHoverring_2] = useState(false);
@@ -52,12 +50,9 @@ export const NavbarHome = (props) => {
     },[])
     
     const [categoria, setCategoria] = useState(1)
-
     const exibirProdutos = (categoria) => {
         setCategoria(categoria)
     }
-    
-    
     const handleMouseOver = (props) => {
         if (props == 1){
             setIsHoverring_1(true);
@@ -77,7 +72,6 @@ export const NavbarHome = (props) => {
         };
            
     };
-
     const handleMouseOut = (props) => {
         if (props == 1){
             setIsHoverring_1(false);
@@ -94,8 +88,6 @@ export const NavbarHome = (props) => {
         if(props == 4){
             setIsHoverring_4(false);  
             };
-         
-        
     };
     return (
         <div className="box-categoria-div" >
@@ -186,7 +178,7 @@ export const NavbarHome = (props) => {
                 </ul>
             </span>
             <span className={visibleBox}>
-                <Carousel allProdutos={props.allProdutos}/>
+                <Carousel allProdutos={props.allProdutos} fezFetch={props.fezFetch}/>
             </span>
         </div>
     )

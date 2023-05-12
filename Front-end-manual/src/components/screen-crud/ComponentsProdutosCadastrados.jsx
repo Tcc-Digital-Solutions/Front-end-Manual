@@ -9,13 +9,14 @@ export const ComponentsProdutosCadastrados = () => {
 
     if ( error ) return <div>falhou ao carregar</div>
     if ( isLoading ) return <div>carregando...</div> /* mostrar nossa página de carregamento */
-
+    console.log(typeof(data))
+    console.log(data)
     return (
         <div className="components-Produtos-Cadastrados-div" >
             <BoxPesquisaCrud/>
             <span className="components-Produtos-Cadastrados-div-produto">
-                { data.map((p) => (
-                    <BoxEditProduto produtoname={p.name}/>
+                { data.map((p,index) => (
+                    <BoxEditProduto produtoname={p.name} key={index}/>
                 ))}
             </span>
         </div>

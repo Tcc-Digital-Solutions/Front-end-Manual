@@ -8,32 +8,37 @@ const Home = () =>{
     const apiProdutos = async() =>{
         const data = (await fetch('http://localhost:3000/api/produtos').then(res => res.json()))
         localStorage.setItem('produtos', JSON.stringify(data))
-        setProdutos(JSON.stringify(data))
+        console.log(data)
+        setProdutos(data)
     }
+    const [fezFetch, setFezFetch] = useState(false)
     // talvez essa logiquinha não seja aplicável aqui porque ele nnão compararia o id da url, ver se vai ser home?
     // e a ultima rota guardada no storage foi home? *****
 
     useEffect(() =>{
-        let dadosLS = localStorage.getItem('produtos')
-        console.log(dadosLS)
-        if (dadosLS != null){
-            let infoProdutos = JSON.parse(dadosLS)
-            if (data == infoProdutos){
-                setProdutos(data)
-            }
-            else{
-                apiProdutos()
-            }
-        }
-        else{
+        // let dadosLS = localStorage.getItem('produtos')
+        // console.log(dadosLS)
+        // if (dadosLS != null){
+        //     let infoProdutos = JSON.parse(dadosLS)
+        //     if (data === infoProdutos){
+        //         setProdutos(data)
+        //     }
+        //     else{
+        //         apiProdutos()
+        //     }
+        // }
+        // else{
             apiProdutos()
-        }
+            setFezFetch(true)
+
+        // }
     }, [])
 
     return (
         <>
-            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" allProdutos={produtos}/>
+            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" allProdutos={produtos} fezFetch={fezFetch}/>
         </>
     );
 }
 export default Home;
+// Só tá buscando na api quando salva esse arquivo

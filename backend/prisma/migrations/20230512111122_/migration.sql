@@ -92,6 +92,7 @@ CREATE TABLE `pdf` (
 CREATE TABLE `product` (
     `codeId` VARCHAR(60) NOT NULL,
     `img_prod` VARCHAR(60) NOT NULL,
+    `img_360` VARCHAR(60) NOT NULL,
     `fkMontage` INTEGER NOT NULL,
     `fkCartegories` INTEGER NOT NULL,
 

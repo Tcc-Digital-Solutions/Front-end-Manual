@@ -7,6 +7,7 @@ import { NavbarHome } from '../screen-home/NavbarHome';
 
 export const Navbar = (props) => {
     {console.log((props.allProdutos))}
+    {console.log(props.fezFetch)}
     return (
         <div className={props.nave} >
             <div className='navbar-div-1'>
@@ -23,7 +24,7 @@ export const Navbar = (props) => {
                         </span> 
                         <Translate /> 
                         <div className={props.menu ? 'active-home' : 'no-active-home'}>
-                            <NavbarHome visible={props.visible} box={props.box} menu={props.menuTrue} search={props.search} allProdutos={props.allProdutos}/>
+                            <NavbarHome visible={props.visible} box={props.box} menu={props.menuTrue} search={props.search} allProdutos={props.allProdutos} fezFetch={props.fezFetch}/>
                         </div>                                               
                     </span>
                 </div>

@@ -34,7 +34,7 @@ export const Carousel = ( props ) => {
                     modules={[Autoplay,Pagination, Navigation]}
                     className="swiper-home"
                 >
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto allProdutos={props.allProdutos}/></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-card"><Cardproduto allProdutos={props.allProdutos} fezFetch={props.fezFetch}/></SwiperSlide>
 
                 </Swiper>                 
             </span>

@@ -100,6 +100,7 @@ model pdf {
 model product {
   codeId        String         @id @db.VarChar(60)
   img_prod      String         @db.VarChar(60)
+  img_360       String         @db.VarChar(60)
   fkMontage     Int
   fkCartegories Int
   cards         cards[]
