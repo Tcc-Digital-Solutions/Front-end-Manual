@@ -1,5 +1,5 @@
 import {RoutesJS} from './routes'
-import VLibras from '@djpfs/react-vlibras';
+import VLibras from '@moreiraste/react-vlibras';
              
 
 function App() {
