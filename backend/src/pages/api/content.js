@@ -8,13 +8,12 @@ export default async function handler(req, res){
         origin: '*',
         optionsSuccessStatus: 200
     })
-
     if (req.method === 'GET'){
-        const { id } = req.query
-        const detalhe = await prisma.productsinfo.findUnique({
-            where: { idProd: parseInt(id) }
-        })
-        res.json(detalhe)
-        console.log(detalhe)
-    }
+      // verificar com o lulu se o id deve ser puxado assim msm
+      const { id } = req.query
+      const detalhe = await prisma.content.findMany(
+        { where }
+      )
+      res.json(detalhe)
+  }
 }

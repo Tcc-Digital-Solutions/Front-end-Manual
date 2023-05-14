@@ -36,7 +36,30 @@ SELECT * FROM productsinfo;
 INSERT INTO productsinfo VALUES(idProd, 'Furadeira Angular', 'audio.mp3', 'equipamento de cor azul com textura plástica','4556159-000', 1);
 INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'audio.mp3', 'equipamento de cor azul com textura plástica','4556159-000', 1);
 
+SELECT * FROM content;
+INSERT INTO content VALUES(idContent, '1 Furadeira GSB RE');
+INSERT INTO content VALUES(idContent, '1 Manual de Instruções');
+INSERT INTO content VALUES(idContent, '1 Limitador de profundidade');
+INSERT INTO content VALUES(idContent, '1 Mala de Transporte');
+INSERT INTO content VALUES(idContent, '1 Punho Auxiliar');
 
+SELECT * FROM description;
+INSERT INTO description VALUES(idDescription, 'Furadeira GSB 13 RE');
+INSERT INTO description VALUES(idDescription, 'Manual de Instruções');
+INSERT INTO description VALUES(idDescription, 'Limitador de Profundidade');
+INSERT INTO description VALUES(idDescription, 'Chave de Mandril');
+
+SELECT * FROM contentprods;
+SELECT * FROM descriptionprods;
+
+INSERT INTO contentprods VALUES(idContentProds, 1, 1);
+INSERT INTO contentprods VALUES(idContentProds, 1, 2);
+INSERT INTO contentprods VALUES(idContentProds, 1, 3);
+
+INSERT INTO descriptionprods VALUES(idDescriptionProds, 1, 1);
+INSERT INTO descriptionprods VALUES(idDescriptionProds, 1, 2);
+INSERT INTO descriptionprods VALUES(idDescriptionProds, 1, 3);
+INSERT INTO descriptionprods VALUES(idDescriptionProds, 1, 4);
 
 
 

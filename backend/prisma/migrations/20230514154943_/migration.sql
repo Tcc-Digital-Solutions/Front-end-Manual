@@ -31,6 +31,44 @@ CREATE TABLE `category` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
+CREATE TABLE `content` (
+    `idContent` INTEGER NOT NULL AUTO_INCREMENT,
+    `content` VARCHAR(45) NOT NULL,
+
+    PRIMARY KEY (`idContent`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `contentprods` (
+    `idContentProds` INTEGER NOT NULL AUTO_INCREMENT,
+    `fkProductsInfo` INTEGER NOT NULL,
+    `fkContent` INTEGER NOT NULL,
+
+    INDEX `idContentProducts_idx`(`fkContent`),
+    INDEX `idProductsInfoContent_idx`(`fkProductsInfo`),
+    PRIMARY KEY (`idContentProds`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `description` (
+    `idDescription` INTEGER NOT NULL AUTO_INCREMENT,
+    `description` VARCHAR(45) NOT NULL,
+
+    PRIMARY KEY (`idDescription`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `descriptionprods` (
+    `idDescriptionProds` INTEGER NOT NULL AUTO_INCREMENT,
+    `fkProductsInfo` INTEGER NOT NULL,
+    `fkDescription` INTEGER NOT NULL,
+
+    INDEX `idDescriptionProdsInfo_idx`(`fkDescription`),
+    INDEX `idProductsInfo_idx`(`fkProductsInfo`),
+    PRIMARY KEY (`idDescriptionProds`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
 CREATE TABLE `imgmontage` (
     `idImgMontage` INTEGER NOT NULL AUTO_INCREMENT,
     `img` VARCHAR(45) NOT NULL,
@@ -170,6 +208,18 @@ ALTER TABLE `categories` ADD CONSTRAINT `IdCategoryCategories` FOREIGN KEY (`fkC
 
 -- AddForeignKey
 ALTER TABLE `categories` ADD CONSTRAINT `IdLanguageCategories` FOREIGN KEY (`fkLanguage`) REFERENCES `languages`(`idLanguages`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `contentprods` ADD CONSTRAINT `idContentProducts` FOREIGN KEY (`fkContent`) REFERENCES `content`(`idContent`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `contentprods` ADD CONSTRAINT `idProductsInfoContent` FOREIGN KEY (`fkProductsInfo`) REFERENCES `productsinfo`(`idProd`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `descriptionprods` ADD CONSTRAINT `idDescriptionProdsInfo` FOREIGN KEY (`fkDescription`) REFERENCES `description`(`idDescription`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- AddForeignKey
+ALTER TABLE `descriptionprods` ADD CONSTRAINT `idProductsInfoDescription` FOREIGN KEY (`fkProductsInfo`) REFERENCES `productsinfo`(`idProd`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
 ALTER TABLE `infolog` ADD CONSTRAINT `fkUser` FOREIGN KEY (`fkUser`) REFERENCES `login`(`idLogin`) ON DELETE NO ACTION ON UPDATE NO ACTION;

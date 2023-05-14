@@ -6,7 +6,7 @@ const Home = () =>{
     // aplicar local storage e dps ver como remover e quando ***
     const [produtos, setProdutos] = useState('')
     const apiProdutos = async() =>{
-        const data = (await fetch('http://localhost:3000/api/produtos').then(res => res.json()))
+        const data = (await fetch('http://localhost:3000/api/produtosInfo').then(res => res.json()))
         localStorage.setItem('produtos', JSON.stringify(data))
         console.log(data)
         setProdutos(data)

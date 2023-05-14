@@ -9,7 +9,7 @@ const Informaçoes = () =>{
     const [prod, setProd] = useState('')
     
     const apiProduto = async() => {
-        const data = (await fetch(`http://localhost:3000/api/produto/${id}`).then(res => res.json()))
+        const data = (await fetch(`http://localhost:3000/api/produtosInfo/${id}`).then(res => res.json()))
         if(data){
             localStorage.setItem('produto', JSON.stringify(data))
             setProd(data)

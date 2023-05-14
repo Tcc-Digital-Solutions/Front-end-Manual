@@ -40,13 +40,46 @@ model category {
   subcategory subcategory[]
 }
 
+model content {
+  idContent    Int            @id @default(autoincrement())
+  content      String         @db.VarChar(45)
+  contentprods contentprods[]
+}
+
+model contentprods {
+  idContentProds Int          @id @default(autoincrement())
+  fkProductsInfo Int
+  fkContent      Int
+  content        content      @relation(fields: [fkContent], references: [idContent], onDelete: NoAction, onUpdate: NoAction, map: "idContentProducts")
+  productsinfo   productsinfo @relation(fields: [fkProductsInfo], references: [idProd], onDelete: NoAction, onUpdate: NoAction, map: "idProductsInfoContent")
+
+  @@index([fkContent], map: "idContentProducts_idx")
+  @@index([fkProductsInfo], map: "idProductsInfoContent_idx")
+}
+
+model description {
+  idDescription    Int                @id @default(autoincrement())
+  description      String             @db.VarChar(45)
+  descriptionprods descriptionprods[]
+}
+
+model descriptionprods {
+  idDescriptionProds Int          @id @default(autoincrement())
+  fkProductsInfo     Int
+  fkDescription      Int
+  description        description  @relation(fields: [fkDescription], references: [idDescription], onDelete: NoAction, onUpdate: NoAction, map: "idDescriptionProdsInfo")
+  productsinfo       productsinfo @relation(fields: [fkProductsInfo], references: [idProd], onDelete: NoAction, onUpdate: NoAction, map: "idProductsInfoDescription")
+
+  @@index([fkDescription], map: "idDescriptionProdsInfo_idx")
+  @@index([fkProductsInfo], map: "idProductsInfo_idx")
+}
+
 model imgmontage {
   idImgMontage  Int             @id @default(autoincrement())
   img           String          @db.VarChar(45)
   subtitleimage subtitleimage[]
 }
 
-/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model infolog {
   idLog  Int      @id @default(autoincrement())
   action String   @db.VarChar(60)
@@ -114,14 +147,16 @@ model product {
 }
 
 model productsinfo {
-  idProd     Int       @id @default(autoincrement())
-  name       String    @db.VarChar(60)
-  audio      String    @db.VarChar(60)
-  subtitle   String    @db.VarChar(255)
-  fkProd     String    @db.VarChar(60)
-  fkLanguage Int
-  languages  languages @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IDLanguageProducts")
-  product    product   @relation(fields: [fkProd], references: [codeId], onDelete: NoAction, onUpdate: NoAction, map: "IDProdInfos")
+  idProd           Int                @id @default(autoincrement())
+  name             String             @db.VarChar(60)
+  audio            String             @db.VarChar(60)
+  subtitle         String             @db.VarChar(255)
+  fkProd           String             @db.VarChar(60)
+  fkLanguage       Int
+  contentprods     contentprods[]
+  descriptionprods descriptionprods[]
+  languages        languages          @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IDLanguageProducts")
+  product          product            @relation(fields: [fkProd], references: [codeId], onDelete: NoAction, onUpdate: NoAction, map: "IDProdInfos")
 
   @@index([fkLanguage], map: "IDLanguageProducts_idx")
   @@index([fkProd], map: "IDProdInfos_idx")
