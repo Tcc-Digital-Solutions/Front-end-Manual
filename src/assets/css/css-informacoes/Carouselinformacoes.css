@@ -50,6 +50,8 @@
     align-items: center;
 }
 
+
+
 @media only screen and (min-width: 1201px)  and (max-width:1280px){ /*Fazer as setas mudarem para cima e para baixo  */
 
  .swiper-info .swiper-button-prev {       

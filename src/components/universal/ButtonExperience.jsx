@@ -1,5 +1,5 @@
 import '../../assets/css/css_universal/ButtonExperience.css'
-import fecharImg from '../../assets/img/close.svg'
+import fecharImg from '../../assets/img/close2.svg'
 import { useState } from 'react'
 import furadeira from '../../assets/audio/SOM - FURADEIRA... (320 kbps).mp3'
 

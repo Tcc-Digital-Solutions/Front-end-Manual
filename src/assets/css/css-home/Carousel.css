@@ -10,6 +10,10 @@
   .swiper.swiper-home.swiper-initialized.swiper-horizontal.swiper-ios {
     height: 84vh !important;
 }
+
+  .swiper-slide.swiper-slide-card.swiper-slide-active{
+    width: 344px;
+  }
 }
 @media only screen and (min-width: 1250px) {
    /*Fazer as setas mudarem para cima e para baixo  */
@@ -40,4 +44,3 @@
   }
   
   }
-
