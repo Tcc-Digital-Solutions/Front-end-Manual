@@ -13,7 +13,7 @@ export const Img360 = (props) => {
                 Interruptor com velocidade variável e botão-trava para trabalhos contínuos. Motor de alto desempenho de 650 W para atender a todas as necessidades dos usuários.Empunhadeira emborrachada: agarre seguro e confortável.
                 Uso industrial com 2 anos de garantia.'/>         */}
             </span>
-            <iframe className='img360-iframe'  src={props.prod.img_360} width="100%" height="100%" scrolling="no" id="frame-spec"></iframe>
+            <iframe className='img360-iframe' src={props.prod.img_360} width="100%" height="100%" scrolling="no" id="frame-spec"></iframe>
         </div>
     )
 }

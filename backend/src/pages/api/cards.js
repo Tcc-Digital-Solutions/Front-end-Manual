@@ -14,6 +14,7 @@ export default async function handler(req, res) {
 
     if (req.method === 'GET'){
         const { id } = req.query
+        // console.log(id)
         const allcards = await prisma.cards.findMany({
             where: { fkProd: id }
         })

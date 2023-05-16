@@ -8,9 +8,7 @@ import 'swiper/css/scrollbar';
 import CardInformacoes from './CardInformacoes';
 import React, { useEffect, useState } from 'react';
 
-
 export const Carouselinformacoes = (props) => {
-    // as vezes ele renderiza as vezes nao
     const { innerWidth: width, innerHeight: height } = window;
     const [slip, setSlip] = useState(2)
 
@@ -67,4 +65,3 @@ export const Carouselinformacoes = (props) => {
         </div>
     )
 }
-// será q se botar no use effect ele resolve??

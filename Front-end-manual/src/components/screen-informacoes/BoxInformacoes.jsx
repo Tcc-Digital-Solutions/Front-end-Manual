@@ -13,8 +13,7 @@ export const BoxInformacoes = (props) => {
                 </span>  
                 <Img360 prodInfo={props.prodInfo} prod={props.prod}/>
                 <Carouselinformacoes card={props.card}/>
-                <ButtonExperience somProduto={props.prod.audio}/>
-                {console.log('audioo',props.prod.audio)}
+                <ButtonExperience somProduto={props.prod.audio} nome={props.prodInfo.name}/>
             </div>
         </div>
     )
