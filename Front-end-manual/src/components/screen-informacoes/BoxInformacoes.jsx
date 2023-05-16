@@ -4,16 +4,17 @@ import { ButtonAbout } from './ButtonAbout';
 import { Carouselinformacoes } from './Carouselinformacoes';
 import { ButtonExperience } from '../universal/ButtonExperience';
 
-export const BoxInformacoes = ({prod}) => {
+export const BoxInformacoes = (props) => {
     return (
         <div className="container-informacoes">
             <div className="BoxInformacoes-div" >
                 <span className='span-informacoes-page'>
-                <ButtonAbout prod={prod}/>
+                <ButtonAbout prodInfo={props.prodInfo}/>
                 </span>  
-                <Img360 name={prod}/>
-                <Carouselinformacoes prod={prod}/>
-                <ButtonExperience/>
+                <Img360 prodInfo={props.prodInfo} prod={props.prod}/>
+                <Carouselinformacoes card={props.card}/>
+                <ButtonExperience somProduto={props.prod.audio}/>
+                {console.log('audioo',props.prod.audio)}
             </div>
         </div>
     )
