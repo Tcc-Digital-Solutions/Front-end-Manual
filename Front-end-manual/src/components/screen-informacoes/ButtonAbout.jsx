@@ -3,7 +3,7 @@ import about from '../../assets/img/sobre-nos 1.png'
 import { useState ,useEffect} from 'react'
 import { Boxproduto } from '../universal/Boxproduto'
 
-export const ButtonAbout = () => {
+export const ButtonAbout = ({prod}) => {
     const { innerWidth: width, innerHeight: height } = window;
     const [visible, setVisible] = useState("ButtonAbout-box")
     const [pressed, setPressed] = useState(false)
@@ -24,7 +24,7 @@ export const ButtonAbout = () => {
         <div className="ButtonAbout-div" >
             <button className='ButtonAbout-button' onClick={() => setMenuVisible()}><img src={about} alt="" width={30} /></button>
             <span className={visible}>
-                <Boxproduto nome='CONTEÚDO DA EMBALAGEM' informSet='components-box-produtos' montaSet='components-box-produtos-hide'/>
+                <Boxproduto nome='CONTEÚDO DA EMBALAGEM' informSet='components-box-produtos' montaSet='components-box-produtos-hide' content={prod.content} description={prod.description}/>
             </span>
         </div>
     )

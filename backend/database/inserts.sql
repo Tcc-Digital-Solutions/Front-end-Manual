@@ -30,40 +30,13 @@ INSERT INTO montage VALUES(idMontage, 'img_principal01', 1);
 INSERT INTO montage VALUES(idMontage, 'img_principal01', 2);
 
 SELECT * FROM product;
-INSERT INTO product VALUES('4556159-000', 'img_principal.png', 'img_360.png', 1, 1);
+INSERT INTO product VALUES('4556159000', 'img_principal.png', 'audiofura.mp3','img_360.png', 1, 1);
+INSERT INTO product VALUES('4324290009', 'img_principal2.png', 'audioesme.mp3','img2_360.png', 1, 1);
 
 SELECT * FROM productsinfo;
-INSERT INTO productsinfo VALUES(idProd, 'Furadeira Angular', 'audio.mp3', 'equipamento de cor azul com textura plástica','4556159-000', 1);
-INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'audio.mp3', 'equipamento de cor azul com textura plástica','4556159-000', 1);
+INSERT INTO productsinfo VALUES(idProd, 'Furadeira Angular', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 Furadeira GSB 13 RE<br/>1 manual de instruções<br/>1 Limitador de profundidade<br/>1 Chave de mandril<br/>Mala de transporte','4556159000', 1);
+INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 Furadeira GSB 13 RE<br/>1 manual de instruções<br/>1 Limitador de profundidade<br/>1 Chave de mandril<br/>Mala de transporte', '4324290009', 1);
+INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 Furadeira GSB 13 RE<br/>1 manual de instruções<br/>1 Limitador de profundidade<br/>1 Chave de mandril<br>Mala de transporte', '4324290009', 1);
 
-SELECT * FROM content;
-INSERT INTO content VALUES(idContent, '1 Furadeira GSB RE');
-INSERT INTO content VALUES(idContent, '1 Manual de Instruções');
-INSERT INTO content VALUES(idContent, '1 Limitador de profundidade');
-INSERT INTO content VALUES(idContent, '1 Mala de Transporte');
-INSERT INTO content VALUES(idContent, '1 Punho Auxiliar');
-
-SELECT * FROM description;
-INSERT INTO description VALUES(idDescription, 'Furadeira GSB 13 RE');
-INSERT INTO description VALUES(idDescription, 'Manual de Instruções');
-INSERT INTO description VALUES(idDescription, 'Limitador de Profundidade');
-INSERT INTO description VALUES(idDescription, 'Chave de Mandril');
-
-SELECT * FROM contentprods;
-SELECT * FROM descriptionprods;
-
-INSERT INTO contentprods VALUES(idContentProds, 1, 1);
-INSERT INTO contentprods VALUES(idContentProds, 1, 2);
-INSERT INTO contentprods VALUES(idContentProds, 1, 3);
-
-INSERT INTO descriptionprods VALUES(idDescriptionProds, 1, 1);
-INSERT INTO descriptionprods VALUES(idDescriptionProds, 1, 2);
-INSERT INTO descriptionprods VALUES(idDescriptionProds, 1, 3);
-INSERT INTO descriptionprods VALUES(idDescriptionProds, 1, 4);
-
-
-
-
-
-
-
+SELECT * FROM cards;
+INSERT INTO cards VALUES(idCards, );

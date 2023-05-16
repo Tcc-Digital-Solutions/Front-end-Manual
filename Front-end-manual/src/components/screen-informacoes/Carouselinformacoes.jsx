@@ -17,6 +17,7 @@ export const Carouselinformacoes = (props) => {
         if (innerHeight < 800){
             setSlip(2)
         }
+        console.log('cheguei aqui: ', props.prod)
     })
 
     return (

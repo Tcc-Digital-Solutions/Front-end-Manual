@@ -11,10 +11,15 @@ export default async function handler(req, res){
 
     if (req.method === 'GET'){
         const { id } = req.query
-        const detalhe = await prisma.productsinfo.findUnique({
-            where: { idProd: parseInt(id) }
+        const detalhe = await prisma.productsinfo.findMany({
+            // colocar esse where relacionado com a linguagem tbmm que vai vir do localstorage
+            
+            where:{
+                fkProd:id,
+            }
         })
         res.json(detalhe)
     }
 }
+
 // pega todas as tabelas aqui ou faz uma api separada pra cada um?
