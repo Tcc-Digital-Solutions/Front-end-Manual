@@ -9,7 +9,7 @@ datasource db {
 
 model cards {
   idCards     Int       @id @default(autoincrement())
-  title       String    @db.VarChar(20)
+  icone       String    @db.VarChar(255)
   description String    @db.VarChar(255)
   fkProd      String    @db.VarChar(60)
   fkLanguage  Int
@@ -42,7 +42,7 @@ model category {
 
 model imgmontage {
   idImgMontage  Int             @id @default(autoincrement())
-  img           String          @db.VarChar(45)
+  img           String          @db.VarChar(255)
   subtitleimage subtitleimage[]
 }
 
@@ -99,9 +99,9 @@ model pdf {
 
 model product {
   codeId        String         @id @db.VarChar(60)
-  img_prod      String         @db.VarChar(60)
-  img_360       String         @db.VarChar(60)
-  audio         String         @db.VarChar(60)
+  img_prod      String         @db.VarChar(255)
+  img_360       String         @db.VarChar(255)
+  audio         String         @db.VarChar(255)
   fkMontage     Int
   fkCartegories Int
   cards         cards[]
@@ -152,7 +152,7 @@ model subtitleimage {
 
 model subtitlemontage {
   idSubtitle    Int             @id @default(autoincrement())
-  subititleImg  String          @db.VarChar(45)
+  subititleImg  String          @db.VarChar(255)
   fkLanguage    Int
   subtitleimage subtitleimage[]
   languages     languages       @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IDLanguageMontage")

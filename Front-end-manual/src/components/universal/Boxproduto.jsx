@@ -8,6 +8,8 @@ export const Boxproduto = (props) => {
     const [descricao, setDescricao] = useState([])
 
     useEffect(() =>{
+        console.log('olá eu sou o goku')
+        console.log(props.content)
         if (props.content != undefined){
             setConteudo(props.content.split('<br/>'))
             console.log(conteudo)
@@ -17,7 +19,7 @@ export const Boxproduto = (props) => {
             console.log(descricao)
         }
 
-    })
+    }, [props.content])
 // tá indo mas se coloca o  [] pra parar o loop infinito do useefect ele para de funcionar
     return (
         <div className='boxproduto-div' >
@@ -32,12 +34,12 @@ export const Boxproduto = (props) => {
                         <li className='texto-box-produtos' key={index}>{c}</li>
                         ))}
                 </ul>
-                {descricao.map((d, index) => (
+                {/* {descricao.map((d, index) => ( */}
                     <ul className={monta}>
-                        <li className='texto-box-produtos' key={index}>{d}</li>
+                        <li className='texto-box-produtos'>Teste</li>
                         // esse tá passando vazio, precisa passar pro localstorage?
                     </ul>
-                ))}
+                {/* ))} */}
             </span>
         </div>
     )

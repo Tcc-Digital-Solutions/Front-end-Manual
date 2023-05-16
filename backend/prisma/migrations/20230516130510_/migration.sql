@@ -1,7 +1,7 @@
 -- CreateTable
 CREATE TABLE `cards` (
     `idCards` INTEGER NOT NULL AUTO_INCREMENT,
-    `title` VARCHAR(20) NOT NULL,
+    `icone` VARCHAR(255) NOT NULL,
     `description` VARCHAR(255) NOT NULL,
     `fkProd` VARCHAR(60) NOT NULL,
     `fkLanguage` INTEGER NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE `category` (
 -- CreateTable
 CREATE TABLE `imgmontage` (
     `idImgMontage` INTEGER NOT NULL AUTO_INCREMENT,
-    `img` VARCHAR(45) NOT NULL,
+    `img` VARCHAR(255) NOT NULL,
 
     PRIMARY KEY (`idImgMontage`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -91,9 +91,9 @@ CREATE TABLE `pdf` (
 -- CreateTable
 CREATE TABLE `product` (
     `codeId` VARCHAR(60) NOT NULL,
-    `img_prod` VARCHAR(60) NOT NULL,
-    `img_360` VARCHAR(60) NOT NULL,
-    `audio` VARCHAR(60) NOT NULL,
+    `img_prod` VARCHAR(255) NOT NULL,
+    `img_360` VARCHAR(255) NOT NULL,
+    `audio` VARCHAR(255) NOT NULL,
     `fkMontage` INTEGER NOT NULL,
     `fkCartegories` INTEGER NOT NULL,
 
@@ -141,7 +141,7 @@ CREATE TABLE `subtitleimage` (
 -- CreateTable
 CREATE TABLE `subtitlemontage` (
     `idSubtitle` INTEGER NOT NULL AUTO_INCREMENT,
-    `subititleImg` VARCHAR(45) NOT NULL,
+    `subititleImg` VARCHAR(255) NOT NULL,
     `fkLanguage` INTEGER NOT NULL,
 
     INDEX `IDLanguageMontage_idx`(`fkLanguage`),

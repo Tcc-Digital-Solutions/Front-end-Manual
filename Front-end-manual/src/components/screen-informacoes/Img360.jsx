@@ -9,7 +9,6 @@ export const Img360 = ({name}) => {
     return (
         <div className="img360-div" >
             <span className="img360-produto-name">
-                {/* {console.log(name)} */}
                 {name}
                 {/* <Speaker buttonTrue='---'  text='Imagem 360 de todos Ângulos da ferramenta bosch ,A Furadeira de Impacto Bosch GSB 13 RE possui 650W de potência, é super leve e compacta! Vem com empunhadeira emborrachada para o agarre seguro e confortável. Além disso, possui interruptor de velocidade variável e botão trava para trabalhos contínuos.
                 Interruptor com velocidade variável e botão-trava para trabalhos contínuos. Motor de alto desempenho de 650 W para atender a todas as necessidades dos usuários.Empunhadeira emborrachada: agarre seguro e confortável.

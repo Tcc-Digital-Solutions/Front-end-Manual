@@ -5,14 +5,13 @@ import { Carouselinformacoes } from './Carouselinformacoes';
 import { ButtonExperience } from '../universal/ButtonExperience';
 
 export const BoxInformacoes = ({prod}) => {
-    {console.log(prod)}
     return (
         <div className="container-informacoes">
             <div className="BoxInformacoes-div" >
                 <span className='span-informacoes-page'>
                 <ButtonAbout prod={prod}/>
                 </span>  
-                <Img360 name={prod.name}/>
+                <Img360 name={prod}/>
                 <Carouselinformacoes prod={prod}/>
                 <ButtonExperience/>
             </div>

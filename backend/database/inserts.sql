@@ -39,4 +39,5 @@ INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'equipamento de cor az
 INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 Furadeira GSB 13 RE<br/>1 manual de instruções<br/>1 Limitador de profundidade<br/>1 Chave de mandril<br>Mala de transporte', '4324290009', 1);
 
 SELECT * FROM cards;
-INSERT INTO cards VALUES(idCards, );
+INSERT INTO cards VALUES(idCards, 'http://localhost:5173/src/assets/img/warranty.svg', 'Uso industrial com 2 anos de garantia.', '4324290009', 1);
+INSERT INTO cards VALUES(idCards, 'http://localhost:5173/src/assets/img/warranty.svg', 'Vem com empunhadeira emborrachada para o agarre seguro e confortável', '4324290009', 1);
