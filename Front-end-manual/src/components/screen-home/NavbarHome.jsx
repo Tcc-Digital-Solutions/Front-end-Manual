@@ -169,7 +169,6 @@ export const NavbarHome = (props) => {
                             <li onMouseOver={() => exibirProdutos(2)}>Serrar</li>
                             <li onMouseOver={() => exibirProdutos(3)}>Cortar e Desbastar</li>
                             <li onMouseOver={() => exibirProdutos(4)}>Acabamento</li>
-
                         </ul>
                     </div>
                             </span>

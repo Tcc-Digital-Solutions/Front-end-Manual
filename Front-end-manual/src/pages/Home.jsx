@@ -16,20 +16,21 @@ const Home = () =>{
         }
     }
     // talvez essa logiquinha não seja aplicável aqui porque ele nnão compararia o id da url, ver se vai ser home?
-    // e a ultima rota guardada no storage foi home? *****
+    // e a ultima rota guardada no storage foi home? *****, fazer a lógica pra ele mudar apenas se tiver alguma alteracao
 
     useEffect(() =>{
         let dadosPIs = localStorage.getItem('produtosInfo')
-        if (dadosPIs == null){
-            // let infoProdutosInfo = JSON.parse(dadosPIs)
-            // if (product_info === infoProdutosInfo){
-            //     setProdsInfo(product_info)
-            // }
-            // else{
-            //     localStorage.removeItem('produtosInfo')
-                apiProdutosInfo()
-            // }
-        }
+        apiProdutosInfo()
+        // if (dadosPIs == null){
+        //     // let infoProdutosInfo = JSON.parse(dadosPIs)
+        //     // if (product_info === infoProdutosInfo){
+        //     //     setProdsInfo(product_info)
+        //     // }
+        //     // else{
+        //     //     localStorage.removeItem('produtosInfo')
+        //         apiProdutosInfo()
+        //     // }
+        // }
         // else{
         //     apiProdutosInfo()
         // }
@@ -42,4 +43,3 @@ const Home = () =>{
     );
 }
 export default Home;
-// Só tá buscando na api quando salva esse arquivo

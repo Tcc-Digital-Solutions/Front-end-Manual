@@ -9,7 +9,6 @@ import { Cardproduto } from "./Cardproduto";
 
 export const Carousel = ( props ) => {
     const { innerWidth: width, innerHeight: height } = window;
-    const [slip, setSlip] = useState(3)
 
     useEffect(() => {
         if (innerWidth < 1000){
@@ -18,23 +17,24 @@ export const Carousel = ( props ) => {
         if (innerWidth < 700){
             setSlip(1)
         }
-    })
+    }, [])
 
     return (
         <div className='Carousel_react-div' >
             <span className='Carousel_react-02'>
                 <Swiper 
-                    slidesPerView={slip}
+                    slidesPerView={3}
                     spaceBetween={0}
                     direction="horizontal"
-                    loop={true}
+                    loop={false}
                     loopFillGroupWithBlank={true}
                     navigation={true}
                     modules={[Autoplay,Pagination, Navigation]}
                     className="swiper-home"
                 >
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto prodsInfo={props.prodsInfo}/></SwiperSlide>
-
+                    {props.prodsInfo && props.prodsInfo.map((p, index) => (
+                        <SwiperSlide className="swiper-slide-card"><Cardproduto nome={p.name} foto={p.product.img_prod} fkProd={p.fkProd} key={index}/></SwiperSlide>
+                    ))}
                 </Swiper>                 
             </span>
 

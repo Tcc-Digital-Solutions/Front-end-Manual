@@ -1,1 +1,3 @@
 devo fazer fetch na api denovo na página de montagem ou passa pela props mesmo?, pq quando a pessoa acessar direto na montagem ele não vai fazer nenhum fetch so se acessar informações pra depois montagem
+
+atualizar o banco de dados na branch dele
