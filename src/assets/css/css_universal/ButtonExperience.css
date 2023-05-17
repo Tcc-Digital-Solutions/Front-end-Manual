@@ -125,6 +125,12 @@
   
   @media only screen and (max-width: 380px){
     .ButtonExperience-div{
-      top: 60%;
+      top: 58%;
+    }
+
+    .ButtonExperience-button {
+      font-size: 15px;
+      padding: 20px 4px;
+ 
     }
   }

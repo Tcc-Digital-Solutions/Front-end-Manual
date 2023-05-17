@@ -2,7 +2,7 @@
     border-top: 2px solid #F2F2F2;
     border-bottom: 2px solid #F2F2F2;
     font-family: var(--fonte);
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 18px;
     position: fixed;
     width: 100%;
@@ -47,9 +47,7 @@
 
     display: flex;
 }
-/* .box-categoria-div {
-    display: none;
-} */
+
 .box-menu ul{
     list-style: none;
     background: #3261a8;
@@ -58,6 +56,8 @@
     padding: 0px;
     cursor: pointer;
     width: 250px;
+    font-family: var(--fonte);
+    font: normal;
 }
 
 .box-menu ul :hover{
@@ -82,7 +82,7 @@
 }
 
 .box-categoria-ul {
-    width: 1728px;
+    width: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -90,6 +90,7 @@
     height: inherit;
     list-style: none;
     padding: 0;
+    margin-right: 17px;
 }
 .box-categoria-li{
     position: relative;
@@ -112,33 +113,154 @@ button.box-categoria-button {
     cursor: pointer;
     align-items: center;
 }
-/* .menu-button{
-    width: 232px;
-    height: 550px;
-    background-color:  #4970A9;
-    position: absolute;
-    margin-top: 60px;
-} */
+
 .menu-button {
     position: absolute;
-    left: -29%;
-    height: 180px;
     margin-top: 58px;
-    padding-bottom: 20px;
-    background-color: #CCE6FF;
     display: flex;
     color: black;
     flex-wrap: wrap;
     flex-direction: row;
-    min-width: 500px;
-    /* width: 750px; */
     align-items: stretch;
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 1280px) {
+    .box-categoria-ul {
+        margin-right: 8px;
+    }
+    .button-menu-box {
+        height: 58px;
+    }
+    .box-menu ul {
+        list-style: none;
+        cursor: pointer;
+        width: 235px;
+    }
 
+    .box-menu ul li {
+        padding: 19px;
+        margin: 0px;
+        font-family:var(--fonte);
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+.box-categoria-ul {
+    width: 1228px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: inherit;
+    list-style: none;
+    padding: 0;
+}
+
+.box-menu ul{
+    list-style: none;
+    background: #ededed;
+    color: black;
+    margin: 0;
+    padding: 0px;
+    cursor: pointer;
+    width: 100vw;
+}
+
+
+.box-menu ul :hover{
+    list-style: none;
+    background: #989898;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.box-menu ul li{
+    padding: 20px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: var(--fonte_2);
+    font-weight: normal;
+    border-bottom: 1px solid #c2c2c2;
+    /* align-items: center;
+    display: flex; */
+    font-weight: 500;
+}
+
+.box-menu li{
+    justify-content: center;
+}
+.button-menu-box{
+    border-top: 2px solid #a0a0a0;
+    border-bottom: 2px solid #a0a0a0;
+    font-family: var(--fonte);
+    font-weight: bold;
+    font-size: 17px;
+    height: 40px;
+}
+
+.menu-button {
+    position: relative;
+    margin-top: 0px;
+    width: inherit;
+    padding: 0;
+
+}
+
+.button-menu-box{
+    font-family: var(--fonte_2);
+    font-weight: 0;
+    font-size: 17px;
+    position: fixed;
+    color: #393939;
+
+}
+
+}
 
 @media only screen and (max-width: 1000px) {
+    .box-categoria-ul {
+        width: 1228px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: inherit;
+        list-style: none;
+        padding: 0;
+    }
+
+    .box-menu li{
+        justify-content: center;
+    }
+
+    
+    .menu-button {
+        position: relative;
+        margin-top: 0px;
+        width: inherit;
+        padding: 0;
+    
+    }
+    
+    .button-menu-box{
+        font-family: var(--fonte_2);
+        font-weight: 0;
+        font-size: 17px;
+        position: fixed;
+        color: #393939;
+    
+    }
+
+    .border-mobile{
+        border-bottom: 1px solid #c9c9c9;
+        padding-bottom: 19px;
+        width: 100%;
+        text-align: center;
+    }
     .box-produtos-result {
         position: fixed;
         top: 103px;
@@ -164,13 +286,19 @@ button.box-categoria-button {
         height: inherit;
         list-style: none;
         padding: 0;
+        width: 100vw;
+        margin: 0;
     }
     .box-categoria-menu {
         display: flex;
-        height: 57px;
+        height: inherit;
         flex-direction: column;
         justify-content: center;
+        width: 100vw;
         cursor: pointer;
         align-items: center;
+        margin-top: 25px;
+        
     }
+
 }
