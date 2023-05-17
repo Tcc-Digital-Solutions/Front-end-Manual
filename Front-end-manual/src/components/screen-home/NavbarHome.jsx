@@ -7,7 +7,7 @@ import lupa from '../../assets/img/search.svg'
 import { Carousel } from './Carousel'
 
 export const NavbarHome = (props) => {
-    {console.log((props.allProdutos))}
+
     const[isHovering_0, setIsHoverring_0] = useState(false);
     const[isHovering_1, setIsHoverring_1] = useState(false);
     const[isHovering_2, setIsHoverring_2] = useState(false);
@@ -177,8 +177,9 @@ export const NavbarHome = (props) => {
                     </li>
                 </ul>
             </span>
+            {/* fazer o fetch da categoria e trazer pra cá */}
             <span className={visibleBox}>
-                <Carousel allProdutos={props.allProdutos} fezFetch={props.fezFetch}/>
+                <Carousel prodsInfo={props.prodsInfo}/>
             </span>
         </div>
     )

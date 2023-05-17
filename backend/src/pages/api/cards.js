@@ -14,9 +14,9 @@ export default async function handler(req, res) {
 
     if (req.method === 'GET'){
         const { id } = req.query
-        // console.log(id)
+        console.log(id)
         const allcards = await prisma.cards.findMany({
-            where: { fkProd: id }
+            where:{ fkProd: id }
         })
         //colocar a condiçao da language tbmm pra puxar o id da language que tá no localstorage
         res.json(allcards)

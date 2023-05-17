@@ -54,8 +54,11 @@ const Informaçoes = () =>{
                 apiCards()
                 apiProduto()
             }
+            // quando troca de página essa regra não é efetiva, ele chega a puxar tudo denovo na api*****
+            // deveria fazer a mesma coisa que quando atualiza e manter os fetchs que já haviam sido feitos
         }
         else{
+            // aqui não era pra chamar né? era só pra setar os valores
             apiProdutoInfo()
             apiCards()
             apiProduto()
@@ -65,6 +68,7 @@ const Informaçoes = () =>{
         <>
             <Navbar visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar' nave="navbar-div"/>
             <BoxInformacoes prodInfo={prodInfo} card={card} prod={prod}/>
+            {/* se não achar as informações principais não renderizar essa página e sim uma de erro(); */}
             {/* colocar o link real do icone e não o icone de hospedagem do nosso site na vercel */}
             {/* tá puxando o card do lugar errado ele não tá pegando do id certo? */}
             {/* no box produto tá faltando passar as coisas pra montagem */}

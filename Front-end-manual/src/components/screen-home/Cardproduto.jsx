@@ -9,26 +9,17 @@ export const Cardproduto = ( props ) => {
         // # passar 0 id da furadeira que está sendo clicada
         navigate(`/informacoes/${id}`)
     }
-    {console.log(props.allProdutos)}
-    {console.log((typeof(props.allProdutos)))}
-    // {console.log((props.allProdutos[0]['name']))}
-    // {console.log((props.allProdutos[1]['name']))}
     return (
         <div className="Cardproduto-div" >
-            {console.log('aq')}
-            {console.log(props.fezFetch)}
-            {/* {console.log(allProdutos)} */}
-            {/* {props.allProdutos.map((prod, index) =>{ */}
+            {props.prodsInfo && props.prodsInfo.map((p, index) => (
                 <span className='Cardproduto-div-02'>
                     <img className='img-card' src={ferramenta} alt="" />
-                    {console.log('entrei')}
                     <span className='Cardproduto-div-03'>
-                        <span className='Cardproduto-div-text'>Nome da Ferramenta</span>
+                        <span className='Cardproduto-div-text' key={index}>{p.name}</span>
                         <button onClick={manual} className='Cardproduto-button'>Manual</button>                    
                     </span>
                 </span>
-            {/* })} */}
-            {/* // }):true} */}
+            ))}
         </div>
     )
 }

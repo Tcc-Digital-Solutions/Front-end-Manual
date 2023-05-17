@@ -4,39 +4,40 @@ import { data } from 'jquery';
 
 const Home = () =>{
     // aplicar local storage e dps ver como remover e quando ***
-    // const [produtos, setProdutos] = useState('')
-    // const apiProdutos = async() =>{
-    //     const data = (await fetch('http://localhost:3000/api/produto_info').then(res => res.json()))
-    //     localStorage.setItem('produto_info', JSON.stringify(data))
-    //     console.log(data)
-    //     setProdutos(data)
-    // }
-    // const [fezFetch, setFezFetch] = useState(false)
-    // // talvez essa logiquinha não seja aplicável aqui porque ele nnão compararia o id da url, ver se vai ser home?
-    // // e a ultima rota guardada no storage foi home? *****
+    // ver se o que tem na pagina de iformação tem aqui
+    // fazer o restante do crud
+    const [prodsInfo, setProdsInfo] = useState('')
+    
+    const apiProdutosInfo = async() =>{
+        const product_info = (await fetch('http://localhost:3000/api/produtos_info').then(res => res.json()))
+        if (product_info){
+            localStorage.setItem('produtosInfo', JSON.stringify(product_info))
+            setProdsInfo(product_info)
+        }
+    }
+    // talvez essa logiquinha não seja aplicável aqui porque ele nnão compararia o id da url, ver se vai ser home?
+    // e a ultima rota guardada no storage foi home? *****
 
-    // useEffect(() =>{
-    //     let dadosLS = localStorage.getItem('produto_info')
-    //     console.log(dadosLS)
-    //     if (dadosLS != null){
-    //         let infoProdutos = JSON.parse(dadosLS)
-    //         if (data === infoProdutos){
-    //             setProdutos(data)
-    //         }
-    //         else{
-    //             apiProdutos()
-    //         }
-    //     }
-    //     else{
-    //         apiProdutos()
-    //         setFezFetch(true)
-
-    //     // }
-    // }, [])
+    useEffect(() =>{
+        let dadosPIs = localStorage.getItem('produtosInfo')
+        if (dadosPIs == null){
+            // let infoProdutosInfo = JSON.parse(dadosPIs)
+            // if (product_info === infoProdutosInfo){
+            //     setProdsInfo(product_info)
+            // }
+            // else{
+            //     localStorage.removeItem('produtosInfo')
+                apiProdutosInfo()
+            // }
+        }
+        // else{
+        //     apiProdutosInfo()
+        // }
+    }, [])
 
     return (
         <>
-            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" allProdutos={produtos} fezFetch={fezFetch}/>
+            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" prodsInfo={prodsInfo}/>
         </>
     );
 }

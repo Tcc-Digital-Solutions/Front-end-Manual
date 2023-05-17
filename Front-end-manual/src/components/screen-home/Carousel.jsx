@@ -20,7 +20,6 @@ export const Carousel = ( props ) => {
         }
     })
 
-    {console.log(props.allProdutos)}
     return (
         <div className='Carousel_react-div' >
             <span className='Carousel_react-02'>
@@ -34,7 +33,7 @@ export const Carousel = ( props ) => {
                     modules={[Autoplay,Pagination, Navigation]}
                     className="swiper-home"
                 >
-                    <SwiperSlide className="swiper-slide-card"><Cardproduto allProdutos={props.allProdutos} fezFetch={props.fezFetch}/></SwiperSlide>
+                    <SwiperSlide className="swiper-slide-card"><Cardproduto prodsInfo={props.prodsInfo}/></SwiperSlide>
 
                 </Swiper>                 
             </span>
