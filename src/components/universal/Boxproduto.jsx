@@ -24,13 +24,13 @@ export const Boxproduto = (props) => {
                     <li className='texto-box-produtos'>2 - manual de instruções</li>
                     <li className='texto-box-produtos'>3 - Limitador de profundidade</li>
                     <li className='texto-box-produtos'>4 - Chave de mandril</li>
-                    <li className='texto-box-produtos'>5 -Mala de transporte</li>
+                    <li className='texto-box-produtos'>5 - Mala de transporte</li>
                     <li className='texto-box-produtos'>6 - Punho auxiliar</li>
                     <li className='texto-box-produtos'>7 - Furadeira GSB 13 RE</li>
                     <li className='texto-box-produtos'>8 - manual de instruções</li>
                     <li className='texto-box-produtos'>9 - Limitador de profundidade</li>
                     <li className='texto-box-produtos'>10 - Chave de mandril</li>
-                    <li className='texto-box-produtos'>11 -Mala de transporte</li>
+                    <li className='texto-box-produtos'>11 - Mala de transporte</li>
                     <li className='texto-box-produtos'>12 - Punho auxiliar</li>
                 </ul>
             </span>

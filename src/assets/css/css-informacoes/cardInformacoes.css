@@ -26,8 +26,10 @@
 }
 
 .card-texto{
+    font-family: var(--fonte);
     font-size: 16px;
     margin: 10px;
+    font-weight:450;
 }
 
 
@@ -43,7 +45,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 17px solid #dadada ;
+        border: 13px solid #dadada ;
     }
     
         .card-texto{
@@ -63,7 +65,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 20px solid #dadada ;
+        border: 11px solid #dadada ;
     }
 
     
@@ -77,20 +79,23 @@
         .card-interno {
             width: 164px;
             height: 120px;
-            border: 13px solid #dadada ;
+            border: 8px solid #dadada ;
         }
         .card-texto {
-            font-size: 10px;
+            font-size: 11px;
         }
     }
 
 @media only screen and (max-height: 750px) and (max-width: 500px){
     .card-interno {
-        width: 150px;
-        height: 92px;
+        border-radius: 7px;
+        border: 7px solid #dadada ;
+        width: 170px;
+        height: 121px;
     }
     .card-texto {
-        font-size: 10px;
+        font-size: 12px;
+        font-weight: 500;
     }
 }
 

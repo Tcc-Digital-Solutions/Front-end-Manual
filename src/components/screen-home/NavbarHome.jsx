@@ -111,7 +111,7 @@ export const NavbarHome = (props) => {
                 <ul className="box-categoria-ul">
                     <li className="box-categoria-li" id='li-categorias'>
                         <div className="box-categoria-menu"  id='box-categoria-menu-border'   onMouseOver={() => handleMouseOver(0)} onMouseOut={() => handleMouseOut (0)}>
-                            Ferramentas 12v
+                            <div className='border-mobile'>Ferramentas 12v</div>
                             <span  className={isHovering_0 ? 'menu-button' : 'menu-escondido'}>
                             <div className='box-menu'>
                         <ul>
@@ -131,7 +131,7 @@ export const NavbarHome = (props) => {
                     
                     <li className="box-categoria-li" id='li-categorias'>
                         <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(1)} onMouseOut={() => handleMouseOut (1)} >
-                            Ferramentas 18v 
+                        <div className='border-mobile'>Ferramentas 18v</div>
                             <span className={isHovering_1 ? 'menu-button' : 'menu-escondido'}>
                             <div className='box-menu'>
                         <ul>
@@ -152,7 +152,7 @@ export const NavbarHome = (props) => {
                     
                     <li className="box-categoria-li" id='li-categorias'>
                         <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(2)} onMouseOut={() => handleMouseOut (2)}>
-                            Linha de Medição
+                        <div className='border-mobile'>Linha de Medição</div>
                             <span className={isHovering_2 ? 'menu-button' : 'menu-escondido'}>
                             <div className='box-menu'>
                         <ul>
@@ -168,7 +168,7 @@ export const NavbarHome = (props) => {
                     
                     <li className="box-categoria-li" id='li-categorias'>
                         <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(3)} onMouseOut={() => handleMouseOut (3)}>
-                            Acessórios
+                        <div className='border-mobile'>Acessórios</div>
                             <span className={isHovering_3 ? 'menu-button' : 'menu-escondido'}>
                             <div className='box-menu'>
                         <ul>
