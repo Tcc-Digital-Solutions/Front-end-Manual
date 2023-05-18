@@ -68,4 +68,5 @@
     position: absolute;
     margin-right: 11px;
     margin-top: 3px;
+    z-index: 999;
 }
