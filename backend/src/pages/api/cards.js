@@ -20,5 +20,6 @@ export default async function handler(req, res) {
         })
         //colocar a condiçao da language tbmm pra puxar o id da language que tá no localstorage
         res.json(allcards)
+        console.log(allcards)
     }
 }

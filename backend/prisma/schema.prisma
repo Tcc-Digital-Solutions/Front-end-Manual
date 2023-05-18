@@ -20,24 +20,16 @@ model cards {
   @@index([fkProd], map: "fkProd_idx")
 }
 
-model categories {
-  idCategories Int       @id @default(autoincrement())
-  fkCategory   Int
-  fkLanguage   Int
-  category     category  @relation(fields: [fkCategory], references: [idCategory], onDelete: NoAction, onUpdate: NoAction, map: "IdCategoryCategories")
-  languages    languages @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IdLanguageCategories")
-  product      product[]
-  videos       videos[]
-
-  @@index([fkCategory], map: "IdCategoryCategories_idx")
-  @@index([fkLanguage], map: "IdLanguageCategories_idx")
-}
-
 model category {
   idCategory  Int           @id @default(autoincrement())
   name        String        @db.VarChar(45)
-  categories  categories[]
+  fkLanguage  Int
+  languages   languages     @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IDLanguageCategory")
+  product     product[]
   subcategory subcategory[]
+  videos      videos[]
+
+  @@index([fkLanguage], map: "IdLanguageCategories_idx")
 }
 
 model imgmontage {
@@ -61,7 +53,7 @@ model languages {
   idLanguages     Int               @id @default(autoincrement())
   sigla           String            @db.VarChar(20)
   cards           cards[]
-  categories      categories[]
+  category        category[]
   pdf             pdf[]
   productsinfo    productsinfo[]
   subtitlemontage subtitlemontage[]
@@ -98,19 +90,19 @@ model pdf {
 }
 
 model product {
-  codeId        String         @id @db.VarChar(60)
-  img_prod      String         @db.VarChar(255)
-  img_360       String         @db.VarChar(255)
-  audio         String         @db.VarChar(255)
-  fkMontage     Int
-  fkCartegories Int
-  cards         cards[]
-  pdf           pdf[]
-  categories    categories     @relation(fields: [fkCartegories], references: [idCategories], onDelete: NoAction, onUpdate: NoAction, map: "fkCartegories")
-  montage       montage        @relation(fields: [fkMontage], references: [idMontage], onDelete: NoAction, onUpdate: NoAction, map: "fkMontage")
-  productsinfo  productsinfo[]
+  codeId       String         @id @db.VarChar(60)
+  img_prod     String         @db.VarChar(255)
+  img_360      String         @db.VarChar(255)
+  audio        String         @db.VarChar(255)
+  fkMontage    Int
+  fkCartegory  Int
+  cards        cards[]
+  pdf          pdf[]
+  category     category       @relation(fields: [fkCartegory], references: [idCategory], onDelete: NoAction, onUpdate: NoAction, map: "IDProductCategory")
+  montage      montage        @relation(fields: [fkMontage], references: [idMontage], onDelete: NoAction, onUpdate: NoAction, map: "IDProductManual")
+  productsinfo productsinfo[]
 
-  @@index([fkCartegories], map: "fkCartegories_idx")
+  @@index([fkCartegory], map: "fkCartegories_idx")
   @@index([fkMontage], map: "fkMontagem_idx")
 }
 
@@ -133,9 +125,9 @@ model subcategory {
   idSubcategory Int      @id @default(autoincrement())
   name          String   @db.VarChar(45)
   fkCategory    Int
-  category      category @relation(fields: [fkCategory], references: [idCategory], onDelete: NoAction, onUpdate: NoAction, map: "fkCategorySub")
+  category      category @relation(fields: [fkCategory], references: [idCategory], onDelete: NoAction, onUpdate: NoAction, map: "IDSubcategoryCategory")
 
-  @@index([fkCategory], map: "fkCategorySub_idx")
+  @@index([fkCategory], map: "idSubcategoryCategory_idx")
 }
 
 model subtitleimage {
@@ -161,13 +153,13 @@ model subtitlemontage {
 }
 
 model videos {
-  idVideo      Int        @id @default(autoincrement())
-  title        String     @db.VarChar(45)
-  codLink      String     @db.VarChar(100)
+  idVideo      Int       @id @default(autoincrement())
+  title        String    @db.VarChar(45)
+  codLink      String    @db.VarChar(100)
   fkLanguage   Int
   fkCategories Int
-  categories   categories @relation(fields: [fkCategories], references: [idCategories], onDelete: NoAction, onUpdate: NoAction, map: "IDCategoriesVideo")
-  languages    languages  @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IDLanguageVideo")
+  category     category  @relation(fields: [fkCategories], references: [idCategory], onDelete: NoAction, onUpdate: NoAction, map: "IDCategoriesVideo")
+  languages    languages @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IDLanguageVideo")
 
   @@index([fkCategories], map: "IDCategoriesVideo_idx")
   @@index([fkLanguage], map: "fkLanguage_idx")

@@ -12,21 +12,12 @@ CREATE TABLE `cards` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `categories` (
-    `idCategories` INTEGER NOT NULL AUTO_INCREMENT,
-    `fkCategory` INTEGER NOT NULL,
-    `fkLanguage` INTEGER NOT NULL,
-
-    INDEX `IdCategoryCategories_idx`(`fkCategory`),
-    INDEX `IdLanguageCategories_idx`(`fkLanguage`),
-    PRIMARY KEY (`idCategories`)
-) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
--- CreateTable
 CREATE TABLE `category` (
     `idCategory` INTEGER NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(45) NOT NULL,
+    `fkLanguage` INTEGER NOT NULL,
 
+    INDEX `IdLanguageCategories_idx`(`fkLanguage`),
     PRIMARY KEY (`idCategory`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -95,9 +86,9 @@ CREATE TABLE `product` (
     `img_360` VARCHAR(255) NOT NULL,
     `audio` VARCHAR(255) NOT NULL,
     `fkMontage` INTEGER NOT NULL,
-    `fkCartegories` INTEGER NOT NULL,
+    `fkCartegory` INTEGER NOT NULL,
 
-    INDEX `fkCartegories_idx`(`fkCartegories`),
+    INDEX `fkCartegories_idx`(`fkCartegory`),
     INDEX `fkMontagem_idx`(`fkMontage`),
     PRIMARY KEY (`codeId`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -123,7 +114,7 @@ CREATE TABLE `subcategory` (
     `name` VARCHAR(45) NOT NULL,
     `fkCategory` INTEGER NOT NULL,
 
-    INDEX `fkCategorySub_idx`(`fkCategory`),
+    INDEX `idSubcategoryCategory_idx`(`fkCategory`),
     PRIMARY KEY (`idSubcategory`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -168,10 +159,7 @@ ALTER TABLE `cards` ADD CONSTRAINT `IDLanguageCards` FOREIGN KEY (`fkLanguage`) 
 ALTER TABLE `cards` ADD CONSTRAINT `IDProdCards` FOREIGN KEY (`fkProd`) REFERENCES `product`(`codeId`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE `categories` ADD CONSTRAINT `IdCategoryCategories` FOREIGN KEY (`fkCategory`) REFERENCES `category`(`idCategory`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- AddForeignKey
-ALTER TABLE `categories` ADD CONSTRAINT `IdLanguageCategories` FOREIGN KEY (`fkLanguage`) REFERENCES `languages`(`idLanguages`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `category` ADD CONSTRAINT `IDLanguageCategory` FOREIGN KEY (`fkLanguage`) REFERENCES `languages`(`idLanguages`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
 ALTER TABLE `infolog` ADD CONSTRAINT `fkUser` FOREIGN KEY (`fkUser`) REFERENCES `login`(`idLogin`) ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -186,10 +174,10 @@ ALTER TABLE `pdf` ADD CONSTRAINT `IDLanguagePDF` FOREIGN KEY (`fkLanguage`) REFE
 ALTER TABLE `pdf` ADD CONSTRAINT `IDProdPDF` FOREIGN KEY (`fkProd`) REFERENCES `product`(`codeId`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE `product` ADD CONSTRAINT `fkCartegories` FOREIGN KEY (`fkCartegories`) REFERENCES `categories`(`idCategories`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `product` ADD CONSTRAINT `IDProductCategory` FOREIGN KEY (`fkCartegory`) REFERENCES `category`(`idCategory`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE `product` ADD CONSTRAINT `fkMontage` FOREIGN KEY (`fkMontage`) REFERENCES `montage`(`idMontage`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `product` ADD CONSTRAINT `IDProductManual` FOREIGN KEY (`fkMontage`) REFERENCES `montage`(`idMontage`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
 ALTER TABLE `productsinfo` ADD CONSTRAINT `IDLanguageProducts` FOREIGN KEY (`fkLanguage`) REFERENCES `languages`(`idLanguages`) ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -198,7 +186,7 @@ ALTER TABLE `productsinfo` ADD CONSTRAINT `IDLanguageProducts` FOREIGN KEY (`fkL
 ALTER TABLE `productsinfo` ADD CONSTRAINT `IDProdInfos` FOREIGN KEY (`fkProd`) REFERENCES `product`(`codeId`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE `subcategory` ADD CONSTRAINT `fkCategorySub` FOREIGN KEY (`fkCategory`) REFERENCES `category`(`idCategory`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `subcategory` ADD CONSTRAINT `IDSubcategoryCategory` FOREIGN KEY (`fkCategory`) REFERENCES `category`(`idCategory`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
 ALTER TABLE `subtitleimage` ADD CONSTRAINT `IDImage` FOREIGN KEY (`fkImg`) REFERENCES `imgmontage`(`idImgMontage`) ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -210,7 +198,7 @@ ALTER TABLE `subtitleimage` ADD CONSTRAINT `IDSubtitle` FOREIGN KEY (`fkSubtitle
 ALTER TABLE `subtitlemontage` ADD CONSTRAINT `IDLanguageMontage` FOREIGN KEY (`fkLanguage`) REFERENCES `languages`(`idLanguages`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE `videos` ADD CONSTRAINT `IDCategoriesVideo` FOREIGN KEY (`fkCategories`) REFERENCES `categories`(`idCategories`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `videos` ADD CONSTRAINT `IDCategoriesVideo` FOREIGN KEY (`fkCategories`) REFERENCES `category`(`idCategory`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
 ALTER TABLE `videos` ADD CONSTRAINT `IDLanguageVideo` FOREIGN KEY (`fkLanguage`) REFERENCES `languages`(`idLanguages`) ON DELETE NO ACTION ON UPDATE NO ACTION;

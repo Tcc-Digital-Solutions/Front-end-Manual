@@ -27,9 +27,9 @@ const Home = () =>{
     // e a ultima rota guardada no storage foi home? *****, fazer a lógica pra ele mudar apenas se tiver alguma alteracao
 
     useEffect(() =>{
-        let dadosPIs = localStorage.getItem('produtosInfo')
+        // let dadosPIs = localStorage.getItem('produtosInfo')
         apiProdutosInfo()
-        apiSubcategories()
+        // apiSubcategories()
         // if (dadosPIs == null){
         //     // let infoProdutosInfo = JSON.parse(dadosPIs)
         //     // if (product_info === infoProdutosInfo){
@@ -47,7 +47,7 @@ const Home = () =>{
 
     return (
         <>
-            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" prodsInfo={prodsInfo} subcategorias={subcategorias}/>
+            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" prodsInfo={prodsInfo}/>
         </>
     );
 }

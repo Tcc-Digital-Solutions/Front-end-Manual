@@ -5,28 +5,28 @@ export const Boxproduto = (props) => {
     const [inform] =  useState(props.informSet)
     const [monta] =  useState(props.montaSet)
     const [conteudo, setConteudo] = useState([])
-    const [descricao, setDescricao] = useState([])
-    const [descjson, setDescjson] = useState()
-    if (typeof window !== 'undefined') {
-        let valor = localStorage.getItem('produtoInfo')
-        if (valor != null){
-            setDescjson(JSON.parse(valor.description))
-        }
-    }
+    // const [descricao, setDescricao] = useState([])
+    // const [descjson, setDescjson] = useState()
+    // if (typeof window !== 'undefined') {
+    //     let valor = localStorage.getItem('produtoInfo')
+    //     if (valor != null){
+    //         setDescjson(JSON.parse(valor.description))
+    //     }
+    // }
 
     useEffect(() =>{
         if (props.content != undefined){
             setConteudo(props.content.split('<br/>'))
         }
-        // e for daquele id buscado***
-        if (descjson != undefined && descjson != null){
-            setDescricao(descjson.split('<br/>'))
-        }
-    }, [props.content, descjson])
+        // // e for daquele id buscado***
+        // if (descjson != undefined && descjson != null){
+        //     setDescricao(descjson.split('<br/>'))
+        // }{/*, descjson*/}
+    }, [props.content])
     
     return (
         <div className='boxproduto-div' >
-            {console.log('teste descricao: ', descricao)}
+            {/* {console.log('teste descricao: ', descricao)} */}
             <span className='boxproduto-text'>
                 <p>{props.nome}</p>
             </span>
@@ -36,12 +36,12 @@ export const Boxproduto = (props) => {
                         <li className='texto-box-produtos' key={index}>{c}</li>
                         ))}
                 </ul>
-                {descricao.map((d, index) => (
+                {/* {descricao.map((d, index) => ( */}
                     <ul className={monta}>
-                        <li className='texto-box-produtos'>{d}</li>
+                        <li className='texto-box-produtos'>a</li>
                         {/* // esse tá passando vazio, precisa passar pro localstorage? */}
                     </ul>
-                ))}
+                {/* ))} */}
             </span>
         </div>
     )
