@@ -168,10 +168,7 @@ flex-direction: column !important;
 display: flex !important;
 align-items: center !important;
 }
-
-
 }
-
 
 @media  screen and (max-height: 800px) {
 .img-fixa-montagem {
@@ -272,7 +269,7 @@ height: 180px;
 cursor: pointer;
 }
 .swiper-button-next:after, .swiper-button-prev:after{
-color: black;
+color: var(--cor-texto);
 }
 
 .img-fixa-montagem-div {

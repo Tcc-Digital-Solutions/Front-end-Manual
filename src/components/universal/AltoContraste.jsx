@@ -111,7 +111,7 @@ export const AltoContraste = () => {
 
     return (
         <div className="AltoContraste-div">
-            <button className='AltoContraste-button'  onClick={() => setMenuVisible()}><img src={imgsunMoon} style={{ width:'24px'}} alt="" /></button>
+            <button className='button-manual'  onClick={() => setMenuVisible()}><img src={imgsunMoon} style={{ width:'24px'}} alt="" /></button>
             <span className={visible}>
                 <div class="container py-2">
                   <div class="row">

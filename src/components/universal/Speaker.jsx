@@ -76,7 +76,7 @@ export function Speaker({children,text, value ,buttonTrue}){
                 {children}
             </div>
             <div className="div-audio">
-                <button className="button-audio" alt="Clique para escutar" onClick={initializerSpeaker}>
+                <button className="button-manual" alt="Clique para escutar" onClick={initializerSpeaker}>
                     { buttonTrue ? <img src={Descrição} style={{width:'30px'}} /> : <img src={SoundSpeak} style={{width:'30px'}} /> }
                 </button>
             </div>
