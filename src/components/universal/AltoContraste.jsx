@@ -32,11 +32,15 @@ export const AltoContraste = () => {
           document.documentElement.style.setProperty('--cor-texto', '#fff');
           document.documentElement.style.setProperty('--cor-bg', '#000');
           document.documentElement.style.setProperty('--cor-manual','#000')
+          document.getElementById('logoN').classList.remove('hide')
+          document.getElementById('logo').classList.add('hide')
     
         } else {
           document.documentElement.style.setProperty('--cor-texto', '#000');
           document.documentElement.style.setProperty('--cor-bg', '#fff');
           document.documentElement.style.setProperty('--cor-manual','#fff')
+          document.getElementById('logoN').classList.add('hide')
+          document.getElementById('logo').classList.remove('hide')
     
           $("body").removeClass("escuro").addClass("claro");
           $("body").children().removeClass("escuro");
@@ -46,8 +50,18 @@ export const AltoContraste = () => {
       const alterarGrey = () =>{
         if($("body").hasClass("grayscale")){
           $("body").removeClass("grayscale");
+          // document.getElementById('logoN').classList.add('hide')
+          // document.getElementById('logo').classList.remove('hide')
         } else {
           $("body").addClass("grayscale");
+          if (escuro) {
+            document.getElementById('logoN').classList.remove('hide')
+            document.getElementById('logo').classList.add('hide')
+          }
+          else{
+            document.getElementById('logoN').classList.add('hide')
+            document.getElementById('logo').classList.remove('hide')
+          }
         }
       }
 

@@ -12,7 +12,8 @@
 .ButtonAbout-button{
   display:  none;
 }
-  
+
+
 @media only screen and (max-width: 1151px) {
   .ButtonAbout-button{
     border: 0;
