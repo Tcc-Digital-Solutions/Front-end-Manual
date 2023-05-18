@@ -10,7 +10,7 @@ export const NavbarHome = (props) => {
 
     const[isHovering_0, setIsHoverring_0] = useState(false);
     const[isHovering_1, setIsHoverring_1] = useState(false);
-    const[isHovering_2, setIsHoverring_2] = useState(false);
+    const[isHovering_2, setIsHoverring_2] = useState(false); 
     const[isHovering_3, setIsHoverring_3] = useState(false);
     const[isHovering_4, setIsHoverring_4] = useState(false);
 
@@ -23,6 +23,8 @@ export const NavbarHome = (props) => {
     const [visibleButtonX, setVisibleButtonX] = useState("button-youtube-button-x-hide")
     const [pressed, setPressed] = useState(false)
     const [pressed2, setPressed2] = useState(false)
+
+    const [pesquisa, setPesquisa] = useState('')
 
     const setMenuVisible = () => {
         pressed ? setVisible("button-menu-box-fechar") : setVisible("button-menu-box")
@@ -47,6 +49,18 @@ export const NavbarHome = (props) => {
                 setVisibleButtonX('button-youtube-button-x')
             }            
         }
+        
+        // setInputPesquisa(document.getElementById('navbarsearch-input'))
+        // if (inputPesquisa){
+        //     inputPesquisa.addEventListener('keyup', function(e){
+        //         console.log('entrei aqui')
+        //     const botaoPesquisa = document.getElementById('icon-search')
+        //     if (botaoPesquisa) {
+        //         botaoPesquisa.click()
+        //         console.log('cliqueii')
+        //     }
+        // })
+    // }
     },[])
     
     const [categoria, setCategoria] = useState(1)
@@ -89,22 +103,34 @@ export const NavbarHome = (props) => {
             setIsHoverring_4(false);  
             };
     };
+    // function buscarProduto(){
+    //     console.log(document.getElementsByClassName('navbarsearch-input').value)
+    //     setPesquisa(document.getElementsByClassName('navbarsearch-input').value)
+    //     console.log(pesquisa)
+    // }
+
     return (
+        // vai poder buscar no campo de pesquisa apenas por nome e por sku
+        // fazer alem de quando clicar no botão, quando a pessoa pressionar ENTER***
+        // botar cursor pointer e over na imagem de botao do search
+        // fazer a categoria
         <div className="box-categoria-div" >
             <div className={props.search} >
                 <button className='navbarsearch-button' onClick={() => setMenuVisibleSearch( () => setWidth()) }> <img  src={visibleIMG} style={{ width:'24px'}} alt="" /></button>
                 <span  className={visibleSearch}>
-                    <input className='navbarsearch-input' type="text" placeholder='O que você esta buscando ?'  />
-                    <img  src={lupa} style={{ width:'20px'}} alt="" />
+                    <input className='navbarsearch-input' type="text" placeholder='O que você esta buscando ?'/>
+                    <img id='icon-search' src={lupa} style={{ width:'20px', cursor:'pointer'}} alt=""/>{/* onClick */}
                 </span>
             </div>
+
             <button className={visibleButton} onClick={() => setMenuVisible()}><img className="button-menu-img" src={menuImg} alt="" /></button>
             <span className={visible}>
             <button className={visibleButtonX} id='button-lado' onClick={() => setMenuVisible()}><img className="button-youtube-button-x-img" src={fecharImg} alt="" /></button>
                 <ul className="box-categoria-ul">
+                    {/* {props.subcategorias && props.subcategorias.map((s, index) => ( */}
                     <li className="box-categoria-li" id='li-categorias'>
                         <div className="box-categoria-menu"  id='box-categoria-menu-border'   onMouseOver={() => handleMouseOver(0)} onMouseOut={() => handleMouseOut (0)}>
-                            Ferramentas 12v
+                            {/* {s.category.name} */}Ferramentas 18V
                             <span  className={isHovering_0 ? 'menu-button' : 'menu-escondido'}>
                             <div className='box-menu'>
                         <ul>
@@ -121,8 +147,9 @@ export const NavbarHome = (props) => {
                             </span>
                         </div>
                     </li>
+                    {/* ))} */}
                     
-                    <li className="box-categoria-li" id='li-categorias'>
+                    {/* <li className="box-categoria-li" id='li-categorias'>
                         <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(1)} onMouseOut={() => handleMouseOut (1)} >
                             Ferramentas 18v 
                             <span className={isHovering_1 ? 'menu-button' : 'menu-escondido'}>
@@ -173,12 +200,12 @@ export const NavbarHome = (props) => {
                     </div>
                             </span>
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
             </span>
             {/* fazer o fetch da categoria e trazer pra cá */}
             <span className={visibleBox}>
-                <Carousel prodsInfo={props.prodsInfo}/>
+                <Carousel prodsInfo={props.prodsInfo} pesquisa={pesquisa}/>
             </span>
         </div>
     )

@@ -8,16 +8,7 @@ import "swiper/css/navigation";
 import { Cardproduto } from "./Cardproduto";
 
 export const Carousel = ( props ) => {
-    const { innerWidth: width, innerHeight: height } = window;
-
-    useEffect(() => {
-        if (innerWidth < 1000){
-            setSlip(2)
-        }
-        if (innerWidth < 700){
-            setSlip(1)
-        }
-    }, [])
+    // const { innerWidth: width, innerHeight: height } = window;
 
     return (
         <div className='Carousel_react-div' >
@@ -33,7 +24,16 @@ export const Carousel = ( props ) => {
                     className="swiper-home"
                 >
                     {props.prodsInfo && props.prodsInfo.map((p, index) => (
-                        <SwiperSlide className="swiper-slide-card"><Cardproduto nome={p.name} foto={p.product.img_prod} fkProd={p.fkProd} key={index}/></SwiperSlide>
+                        // {console.log('pesquisa:', props.pesquisa)}
+                        // if (toString(props.pesquisa) != ' '){
+                            // if (toString(p.name).toUpperCase() == toString(props.pesquisa).toUpperCase()){
+                                // {console.log('Entrei aqui')}
+                                // <SwiperSlide className="swiper-slide-card"><Cardproduto nome={p.name} foto={p.product.img_prod} fkProd={p.fkProd} key={index}/></SwiperSlide>
+                            // }
+                        // }
+                        // else{
+                            <SwiperSlide className="swiper-slide-card"><Cardproduto nome={p.name} foto={p.product.img_prod} fkProd={p.fkProd} key={index}/></SwiperSlide>
+                        // }
                     ))}
                 </Swiper>                 
             </span>

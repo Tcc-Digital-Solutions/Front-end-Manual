@@ -13,7 +13,7 @@ const Informaçoes = () =>{
     const apiProdutoInfo = async() => {
         const product_info = (await fetch(`http://localhost:3000/api/produto_info/${id}`).then(res => res.json()))
         if (product_info){
-            localStorage.setItem('produtoInfo', JSON.stringify(product_info))
+            localStorage.setItem('produtoInfo', JSON.stringify(product_info[0]))
             setProdInfo(product_info[0])
         }
     }
@@ -72,6 +72,9 @@ const Informaçoes = () =>{
             {/* colocar o link real do icone e não o icone de hospedagem do nosso site na vercel */}
             {/* tá puxando o card do lugar errado ele não tá pegando do id certo? */}
             {/* no box produto tá faltando passar as coisas pra montagem */}
+{/* 
+            o button youtube tá pra cá, precisa resolver esse problema de passar pra la e ca pra fazer o fetch dele,
+            pegar o fetch dele como join na tabela product info ou product */}
             <ButtonsBar />
         </>
     );

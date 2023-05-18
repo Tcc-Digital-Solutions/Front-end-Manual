@@ -6,17 +6,24 @@ export const Boxproduto = (props) => {
     const [monta] =  useState(props.montaSet)
     const [conteudo, setConteudo] = useState([])
     const [descricao, setDescricao] = useState([])
+    const [descjson, setDescjson] = useState()
+    if (typeof window !== 'undefined') {
+        let valor = localStorage.getItem('produtoInfo')
+        if (valor != null){
+            setDescjson(JSON.parse(valor.description))
+        }
+    }
 
     useEffect(() =>{
         if (props.content != undefined){
             setConteudo(props.content.split('<br/>'))
         }
-        if (props.description != undefined){
-            setDescricao(props.description.split('<br/>'))
+        // e for daquele id buscado***
+        if (descjson != undefined && descjson != null){
+            setDescricao(descjson.split('<br/>'))
         }
-    }, [props.content, props.description])
-
-    {console.log('to fora de tudo',descricao)}
+    }, [props.content, descjson])
+    
     return (
         <div className='boxproduto-div' >
             {console.log('teste descricao: ', descricao)}
@@ -32,7 +39,7 @@ export const Boxproduto = (props) => {
                 {descricao.map((d, index) => (
                     <ul className={monta}>
                         <li className='texto-box-produtos'>{d}</li>
-                        // esse tá passando vazio, precisa passar pro localstorage?
+                        {/* // esse tá passando vazio, precisa passar pro localstorage? */}
                     </ul>
                 ))}
             </span>

@@ -19,7 +19,6 @@ export const ButtonAbout = (props) => {
         }
     },[])
 
-
     return (
         <div className="ButtonAbout-div" >
             <button className='ButtonAbout-button' onClick={() => setMenuVisible()}><img src={about} alt="" width={30} /></button>
