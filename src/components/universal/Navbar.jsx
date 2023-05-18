@@ -1,6 +1,7 @@
 import '../../assets/css/css_universal/Navbar.css'
 import imgTop from '../../assets/img/imgTopo.png'
 import boschLogo from '../../assets/img/Group 72.png'
+import boschLogoN from '../../assets/img/logo-negativado.png'
 import { Translate } from './Translate';
 import { ButtonLogoff } from '../screen-crud/ButtonLogoff'
 import { NavbarHome } from '../screen-home/NavbarHome';
@@ -8,7 +9,6 @@ import { NavbarHome } from '../screen-home/NavbarHome';
 
 
 export const Navbar = (props) => {
-    
 
     return (
         <div className={props.nave} >
@@ -17,7 +17,8 @@ export const Navbar = (props) => {
             </div>
             <div className='navbar-div-2'>
                 <span className='navbar-div-2-span'>
-                    <img className='navbar-div-img-2' src={boschLogo} alt="" />                   
+                    <img className='navbar-div-img-2' src={boschLogo} alt="" id="logo"/>    
+                    <img className='navbar-div-img-2 hide' src={boschLogoN} alt="" id="logoN" />    
                 </span>
                 <div  className={props.logado ? 'navbar-div-buttons' : 'navbar-div-buttons-2'}>
                     <span className='navbar-buttons-comus-1'>
