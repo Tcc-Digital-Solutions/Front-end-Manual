@@ -32,7 +32,7 @@ export const Translate = () => {
     return (
         <div className="translate-div">
             <Speaker value={selectedOption.value}></Speaker>
-            <button className='translate-button'  onClick={() => setMenuVisible()}><img src={translateImg} style={{ width:'30px'}} alt="" /></button>
+            <button className='button-manual'  onClick={() => setMenuVisible()}><img src={translateImg} style={{ width:'30px'}} alt="" /></button>
             <span className={visible}>
                 <Select placeholder='Linguagem'
                 isClearable={true}
