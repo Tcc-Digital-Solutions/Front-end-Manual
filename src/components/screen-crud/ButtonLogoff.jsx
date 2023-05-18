@@ -4,7 +4,7 @@ import logoffImg from '../../assets/img/logout.svg'
 export const ButtonLogoff = () => {
     return (
         <div className="button-logoff-div" >
-            <button className="button-logoff-button" ><img src={logoffImg} alt="" /></button>
+            <button className="button-manual" ><img src={logoffImg} alt="" /></button>
         </div>
     )
 }

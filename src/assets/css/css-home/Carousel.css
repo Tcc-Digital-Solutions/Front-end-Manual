@@ -23,7 +23,7 @@
       top: 50% !important;
       transform: rotate(0deg);
       transform-origin: left center;
-      color: black;
+      color: var(--cor-texto);
     }
     .swiper-home .swiper-button-next{
       left: 96% !important;
@@ -32,7 +32,7 @@
       transform: rotate(0deg);
       transform-origin: left center;
       top:auto;
-      color: black;
+      color: var(--cor-texto);
     }
   
     .Carousel-informacoes-div{
