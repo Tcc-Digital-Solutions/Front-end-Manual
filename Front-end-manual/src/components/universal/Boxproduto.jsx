@@ -5,28 +5,22 @@ export const Boxproduto = (props) => {
     const [inform] =  useState(props.informSet)
     const [monta] =  useState(props.montaSet)
     const [conteudo, setConteudo] = useState([])
-    // const [descricao, setDescricao] = useState([])
-    // const [descjson, setDescjson] = useState()
-    // if (typeof window !== 'undefined') {
-    //     let valor = localStorage.getItem('produtoInfo')
-    //     if (valor != null){
-    //         setDescjson(JSON.parse(valor.description))
-    //     }
-    // }
+    const [descricao, setDescricao] = useState([])
 
     useEffect(() =>{
-        if (props.content != undefined){
+        const produtoInfo = localStorage.getItem('produtoInfo')
+        if (produtoInfo != undefined && produtoInfo != null){
+            const prodInfoJSON = JSON.parse(produtoInfo)
+            setDescricao(prodInfoJSON.description.split('<br/>'))
+        }
+
+        if (props.content != undefined && props.content != null){
             setConteudo(props.content.split('<br/>'))
         }
-        // // e for daquele id buscado***
-        // if (descjson != undefined && descjson != null){
-        //     setDescricao(descjson.split('<br/>'))
-        // }{/*, descjson*/}
-    }, [props.content])
+    }, [props.content, localStorage.getItem('produtoInfo')])
     
     return (
         <div className='boxproduto-div' >
-            {/* {console.log('teste descricao: ', descricao)} */}
             <span className='boxproduto-text'>
                 <p>{props.nome}</p>
             </span>
@@ -36,12 +30,11 @@ export const Boxproduto = (props) => {
                         <li className='texto-box-produtos' key={index}>{c}</li>
                         ))}
                 </ul>
-                {/* {descricao.map((d, index) => ( */}
-                    <ul className={monta}>
-                        <li className='texto-box-produtos'>a</li>
-                        {/* // esse tá passando vazio, precisa passar pro localstorage? */}
-                    </ul>
-                {/* ))} */}
+                <ul className={monta}>
+                    {descricao.map((d, index) => (
+                        <li className='texto-box-produtos' key={index}>{d}</li>
+                    ))}
+                </ul>
             </span>
         </div>
     )

@@ -23,7 +23,7 @@ export const ButtonAbout = (props) => {
         <div className="ButtonAbout-div" >
             <button className='ButtonAbout-button' onClick={() => setMenuVisible()}><img src={about} alt="" width={30} /></button>
             <span className={visible}>
-                <Boxproduto nome='CONTEÚDO DA EMBALAGEM' informSet='components-box-produtos' montaSet='components-box-produtos-hide' content={props.prodInfo.content} description={props.prodInfo.description}/>
+                <Boxproduto nome='CONTEÚDO DA EMBALAGEM' informSet='components-box-produtos' montaSet='components-box-produtos-hide' content={props.prodInfo.content}/>
             </span>
         </div>
     )

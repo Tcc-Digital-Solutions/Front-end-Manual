@@ -11,6 +11,7 @@ const Informaçoes = () =>{
     const [prod, setProd] = useState('')
     
     const apiProdutoInfo = async() => {
+        // fazer try catch aqui e fazer condição no render, se der erro renderizar pra página de erro
         const product_info = (await fetch(`http://localhost:3000/api/produto_info/${id}`).then(res => res.json()))
         if (product_info){
             localStorage.setItem('produtoInfo', JSON.stringify(product_info[0]))
@@ -37,46 +38,45 @@ const Informaçoes = () =>{
         let dadosP = localStorage.getItem('produto')
 
         if (dadosPI != null && dadosCD != null && dadosP != null){
-            let infoProdutoInfo = JSON.parse(dadosPI)
-            let infoCards = JSON.parse(dadosCD)
-            let infoProduto = JSON.parse(dadosP)
+            if (dadosPI != undefined && dadosCD != undefined && dadosP != undefined){
+                let infoProdutoInfo = JSON.parse(dadosPI)
+                let infoCards = JSON.parse(dadosCD)
+                let infoProduto = JSON.parse(dadosP)
 
-            if (infoProdutoInfo.fkProd == id && infoCards.fkProd == id && infoProduto.codeId == id){
-                setProdInfo(infoProdutoInfo[0])
-                setCards(infoCards)
-                setProd(infoProduto)
-            }
-            else{
-                localStorage.removeItem('produto')
-                localStorage.removeItem('produtoInfo')
-                localStorage.removeItem('cards')
-                apiProdutoInfo()
-                apiCards()
-                apiProduto()
+                if (infoProdutoInfo.fkProd == id && infoCards.fkProd == id && infoProduto.codeId == id){
+                    setProdInfo(infoProdutoInfo[0])
+                    setCards(infoCards)
+                    setProd(infoProduto)
+                }
+                else{
+                    localStorage.removeItem('produto')
+                    localStorage.removeItem('produtoInfo')
+                    localStorage.removeItem('cards')
+                    apiProdutoInfo()
+                    apiCards()
+                    apiProduto()
+                }
             }
             // quando troca de página essa regra não é efetiva, ele chega a puxar tudo denovo na api*****
             // deveria fazer a mesma coisa que quando atualiza e manter os fetchs que já haviam sido feitos
         }
         else{
             // aqui não era pra chamar né? era só pra setar os valores
+            
             apiProdutoInfo()
             apiCards()
             apiProduto()
         }
     }, [])
-    return (
+    return(
         <>
             <Navbar visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar' nave="navbar-div"/>
             <BoxInformacoes prodInfo={prodInfo} card={card} prod={prod}/>
-            {/* se não achar as informações principais não renderizar essa página e sim uma de erro(); */}
-            {/* colocar o link real do icone e não o icone de hospedagem do nosso site na vercel */}
-            {/* tá puxando o card do lugar errado ele não tá pegando do id certo? */}
-            {/* no box produto tá faltando passar as coisas pra montagem */}
-{/* 
-            o button youtube tá pra cá, precisa resolver esse problema de passar pra la e ca pra fazer o fetch dele,
-            pegar o fetch dele como join na tabela product info ou product */}
+            {/* o button youtube tá pra cá, precisa resolver esse problema de passar pra la e ca pra fazer o fetch dele, */}
+            {/* pegar o fetch dele como join na tabela product info ou product */}
             <ButtonsBar />
         </>
-    );
+    )
 }
+//renderizar aqui a pagina de erro que nosso site já possui
 export default Informaçoes;

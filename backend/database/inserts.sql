@@ -65,7 +65,7 @@ INSERT INTO product VALUES('4324290012', 'img_principal2.png', 'img2_360.png', '
 INSERT INTO product VALUES('4324290090', 'img_principal2.png', 'img2_360.png', 'audioesme.mp3', 1, 1);
 
 SELECT * FROM productsinfo;
-INSERT INTO productsinfo VALUES(idProd, 'Furadeira Angular', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 Furadeira GSB 13 RE<br/>1 manual de instruções<br/>1 Limitador de profundidade<br/>','4556159000', 1);
+INSERT INTO productsinfo VALUES(idProd, 'Furadeira Angular', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 Furadeira GSB 13 RE<br/>1 manual de instruções<br/>1 Limitador de profundidade','4556159000', 1);
 INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 Limitador de profundidade<br/>1 Chave de mandril<br/>Mala de transporte', '4324290009', 1);
 INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira Angular', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 manual de instruções<br/>1 Limitador de profundidade<br/>Mala de transporte', '4324290012', 1);
 INSERT INTO productsinfo VALUES(idProd, 'Serra Tico-Tico', 'equipamento de cor azul com textura plástica', 'Ponta da Ferramenta<br/>Costas da ferramenta<br/>', '1 Chave de mandril<br/>Mala de transporte', '4324290090', 1);
