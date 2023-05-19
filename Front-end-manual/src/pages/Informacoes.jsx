@@ -18,7 +18,7 @@ const Informaçoes = () =>{
         }
     }
     const apiCards = async() =>{
-        const cards = (await fetch('http://localhost:3000/api/cards').then(res => res.json()))
+        const cards = (await fetch(`http://localhost:3000/api/cards/${id}`).then(res => res.json()))
         if (cards){
             localStorage.setItem('cards', JSON.stringify(cards))
             setCards(cards)

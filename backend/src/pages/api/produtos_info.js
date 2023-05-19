@@ -25,7 +25,6 @@ export default async function handler(req, res) {
                 }
             }
         })
-        console.log(allprods)
         res.json(allprods)
     }
 }

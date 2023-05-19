@@ -1,7 +1,14 @@
 import { prisma } from '../../../../prisma/prisma'
 import NextCors from 'nextjs-cors'
+import { useEffect, useState } from 'react'
 
 export default async function handler(req, res){
+
+    // const [lng, setLng] = useState('')
+
+    // useEffect(() => {
+    //     setLng(localStorage.getItem(I18N_STORAGE_KEY))
+    // }, [])
 
     await NextCors(req, res, {
         methods: ['GET'],
@@ -16,10 +23,12 @@ export default async function handler(req, res){
             
             where:{
                 fkProd:id,
+                // fkProd:id,
             }
         })
         res.json(detalhe)
         console.log(detalhe)
+        // console.log(lng)
     }
 }
 
