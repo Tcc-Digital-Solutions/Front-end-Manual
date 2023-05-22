@@ -16,13 +16,13 @@ const Home = () =>{
             setProdsInfo(product_info)
         }
     }
-    const apiSubcategories= async() =>{
-        const subcategories = (await fetch('http://localhost:3000/api/subcategories').then(res => res.json()))
-        if (subcategories){
-            localStorage.setItem('subcategories', JSON.stringify(subcategories))
-            setSubcategorias(subcategories)
-        }
-    }
+    // const apiSubcategories= async() =>{
+    //     const subcategories = (await fetch('http://localhost:3000/api/subcategories').then(res => res.json()))
+    //     if (subcategories){
+    //         localStorage.setItem('subcategories', JSON.stringify(subcategories))
+    //         setSubcategorias(subcategories)
+    //     }
+    // }
     // talvez essa logiquinha não seja aplicável aqui porque ele nnão compararia o id da url, ver se vai ser home?
     // e a ultima rota guardada no storage foi home? *****, fazer a lógica pra ele mudar apenas se tiver alguma alteracao
 

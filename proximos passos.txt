@@ -1,0 +1,2 @@
+dot env react
+use context arquivo responsável por fazer as chamadas na api e retornar um json para trabalharmos na página .map etc

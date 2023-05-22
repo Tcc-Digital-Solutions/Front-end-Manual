@@ -20,6 +20,11 @@ export default async function handler(req, res) {
                     is: {
                         fkProd: id
                     }
+                },
+                subtitlemontage: {
+                    is: {
+                        fkLanguage : 1
+                    }
                 }
             },
             include: {
@@ -27,30 +32,6 @@ export default async function handler(req, res) {
                 subtitlemontage: true,
                 imgmontage: true,
             }
-            // select:{
-            //     // montage:{
-            //     //     where: {
-            //     //         fkProd: id
-            //     //     },
-            //     //     select:{
-            //     //         img_guide: true
-            //     //     },
-                    
-            //     //     // where: { is : { fkProd: id }
-            //     //     // }
-            //     // },
-            //     imgmontage:{
-            //         select:{
-            //             img: true,
-            //         }
-            //     },
-            //     subtitlemontage:{
-            //         select:{
-            //             subititleImg: true,
-            //         }
-            //     },
-            
-            // },
         })
         // //colocar a condiçao da language tbmm pra puxar o id da language que tá no localstorage
         res.json(montagem)

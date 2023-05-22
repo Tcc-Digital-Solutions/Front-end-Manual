@@ -86,3 +86,6 @@ INSERT INTO videos VALUES(idVideo, 'Video do youtube sobre x', 'Bptf9MTqsAU', 1,
 INSERT INTO videos VALUES(idVideo, 'Video do youtube sobre y', '287OmjWqVYM', 1, '4324290009');
 INSERT INTO videos VALUES(idVideo, 'Video do youtube sobre z', 'qZ83KN1G_2c', 1, '4324290009');
 INSERT INTO videos VALUES(idVideo, 'Video do youtube sobre ab', 'MEtQy4c9SoE', 1, '4556159000');
+
+SELECT * FROM pdf;
+INSERT INTO pdf VALUES(idPDF, '../../pdf.pdf', '4556159000', 1);

@@ -18,8 +18,6 @@ export default async function handler(req, res) {
             where:{ fkProd: id }
         })
         //colocar a condiçao da language tbmm pra puxar o id da language que tá no localstorage
-        console.log('id do proddd', id)
-        console.log('id do proddd', allvideos)
         res.json(allvideos)
     }
 }
