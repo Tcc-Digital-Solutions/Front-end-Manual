@@ -30,16 +30,6 @@ export const ScreenEspera = () => {
     return (
         <div className="screnn-espera-div" >
             <img className={animado ? 'screnn-espera-img animar' : ' screnn-espera-img- '} src={bosch} alt="" />
-            <div className={!animado ? 'screnn-espera-button- para' : 'screnn-espera-button'}>
-                <span className="screnn-espera-text">
-                    <Speaker>
-                        <p>Nenhum código de produto encontrado na Url</p>
-                        <p> Click em continuar  para selecionar produto </p>
-                    </Speaker>
-                </span>
-                <img className='screen-espera-img-error' src={errorImg} alt="" />
-                <Introducao />
-            </div>
         </div>
     )
 }

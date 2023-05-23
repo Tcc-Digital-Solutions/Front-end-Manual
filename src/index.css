@@ -151,5 +151,8 @@ div[vw] {
   justify-content: center;
   border: none;
   cursor:pointer;
-  margin-right: 10px;
+}
+
+.img-svg-manual{
+  fill: var(--cor-texto);
 }

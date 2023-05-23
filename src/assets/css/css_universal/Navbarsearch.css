@@ -9,7 +9,7 @@
 
 .navbarsearch-span{
     display: flex;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--cor-texto);
     position: absolute;
     top: 37px;
     left: 228px;

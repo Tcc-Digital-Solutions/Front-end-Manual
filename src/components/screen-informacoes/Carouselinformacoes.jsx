@@ -27,7 +27,6 @@ export const Carouselinformacoes = (props) => {
                     direction={'vertical'}
                     spaceBetween={0}
                     slidesPerGroup={slip}
-
                     loop={false}
                     navigation={true}
                     loopFillGroupWithBlank={true}
@@ -51,7 +50,6 @@ export const Carouselinformacoes = (props) => {
                 <Swiper
                     spaceBetween={0}
                     slidesPerView={1}
-
                     loop={false}
                     loopFillGroupWithBlank={true}
                     navigation={true}
