@@ -44,7 +44,7 @@ export const NavbarHome = (props) => {
             if (innerWidth < 1000){
                 setVisibleSearch('navbarsearch-span-fechar')
                 setVisible('button-menu-box-fechar')
-                setVisibleButton('button-menu-click')
+                setVisibleButton('button-manual')
                 setVisibleButtonX('button-youtube-button-x')
             }            
         }
@@ -99,10 +99,10 @@ export const NavbarHome = (props) => {
     return (
         <div className="box-categoria-div" >
             <div className={props.search} >
-                <button className='navbarsearch-button' onClick={() => setMenuVisibleSearch( () => setWidth()) }> <img  src={visibleIMG} style={{ width:'24px'}} alt="" /></button>
+                <button className='button-manual' onClick={() => setMenuVisibleSearch( () => setWidth()) }> <img  src={visibleIMG} style={{ width:'24px'}} alt="" /></button>
                 <span  className={visibleSearch}>
                     <input className='navbarsearch-input' type="text" placeholder='O que você esta buscando ?'  />
-                    <img  src={lupa} style={{ width:'20px'}} alt="" />
+                    <svg className='img-svg-manual' style={{ width:'20px'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><path d="M170.829 149.171l-56.874-56.873A51.667 51.667 0 0 0 120 68c0-28.673-23.327-52-52-52S16 39.327 16 68s23.327 52 52 52c8.773 0 17.04-2.192 24.298-6.045l56.873 56.874c3.45 3.45 7.92 5.2 12.248 5.2 3.854 0 7.597-1.388 10.41-4.2 5.97-5.972 5.522-16.135-1-22.658zM24 68c0-24.262 19.738-44 44-44s44 19.738 44 44-19.738 44-44 44-44-19.738-44-44zm142.171 98.171c-1.75 1.753-3.874 1.979-5.347 1.857-2.171-.176-4.357-1.217-5.995-2.857L99.216 109.56a52.439 52.439 0 0 0 10.343-10.343l55.612 55.613c1.64 1.638 2.68 3.824 2.857 5.995.12 1.473-.105 3.596-1.857 5.347z"/></svg>
                 </span>
             </div>
             <button className={visibleButton} onClick={() => setMenuVisible()}><img className="button-menu-img" src={menuImg} alt="" /></button>
