@@ -19,7 +19,6 @@ export const BoxManual = (props) => {
       <div className='BoxManual-container'>
         <div className='pdf-container'>
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.6.172/build/pdf.worker.min.js">
-            {/* pode essa cambiarra*******************? */}
             <Viewer fileUrl={props.manual ? props.manual.pdf : '...'}
               plugins={[defaultLayoutPluginInstance]} />
           </Worker>

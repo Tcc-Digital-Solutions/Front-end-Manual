@@ -52,7 +52,8 @@ const Informaçoes = () =>{
         let dadosCD = localStorage.getItem('cards')
         if (dadosCD != null && dadosCD != undefined && dadosCD != "undefined"){
             let infoCards = JSON.parse(dadosCD)
-            if (infoCards.fkProd == id ){
+            console.log('fk prod:',infoCards[0].fkProd)
+            if (infoCards[0].fkProd == id ){
                 setCards(infoCards)
             }
             else{
@@ -61,6 +62,7 @@ const Informaçoes = () =>{
             }
         }
         else{
+            console.log('entrei aqui')
             apiCards()
         }
 

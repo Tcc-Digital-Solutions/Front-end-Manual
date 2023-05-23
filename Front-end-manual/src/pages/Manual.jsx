@@ -49,7 +49,7 @@ const Manual = () => {
       let dadosVideo = localStorage.getItem('videos')
       if (dadosVideo != null && dadosVideo != undefined && dadosVideo != "undefined"){
         let infoVideo = JSON.parse(dadosVideo)
-        if (infoVideo.fkProd == id) {
+        if (infoVideo[0].fkProd == id) {
           setVideo(infoVideo)
         }
         else{

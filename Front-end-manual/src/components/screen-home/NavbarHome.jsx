@@ -113,6 +113,9 @@ export const NavbarHome = (props) => {
         // vai poder buscar no campo de pesquisa apenas por nome e por sku
         // fazer alem de quando clicar no botão, quando a pessoa pressionar ENTER***
         // botar cursor pointer e over na imagem de botao do search
+
+
+        // onkeydown
         // fazer a categoria
         <div className="box-categoria-div" >
             <div className={props.search} >
