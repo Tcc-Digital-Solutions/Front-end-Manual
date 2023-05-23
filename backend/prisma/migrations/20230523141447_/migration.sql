@@ -69,7 +69,7 @@ CREATE TABLE `login` (
 -- CreateTable
 CREATE TABLE `montage` (
     `idMontage` INTEGER NOT NULL AUTO_INCREMENT,
-    `img_guide` VARCHAR(60) NOT NULL,
+    `img_guide` VARCHAR(255) NOT NULL,
     `fkProd` VARCHAR(60) NOT NULL,
 
     INDEX `IDMontageProduct`(`fkProd`),
@@ -79,7 +79,7 @@ CREATE TABLE `montage` (
 -- CreateTable
 CREATE TABLE `pdf` (
     `idPDF` INTEGER NOT NULL AUTO_INCREMENT,
-    `pdf` VARCHAR(60) NOT NULL,
+    `pdf` VARCHAR(255) NOT NULL,
     `fkProd` VARCHAR(60) NOT NULL,
     `fkLanguage` INTEGER NOT NULL,
 
@@ -161,7 +161,7 @@ CREATE TABLE `table1` (
 CREATE TABLE `videos` (
     `idVideo` INTEGER NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(45) NOT NULL,
-    `codLink` VARCHAR(100) NOT NULL,
+    `codLink` VARCHAR(255) NOT NULL,
     `fkLanguage` INTEGER NOT NULL,
     `fkProd` VARCHAR(60) NOT NULL,
 

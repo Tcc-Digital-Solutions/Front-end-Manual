@@ -45,10 +45,13 @@ INSERT INTO subcategory VALUES(idSubcategory, 'Cortar e Acabamento', 4);*/
 SELECT * FROM subtitlemontage;
 INSERT INTO subtitlemontage values(idSubtitle, 'imagem de abacaxi', 1);
 INSERT INTO subtitlemontage values(idSubtitle, 'image pineapple', 2);
+INSERT INTO subtitlemontage values(idSubtitle, 'image apple', 2);
+INSERT INTO subtitlemontage values(idSubtitle, 'image maça', 1);
 
 SELECT * FROM imgmontage;
 INSERT INTO imgmontage values(idImgMontage, 'https://manual-digital-bosch.vercel.app/assets/img-furadeira-C.0e22e509.png');
 INSERT INTO imgmontage values(idImgMontage, 'https://manual-digital-bosch.vercel.app/assets/img-furadeira-B.f7108c20.png');
+INSERT INTO imgmontage values(idImgMontage, 'https://manual-digital-bosch.vercel.app/assets/img-furadeira-A.f9b96574.png');
 INSERT INTO imgmontage values(idImgMontage, 'https://manual-digital-bosch.vercel.app/assets/img-furadeira-A.f9b96574.png');
 
 SELECT * FROM product;
@@ -64,7 +67,7 @@ INSERT INTO productsinfo VALUES(idProd, 'Esmerilhadeira', 'equipamento de cor az
 INSERT INTO productsinfo VALUES(idProd, 'Serra Tico-Tico', 'equipamento de cor azul com textura plástica', 'Ponta do Guaraná<br/>Costas do macarrão<br/>Arroz<br/>Feijão<br/>Batata', '1 Chave de mandril<br/>Mala de transporte', '4324290090', 1);
 */
 SELECT * FROM montage;
-INSERT INTO montage VALUES(idMontage, 'http://localhost:5173/src/assets/img/img-fixa-montagem.png', '4556159000');
+INSERT INTO montage VALUES(idMontage, 'https://manual-digital-bosch.vercel.app/assets/img-fixa-montagem.c7e75009.png', '4556159000');
 /*INSERT INTO montage VALUES(idMontage, 'img_principal01', '4324290012');
 INSERT INTO montage VALUES(idMontage, 'img_principal02', '4324290090');*/
 INSERT INTO montage VALUES(idMontage, 'img_principal03', '4324290009');
@@ -73,11 +76,13 @@ SELECT * FROM subtitleimage;
 INSERT INTO subtitleimage VALUES(idSubtitleImage, 1, 2, 1);
 INSERT INTO subtitleimage VALUES(idSubtitleImage, 1, 1, 1);
 INSERT INTO subtitleimage VALUES(idSubtitleImage, 3, 2, 1);
+INSERT INTO subtitleimage VALUES(idSubtitleImage, 4, 4, 1);
 
 SELECT * FROM cards;
 INSERT INTO cards VALUES(idCards, 'http://localhost:5173/src/assets/img/warranty.svg', 'Uso industrial com 2 anos de garantia.', '4324290009', 1);
 INSERT INTO cards VALUES(idCards, 'http://localhost:5173/src/assets/img/security.svg', 'Vem com empunhadeira emborrachada para o agarre seguro e confortável', '4324290009', 1);
 INSERT INTO cards VALUES(idCards, 'http://localhost:5173/src/assets/img/security.svg', 'Quinto card', '4556159000', 1);
+INSERT INTO cards VALUES(idCards, 'http://localhost:5173/src/assets/img/security.svg', 'Sétimo', '4556159000', 1);
 /*INSERT INTO cards VALUES(idCards, 'http://localhost:5173/src/assets/img/security.svg', 'Terceiro card', '4324290012', 1);
 INSERT INTO cards VALUES(idCards, 'http://localhost:5173/src/assets/img/security.svg', 'Quarto card', '4324290090', 1);*/
 

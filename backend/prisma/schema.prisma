@@ -77,7 +77,7 @@ model login {
 
 model montage {
   idMontage     Int             @id @default(autoincrement())
-  img_guide     String          @db.VarChar(60)
+  img_guide     String          @db.VarChar(255)
   fkProd        String          @db.VarChar(60)
   product       product         @relation(fields: [fkProd], references: [codeId], onDelete: NoAction, onUpdate: NoAction, map: "IDMontageProduct")
   subtitleimage subtitleimage[]
@@ -87,7 +87,7 @@ model montage {
 
 model pdf {
   idPDF      Int       @id @default(autoincrement())
-  pdf        String    @db.VarChar(60)
+  pdf        String    @db.VarChar(255)
   fkProd     String    @db.VarChar(60)
   fkLanguage Int
   languages  languages @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IDLanguagePDF")
@@ -171,7 +171,7 @@ model table1 {
 model videos {
   idVideo    Int       @id @default(autoincrement())
   title      String    @db.VarChar(45)
-  codLink    String    @db.VarChar(100)
+  codLink    String    @db.VarChar(255)
   fkLanguage Int
   fkProd     String    @db.VarChar(60)
   languages  languages @relation(fields: [fkLanguage], references: [idLanguages], onDelete: NoAction, onUpdate: NoAction, map: "IDLanguageVideo")
