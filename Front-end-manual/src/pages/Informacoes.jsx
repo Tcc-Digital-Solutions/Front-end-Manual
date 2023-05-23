@@ -3,7 +3,6 @@ import { BoxInformacoes } from '../components/screen-informacoes/BoxInformacoes'
 import { ButtonsBar } from '../components/universal/ButtonsBar';
 import { Navbar } from '../components/universal/Navbar';
 import { useParams } from 'react-router-dom';
-import { components } from 'react-select';
 
 const Informaçoes = () =>{
     const { id } = useParams()
@@ -34,76 +33,62 @@ const Informaçoes = () =>{
         }
     }
 
-    const apiVideos = async() =>{
-        const videos = (await fetch(`http://localhost:3000/api/videos/${id}`).then(res => res.json()))
-        console.log(JSON.stringify(videos))
-        if (videos){
-            localStorage.setItem('videos', JSON.stringify(videos))
-        }
-    }
-
-    const apiMontage = async() =>{
-        const montage = (await fetch(`http://localhost:3000/api/montagem/${id}`).then(res => res.json()))
-        if (montage){
-            localStorage.setItem('montagem', JSON.stringify(montage))
-            console.log(JSON.stringify(montage))
-        }
-    }
-
     useEffect(() => {
         let dadosPI = localStorage.getItem('produtoInfo')
-        let dadosCD = localStorage.getItem('cards')
-        let dadosP = localStorage.getItem('produto')
-        let dadosV = localStorage.getItem('videos')
-        let dadosM = localStorage.getItem('montagem')
-        // fazer separado os ifs ? ** não esqueça dos subtitles pra pessoas cegas
-        if (dadosPI != null && dadosCD != null && dadosP != null && dadosV != null && dadosM != null){
-            if (dadosPI != undefined && dadosCD != undefined && dadosP != undefined && dadosV != undefined && dadosM != undefined){
-                let infoProdutoInfo = JSON.parse(dadosPI)
-                let infoCards = JSON.parse(dadosCD)
-                let infoProduto = JSON.parse(dadosP)
-                let infoVideos = JSON.parse(dadosV)
-                let infoMontagem = JSON.parse(dadosM)
-
-                if (infoProdutoInfo.fkProd == id && infoCards.fkProd == id && infoProduto.codeId == id && infoVideos.fkProd == id && infoMontagem.fkProd == id){
-                    setProdInfo(infoProdutoInfo)
-                    setCards(infoCards)
-                    setProd(infoProduto)
-                    setVideo(infoVideos)
-                }
-                else{
-                    localStorage.removeItem('produto')
-                    localStorage.removeItem('produtoInfo')
-                    localStorage.removeItem('cards')
-                    localStorage.removeItem('videos')
-                    localStorage.removeItem('montagem')
-                    apiProdutoInfo()
-                    apiCards()
-                    apiProduto()
-                    apiVideos()
-                    apiMontage()
-                }
+        if (dadosPI != null && dadosPI != undefined && dadosPI != "undefined"){
+            let infoProdutoInfo = JSON.parse(dadosPI)
+            if (infoProdutoInfo.fkProd == id ){
+                setProdInfo(infoProdutoInfo)
             }
-            // quando troca de página essa regra não é efetiva, ele chega a puxar tudo denovo na api*****
-            // deveria fazer a mesma coisa que quando atualiza e manter os fetchs que já haviam sido feitos
+            else{
+                localStorage.removeItem('produtoInfo')
+                apiProdutoInfo()
+            }
         }
         else{
             apiProdutoInfo()
+        }
+
+        let dadosCD = localStorage.getItem('cards')
+        if (dadosCD != null && dadosCD != undefined && dadosCD != "undefined"){
+            let infoCards = JSON.parse(dadosCD)
+            if (infoCards.fkProd == id ){
+                setCards(infoCards)
+            }
+            else{
+                localStorage.removeItem('cards')
+                apiCards()
+            }
+        }
+        else{
             apiCards()
+        }
+
+        let dadosP = localStorage.getItem('produto')
+        if (dadosP != null && dadosP != undefined && dadosP != "undefined"){
+            let infoProduto = JSON.parse(dadosP)
+            if (infoProduto.codeId == id ){
+                setProd(infoProduto)
+            }
+            else{
+                localStorage.removeItem('produto')
+                apiProduto()
+            }
+        }
+        else{
             apiProduto()
-            apiVideos()
-            apiMontage()
         }
     }, [])
-    console.log(prodInfo)
+
     return(
         <>
             <Navbar visible='button-menu-box-fechar' search='button-menu-box-fechar'  box='button-menu-box-fechar' nave="navbar-div"/>
+            {/* pra ele parar de pegar denovo toda vez que mudo de pagina puxar o card devo fazer a mesma condição do localstorage de prodInfo? */}
             <BoxInformacoes prodInfo={prodInfo} card={card} prod={prod}/>
             <ButtonsBar />
-             {/* Quando o id for mudado limpar os localstorage né? pq o dado pode não atualizar*/}
         </>
     )
 }
-// renderizar aqui a pagina de erro que nosso site já possui
+// renderizar aqui a pagina de erro que nosso site já possui ***
+// outra coisa é que precisaficar atualizando a pagina quando um item é chamado diferente do swr que quando clica na página já chama...
 export default Informaçoes;

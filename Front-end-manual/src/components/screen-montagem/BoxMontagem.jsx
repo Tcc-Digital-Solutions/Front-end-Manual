@@ -35,7 +35,7 @@ export const BoxMontagem = (props) => {
         }
         // props.montagem[0] && props.montagem[0].subtitlemontage.subititleImg
         setImagemMaximizada(props.montagem[0] && props.montagem[0].montage.img_guide)
-        setSubtitleMaximizada('Imagem ')
+        setSubtitleMaximizada('Imagem Principal da Ferramenta')
     }, [props.montagem[0] && props.montagem[0].montage.img_guide])
 
     return (
@@ -46,7 +46,7 @@ export const BoxMontagem = (props) => {
                     <ButtonMontagem/>
                 </div>
                 <div className='img-fixa-montagem-div'>
-                    <img className='img-fixa-montagem' src={imagemMaximizada} />
+                    <img className='img-fixa-montagem' src={imagemMaximizada} alt={subtitleMaximizada}/>
                 </div>
                 <div className={classd}>
                     <div className='box-imgs-montagem-div'>
@@ -65,11 +65,11 @@ export const BoxMontagem = (props) => {
                                    
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
-
+                                // passar o tradutor interno na imagem 1
                                 >
-                                    <SwiperSlide><img className='imgs-montagem' src={props.montagem[0] && props.montagem[0].montage.img_guide} onClick={() => setImagemMaximizada(props.montagem[0] && props.montagem[0].montage.img_guide)} /></SwiperSlide>
+                                    <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={props.montagem[0] && props.montagem[0].montage.img_guide} onClick={() => (setImagemMaximizada(props.montagem[0] && props.montagem[0].montage.img_guide), setSubtitleMaximizada('Imagem principal da ferramenta'))} alt={'Imagem principal da ferramenta'} /></span></SwiperSlide>
                                     {props.montagem && props.montagem.map((m, index) => (
-                                        <SwiperSlide key={index}><span className='montagem-span'><img className='imgs-montagem' src={m.imgmontage.img} onClick={() => setImagemMaximizada(m.imgmontage.img)} alt={m.subtitlemontage.subititleImg}/></span></SwiperSlide>
+                                        <SwiperSlide key={index}><span className='montagem-span'><img className='imgs-montagem' src={m.imgmontage.img} onClick={() => (setSubtitleMaximizada(m.subtitlemontage.subititleImg), setImagemMaximizada(m.imgmontage.img))} alt={m.subtitlemontage.subititleImg}/></span></SwiperSlide>
                                         ))}
                                 </Swiper>
                             </div>
@@ -85,9 +85,9 @@ export const BoxMontagem = (props) => {
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
                                     >
-                                    <SwiperSlide><img className='imgs-montagem' src={props.montagem[0] && props.montagem[0].montage.img_guide} onClick={() => setImagemMaximizada(props.montagem[0] && props.montagem[0].montage.img_guide)} /></SwiperSlide>
+                                    <SwiperSlide><img className='imgs-montagem' src={props.montagem[0] && props.montagem[0].montage.img_guide} onClick={() => (setImagemMaximizada(props.montagem[0] && props.montagem[0].montage.img_guide), setSubtitleMaximizada('Imagem principal da ferramenta'))} alt={'Imagem principal da ferramenta'} /></SwiperSlide>
                                     {props.montagem && props.montagem.map((m, index) => (
-                                        <SwiperSlide key={index}><img className='imgs-montagem' src={m.imgmontage.img} onClick={() => setImagemMaximizada(m.imgmontage.img)} alt={m.subtitlemontage.subititleImg} /></SwiperSlide>
+                                        <SwiperSlide key={index}><img className='imgs-montagem' src={m.imgmontage.img} onClick={() => (setSubtitleMaximizada(m.subtitlemontage.subititleImg), setImagemMaximizada(m.imgmontage.img))} alt={m.subtitlemontage.subititleImg}/></SwiperSlide>
                                     ))}
                                 </Swiper>
                             </div>

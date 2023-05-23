@@ -2,6 +2,7 @@ import { prisma } from '../../../prisma/prisma'
 import NextCors from 'nextjs-cors'
 
 export default async function handler(req, res) {
+    console.log(req.method)
     /*
         cors next js
         https://dev.to/steadylearner/how-to-use-cors-for-all-routes-with-next-js-and-browser-session-api-jmo

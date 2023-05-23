@@ -9,15 +9,15 @@ export const Boxproduto = (props) => {
 
     useEffect(() =>{
         const produtoInfo = localStorage.getItem('produtoInfo')
-        if (produtoInfo != undefined && produtoInfo != null){
+        if (produtoInfo != undefined && produtoInfo != null && produtoInfo != "undefined"){
             const prodInfoJSON = JSON.parse(produtoInfo)
             setDescricao(prodInfoJSON.description.split('<br/>'))
+            setConteudo(prodInfoJSON.content.split('<br/>'))
         }
-
-        if (props.content != undefined && props.content != null){
-            setConteudo(props.content.split('<br/>'))
-        }
-    }, [props.content, localStorage.getItem('produtoInfo')])
+        // else if (props.content != undefined && props.content != null){
+        //     setConteudo(props.content.split('<br/>'))
+        // }
+    }, [localStorage.getItem('produtoInfo')])
     
     return (
         <div className='boxproduto-div' >

@@ -5,11 +5,16 @@ import { Carouselinformacoes } from './Carouselinformacoes';
 import { ButtonExperience } from '../universal/ButtonExperience';
 
 export const BoxInformacoes = (props) => {
+    // const [prodInfo, setProdInfo] = useState('')
+    // const [card, setCards] = useState('')
+    // const [prod, setProd] = useState('')
+
+
     return (
         <div className="container-informacoes">
             <div className="BoxInformacoes-div" >
                 <span className='span-informacoes-page'>
-                <ButtonAbout prodInfo={props.prodInfo}/>
+                <ButtonAbout/>
                 </span>  
                 <Img360 prodInfo={props.prodInfo} prod={props.prod}/>
                 <Carouselinformacoes card={props.card}/>
