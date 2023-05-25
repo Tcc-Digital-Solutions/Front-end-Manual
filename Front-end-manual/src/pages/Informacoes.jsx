@@ -10,8 +10,11 @@ const Informaçoes = () =>{
     const [card, setCards] = useState('')
     const [prod, setProd] = useState('')
     
+    // não precisa desses 3 fetchs, posso puxar tudo com releacionamento no prisma igual em montagem né?
     const apiProdutoInfo = async() => {
         // fazer try catch aqui e fazer condição no render, se der erro renderizar pra página de erro
+        // fazer .catch retornar qual erro q deu, ver se isso não deve ser feito na horade charmar o método, tipo,
+        // catch, setar alguma coisa no prouduto,se algumas coisas faltarem apenas dizer que não foi cadastrado
         const product_info = (await fetch(`http://localhost:3000/api/produto_info/${id}`).then(res => res.json()))
         if (product_info){
             localStorage.setItem('produtoInfo', JSON.stringify(product_info[0]))
@@ -22,10 +25,17 @@ const Informaçoes = () =>{
         const cards = (await fetch(`http://localhost:3000/api/cards/${id}`).then(res => res.json()))
         if (cards){
             localStorage.setItem('cards', JSON.stringify(cards))
-            console.log('cards', cards)
             setCards(cards)
         }
     }
+    // pra apresentação é melhor deixar as imagens aqui internamente?? e o caminho de acesso delas dentro do banco só?
+    // pra não ter essa lentidao na hora de buscar a imagem
+    // que tal puxar produto info e cards junto já que ambos possuem uma relação com a linguagem e na hora de verificar,
+    // o localstorage pra fazer fetch denovo teria que comparar: o id na url é o mesmo? se nao, puxar o fetch de td... se sim, puxar o 
+    // fetch apenas, sendo o mesmo id verificar se é a mesma linguagem, sendo a mesma lingugaem não mudar nada. Sendo o mesmo id mas
+    // outra linguagem, teria que puxar apenas tabelas que possuem mudança devido a se texto como a cards e products info, agora,
+    // produto não teria a necessidade de ser puxada novamente, as imagens e etc, continuariam as mesmas, ver esse caso em outras apis
+   // pq, por exemplo, na montagem acho que só teria a necessidade de puxar denovo ao mudar a linguagem, a tabela 'Subtitle Montage'
     const apiProduto = async() =>{
         const product = (await fetch(`http://localhost:3000/api/produto/${id}`).then(res => res.json()))
         if (product){
@@ -56,10 +66,8 @@ const Informaçoes = () =>{
         let dadosCD = localStorage.getItem('cards')
         if (dadosCD != null && dadosCD != undefined && dadosCD != "undefined"){
             let infoCards = JSON.parse(dadosCD)
-            console.log('fk prod:',infoCards)
-            console.log('id prod:', id)
-            console.log('local:', dadosCD)
-            if (infoCards && infoCards[0].fkProd == id ){
+
+            if (infoCards[0].fkProd == id ){
                 setCards(infoCards)
             }
             else{
@@ -97,6 +105,8 @@ const Informaçoes = () =>{
         </>
     )
 }
+// cade os alts do s botoes?? da imagem da bosch, de cada comonnet, isso tem que estar feito pra fazer a tradução interna do i18next se não,
+// isso não vai ajudar alguém cego
 // renderizar aqui a pagina de erro que nosso site já possui ***
 // outra coisa é que precisaficar atualizando a pagina quando um item é chamado diferente do swr que quando clica na página já chama...
 export default Informaçoes;
