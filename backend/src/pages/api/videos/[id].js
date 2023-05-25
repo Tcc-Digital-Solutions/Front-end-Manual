@@ -11,13 +11,15 @@ export default async function handler(req, res) {
         origin: '*',
         optionsSuccessStatus: 200
     })
-
+    // pegar essa linguagem do localstorage
     if (req.method === 'GET'){
         const { id } = req.query
         const allvideos = await prisma.videos.findMany({
-            where:{ fkProd: id }
+            where:{
+                fkLanguage: 2,
+                fkProd: id 
+            }
         })
-        //colocar a condiçao da language tbmm pra puxar o id da language que tá no localstorage
         res.json(allvideos)
     }
 }

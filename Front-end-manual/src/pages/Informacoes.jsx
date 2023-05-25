@@ -22,6 +22,7 @@ const Informaçoes = () =>{
         const cards = (await fetch(`http://localhost:3000/api/cards/${id}`).then(res => res.json()))
         if (cards){
             localStorage.setItem('cards', JSON.stringify(cards))
+            console.log('cards', cards)
             setCards(cards)
         }
     }
@@ -32,7 +33,10 @@ const Informaçoes = () =>{
             setProd(product)
         }
     }
-
+// tem sempre que verificar nessas condições se o id da linguagem tbm continua sendo o mesmo
+// o fetch do video ficou bugado no front, pq tem 3 videos em pt-br e 2 em en-es pro mesmo prodiuto, 
+// apesar disso nn ser um problema acabou bugando o fronto, arrumar ***
+// isso só na parte mobile, que louco, compare e observe a parte desktop com a mobile
     useEffect(() => {
         let dadosPI = localStorage.getItem('produtoInfo')
         if (dadosPI != null && dadosPI != undefined && dadosPI != "undefined"){
@@ -52,8 +56,10 @@ const Informaçoes = () =>{
         let dadosCD = localStorage.getItem('cards')
         if (dadosCD != null && dadosCD != undefined && dadosCD != "undefined"){
             let infoCards = JSON.parse(dadosCD)
-            console.log('fk prod:',infoCards[0].fkProd)
-            if (infoCards[0].fkProd == id ){
+            console.log('fk prod:',infoCards)
+            console.log('id prod:', id)
+            console.log('local:', dadosCD)
+            if (infoCards && infoCards[0].fkProd == id ){
                 setCards(infoCards)
             }
             else{

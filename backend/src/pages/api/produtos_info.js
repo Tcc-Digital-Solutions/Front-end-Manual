@@ -15,6 +15,13 @@ export default async function handler(req, res) {
 
     if (req.method === 'GET'){
         const allprods = await prisma.productsinfo.findMany({
+            where:{
+                languages : {
+                    is : {
+                        idLanguages : 2
+                    }
+                }
+            },
             select:{
                 fkProd: true,
                 name: true,
@@ -29,6 +36,3 @@ export default async function handler(req, res) {
         res.json(allprods)
     }
 }
-// tem que filtrar com where na linguagem tbmm
-// SELECT productsinfo.fkProd, productsinfo.name, product.img_prod FROM productsinfo INNER JOIN product ON productsinfo.fkProd=product.codeId;
-// então eu faço isso pra página de informação ao inves de dar 3 fetchs

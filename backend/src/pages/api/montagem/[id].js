@@ -21,9 +21,11 @@ export default async function handler(req, res) {
                         fkProd: id
                     }
                 },
+                // trocar pelo que estiver no localstorage, talvez tenha que fazer where pra ver se bate com en-es ou deixar isso como
+                // chave primária
                 subtitlemontage: {
                     is: {
-                        fkLanguage : 1
+                        fkLanguage : 2
                     }
                 }
             },
