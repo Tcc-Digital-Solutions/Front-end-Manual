@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         const { id } = req.query
         const allvideos = await prisma.videos.findMany({
             where:{
-                fkLanguage: 2,
+                fkLanguage: 1,
                 fkProd: id 
             }
         })

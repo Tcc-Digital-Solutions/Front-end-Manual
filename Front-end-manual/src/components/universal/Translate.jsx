@@ -7,12 +7,12 @@ import { Speaker } from './Speaker';
 import { AltoContraste } from './AltoContraste'
 
 export const Translate = () => {
-    const [selectedOption, setSelectedOption] = useState('pt-PT');
+    const [selectedOption, setSelectedOption] = useState('pt-BR');
     const [visible, setVisible] = useState("translate-box-fechar")
     const [pressed, setPressed] = useState(false)
 
     const options = [
-        { value: 'pt-PT', label: 'Português' },
+        { value: 'pt-BR', label: 'Português' },
         { value: 'en-US', label: 'English' },
         { value: 'fr-FR', label: 'Français' },
         { value: 'es-ES', label: 'Español' },
@@ -27,7 +27,6 @@ export const Translate = () => {
         pressed ? setVisible("translate-box-fechar") : setVisible("translate-box")
         setPressed(!pressed)
     }
-    
 
     return (
         <div className="translate-div">
@@ -38,7 +37,9 @@ export const Translate = () => {
                 isClearable={true}
                 onChange={setSelectedOption}
                 isSearchable={true}
-                options={options}  /> 
+                options={options}  
+                className='select-idioma'/> 
+                {localStorage.setItem('idioma', selectedOption == 'pt-BR' ? selectedOption : selectedOption.value)}
             </span>
             <AltoContraste/>
         </div>

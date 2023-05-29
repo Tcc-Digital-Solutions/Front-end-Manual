@@ -1,4 +1,4 @@
-import { prisma } from '../../../../prisma/prisma'
+import { prisma } from '../../../prisma/prisma'
 import NextCors from 'nextjs-cors'
 
 export default async function handler(req, res) {
@@ -13,14 +13,14 @@ export default async function handler(req, res) {
     })
 
     if (req.method === 'GET'){
-        const { id } = req.query
-        const allcards = await prisma.cards.findMany({
-            where:{ 
-                fkProd: id,
-                fkLanguage: 1
-            }
+        const category = await prisma.category.findMany({
+           where:{
+            fkLanguage: 1
+           },
+           include:{
+            subcategory: true
+           }
         })
-        //colocar a condiçao da language tbmm pra puxar o id da language que tá no localstorage
-        res.json(allcards)
+        res.json(category)
     }
 }

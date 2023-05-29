@@ -19,7 +19,7 @@ export default async function handler(req, res){
         const detalhe = await prisma.productsinfo.findMany({
             where:{
                 fkProd:id,
-                fkLanguage:2
+                fkLanguage:1
             },
             // colocar esse where relacionado com a linguagem tbmm que vai vir do localstorage
         })

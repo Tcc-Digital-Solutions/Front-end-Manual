@@ -7,13 +7,13 @@ import lupa from '../../assets/img/search.svg'
 import { Carousel } from './Carousel'
 
 export const NavbarHome = (props) => {
-
+    
     const[isHovering_0, setIsHoverring_0] = useState(false);
     const[isHovering_1, setIsHoverring_1] = useState(false);
     const[isHovering_2, setIsHoverring_2] = useState(false); 
     const[isHovering_3, setIsHoverring_3] = useState(false);
     const[isHovering_4, setIsHoverring_4] = useState(false);
-
+    
     const { innerWidth: width, innerHeight: height } = window;
     const [visible, setVisible] = useState(props.visible)
     const [visibleSearch, setVisibleSearch] = useState('navbarsearch-span')
@@ -23,7 +23,7 @@ export const NavbarHome = (props) => {
     const [visibleButtonX, setVisibleButtonX] = useState("button-youtube-button-x-hide")
     const [pressed, setPressed] = useState(false)
     const [pressed2, setPressed2] = useState(false)
-
+    
     const [pesquisa, setPesquisa] = useState('')
 
     const setMenuVisible = () => {
@@ -63,7 +63,6 @@ export const NavbarHome = (props) => {
     // }
     },[])
     
-    const [categoria, setCategoria] = useState(1)
     const exibirProdutos = (categoria) => {
         setCategoria(categoria)
     }
@@ -130,27 +129,27 @@ export const NavbarHome = (props) => {
             <span className={visible}>
             <button className={visibleButtonX} id='button-lado' onClick={() => setMenuVisible()}><img className="button-youtube-button-x-img" src={fecharImg} alt="" /></button>
                 <ul className="box-categoria-ul">
-                    {/* {props.subcategorias && props.subcategorias.map((s, index) => ( */}
+                    {/* {console.log(categoria)} */}
+                    {props.categoria && props.categoria.map((c, indexc) => (
                     <li className="box-categoria-li" id='li-categorias'>
                         <div className="box-categoria-menu"  id='box-categoria-menu-border'   onMouseOver={() => handleMouseOver(0)} onMouseOut={() => handleMouseOut (0)}>
-                            {/* {s.category.name} */}Ferramentas 18V
+                            <p key={indexc}>{c.name}</p>
+                            {console.log('categria: ' , c)}
+                            {console.log('subcategoria: ', c.subcategory)}
+                            {/* {console.log('sub', c.subcategory)} */}
                             <span  className={isHovering_0 ? 'menu-button' : 'menu-escondido'}>
                             <div className='box-menu'>
                         <ul>
-                            <li className={categoria == 1 ? 'active' : null} onMouseOver={() => exibirProdutos(1)}>Furadeiras e Parafusadeiras</li>
-                            <li onMouseOver={() => exibirProdutos(2)}>Chave de Impacto</li>
-                            <li onMouseOver={() => exibirProdutos(3)}>Serra Circular</li>
-                            <li onMouseOver={() => exibirProdutos(4)}>Serra Tico-Tico</li>
-                            <li onMouseOver={() => exibirProdutos(5)}>Plaina</li>
-                            <li onMouseOver={() => exibirProdutos(6)}>Aspiradores</li>
-                            <li onMouseOver={() => exibirProdutos(7)}>Barteria e Carregadores</li>
-                            <li onMouseOver={() => exibirProdutos(8)}>Lanterna</li>
+                            {/* <li className={props.categoria == 1 ? 'active' : null} onMouseOver={() => exibirProdutos(1)}>Furadeiras e Parafusadeiras</li> */}
+x                            {c.subcategory && c.subcategory.map((s, indexs) => (
+                                <li onMouseOver={() => exibirProdutos(2)} key={indexs}>{s.name}</li>
+                             ))}
                         </ul>
                     </div>
                             </span>
                         </div>
                     </li>
-                    {/* ))} */}
+                    ))}
                     
                     {/* <li className="box-categoria-li" id='li-categorias'>
                         <div className="box-categoria-menu" id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(1)} onMouseOut={() => handleMouseOut (1)} >

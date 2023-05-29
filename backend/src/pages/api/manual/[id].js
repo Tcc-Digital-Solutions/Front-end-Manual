@@ -14,7 +14,7 @@ export default async function handler(req, res){
         const detalhe = await prisma.pdf.findMany({
             where:{ 
                 fkProd: id,
-                fkLanguage: 2,
+                fkLanguage: 1,
             }
         })
         res.json(detalhe)
