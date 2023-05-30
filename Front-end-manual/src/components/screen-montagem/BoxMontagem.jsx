@@ -70,7 +70,7 @@ export const BoxMontagem = (props) => {
                                     <SwiperSlide><span className='montagem-span'><img className='imgs-montagem' src={props.montagem[0] && props.montagem[0].montage.img_guide} onClick={() => (setImagemMaximizada(props.montagem[0] && props.montagem[0].montage.img_guide), setSubtitleMaximizada('Imagem principal da ferramenta'))} alt={'Imagem principal da ferramenta'} /></span></SwiperSlide>
                                     {props.montagem && props.montagem.map((m, index) => (
                                         <SwiperSlide key={index}><span className='montagem-span'><img className='imgs-montagem' src={m.imgmontage.img} onClick={() => (setSubtitleMaximizada(m.subtitlemontage.subititleImg), setImagemMaximizada(m.imgmontage.img))} alt={m.subtitlemontage.subititleImg}/></span></SwiperSlide>
-                                        ))}
+                                    ))}
                                 </Swiper>
                             </div>
 

@@ -26,7 +26,6 @@ export const Carouselinformacoes = (props) => {
                     direction={'vertical'}
                     spaceBetween={0}
                     slidesPerGroup={slip}
-
                     loop={false}
                     navigation={true}
                     loopFillGroupWithBlank={true}

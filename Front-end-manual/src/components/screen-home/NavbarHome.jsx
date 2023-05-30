@@ -132,8 +132,9 @@ export const NavbarHome = (props) => {
                     {/* {console.log(categoria)} */}
                     {props.categoria && props.categoria.map((c, indexc) => (
                     <li className="box-categoria-li" id='li-categorias'>
-                        <div className="box-categoria-menu"  id='box-categoria-menu-border'   onMouseOver={() => handleMouseOver(0)} onMouseOut={() => handleMouseOut (0)}>
-                            <p key={indexc}>{c.name}</p>
+                        // nesses numeros não seria o indexc e indexs?
+                        <div className="box-categoria-menu"  id='box-categoria-menu-border' onMouseOver={() => handleMouseOver(indexc)} key={indexc} onMouseOut={() => handleMouseOut (indexc)}>
+                            <p>{c.name}</p>
                             {console.log('categria: ' , c)}
                             {console.log('subcategoria: ', c.subcategory)}
                             {/* {console.log('sub', c.subcategory)} */}
@@ -142,7 +143,7 @@ export const NavbarHome = (props) => {
                         <ul>
                             {/* <li className={props.categoria == 1 ? 'active' : null} onMouseOver={() => exibirProdutos(1)}>Furadeiras e Parafusadeiras</li> */}
 x                            {c.subcategory && c.subcategory.map((s, indexs) => (
-                                <li onMouseOver={() => exibirProdutos(2)} key={indexs}>{s.name}</li>
+                                <li onMouseOver={() => exibirProdutos(indexs)} key={indexs}>{s.name}</li>
                              ))}
                         </ul>
                     </div>

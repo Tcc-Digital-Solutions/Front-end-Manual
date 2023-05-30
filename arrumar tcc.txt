@@ -1,0 +1,11 @@
+Problemas na categoria da home
+problemas na exibição do manual
+consegui fazer o localstorage mudar quando muda o idioma mas não consegui fazer uma variavel que fica mudando pra fazer o fetch
+porque eles são em arquivos diferentes
+
+
+
+
+
+problemas para exibir o manual agora que o banco tá hospedado
+subir backend na azure

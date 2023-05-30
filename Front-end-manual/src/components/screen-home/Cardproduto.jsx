@@ -10,6 +10,7 @@ export const Cardproduto = ( props ) => {
         <>
             <div className="Cardproduto-div" >
                 <span className='Cardproduto-div-02'>
+                    {/* e a legenda dessa imagem? */}
                     <img className='img-card' src={props.foto} alt="" />
                     <span className='Cardproduto-div-03'>
                         <span className='Cardproduto-div-text'>{props.nome}</span>
