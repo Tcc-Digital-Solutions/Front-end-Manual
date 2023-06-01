@@ -13,7 +13,7 @@ export const Navbar = (props) => {
             </div>
             <div className='navbar-div-2'>
                 <span className='navbar-div-2-span'>
-                    <img className='navbar-div-img-2' src={boschLogo} alt="" />                   
+                    <img className='navbar-div-img-2' src={boschLogo} alt="" />                
                 </span>
                 <div  className={props.logado ? 'navbar-div-buttons' : 'navbar-div-buttons-2'}>
                     <span className='navbar-buttons-comus-1'>
@@ -22,7 +22,7 @@ export const Navbar = (props) => {
                         </span> 
                         <Translate /> 
                         <div className={props.menu ? 'active-home' : 'no-active-home'}>
-                            <NavbarHome visible={props.visible} box={props.box} menu={props.menuTrue} search={props.search} prodsInfo={props.prodsInfo}/>
+                            <NavbarHome visible={props.visible} box={props.box} menu={props.menuTrue} search={props.search} prodsInfo={props.prodsInfo} categoria={props.categoria}/>
                         </div>                                               
                     </span>
                 </div>

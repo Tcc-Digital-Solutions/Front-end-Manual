@@ -1,0 +1,29 @@
+Tratamento de Erros
+Ex:
+
+Agora que o anco ta hospeadado ver o que fazer cm as imagens da montagem -era o proxy
+
+Fazer trazer os produtos agora que a api tá hospedada, arrumar os desafios que aparecerem,
+
+
+trazer as languages do banco
+** fazer docs da api
+
+Produto não encontrado,
+
+Preenchimento de informações, ex: tem algumas coisas que se faltar, só vai estar escrito que não foi cadastrado, exemplo card, se vir vazio substituir pra nenhum card de foi cadastrado pra esse produto***
+
+Arrumar os problemas com o manual
+
+fazer a busca personalizada da barra de pesquisa da home, fazer a busca personalizada da barra de categoria e subcategoria da home
+trazer a categoria e a subcategoria da home
+
+fazer o fetch ser executado toda vez que a linguagem mudar, exeto que ao entrar na página a linguagem já pode ser uma paddrão, exemplo, ingles
+
+
+colocar os dados veridicos de cada ferramenta, pra ter dados mais sérios do que só de teste.
+
+
+se tudo der certo
+
+fazer as inserçoes e alterações, restante do crud

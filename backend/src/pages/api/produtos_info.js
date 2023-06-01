@@ -18,7 +18,7 @@ export default async function handler(req, res) {
             where:{
                 languages : {
                     is : {
-                        idLanguages : 2
+                        idLanguages : 1
                     }
                 }
             },

@@ -8,12 +8,23 @@ const Home = () =>{
     // fazer o restante do crud
     const [prodsInfo, setProdsInfo] = useState('')
     const [subcategorias, setSubcategorias] = useState('')
+    const [categoria, setCategoria] = useState('')
     
     const apiProdutosInfo = async() =>{
         const product_info = (await fetch('http://localhost:3000/api/produtos_info').then(res => res.json()))
         if (product_info){
             localStorage.setItem('produtosInfo', JSON.stringify(product_info))
             setProdsInfo(product_info)
+        }
+    }
+
+    const apiCategory = async() => {
+        const category = (await fetch('http://localhost:3000/api/category').then(res => res.json()))
+        if (category) {
+            localStorage.setItem('category', JSON.stringify(category))
+            console.log('o fetch',category)
+            setCategoria(category)
+            console.log(categoria)
         }
     }
     // const apiSubcategories= async() =>{
@@ -29,6 +40,7 @@ const Home = () =>{
     useEffect(() =>{
         // let dadosPIs = localStorage.getItem('produtosInfo')
         apiProdutosInfo()
+        apiCategory()
         // apiSubcategories()
         // if (dadosPIs == null){
         //     // let infoProdutosInfo = JSON.parse(dadosPIs)
@@ -47,7 +59,7 @@ const Home = () =>{
 
     return (
         <>
-            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" prodsInfo={prodsInfo}/>
+            <Navbar menu='active-home' visible='button-menu-box' box='box-produtos-result' menuTrue='true' search="navbarsearch-div" nave="navbar-div" prodsInfo={prodsInfo} categoria={categoria}/>
         </>
     );
 }

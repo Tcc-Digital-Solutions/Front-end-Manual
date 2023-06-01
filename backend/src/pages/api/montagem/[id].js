@@ -25,7 +25,7 @@ export default async function handler(req, res) {
                 // chave primária
                 subtitlemontage: {
                     is: {
-                        fkLanguage : 2
+                        fkLanguage : 1
                     }
                 }
             },

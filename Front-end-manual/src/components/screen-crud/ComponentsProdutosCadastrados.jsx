@@ -5,7 +5,7 @@ import useSWR from 'swr'
 
 export const ComponentsProdutosCadastrados = () => {
     const fetcher  = (...args) => fetch(...args, { method: 'GET' }).then(res => res.json())
-    const { data, error, isLoading } = useSWR('http://localhost:3000/api/produtos', fetcher)
+    const { data, error, isLoading } = useSWR('manual-digital-server.mysql.database.azure.com/api/produtos', fetcher)
 
     if ( error ) return <div>falhou ao carregar</div>
     if ( isLoading ) return <div>carregando...</div> /* mostrar nossa página de carregamento */

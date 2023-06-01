@@ -9,6 +9,7 @@ const Informaçoes = () =>{
     const [prodInfo, setProdInfo] = useState('')
     const [card, setCards] = useState('')
     const [prod, setProd] = useState('')
+    const [idioma, setIdioma] = useState('')
     
     // não precisa desses 3 fetchs, posso puxar tudo com releacionamento no prisma igual em montagem né?
     const apiProdutoInfo = async() => {
@@ -16,6 +17,7 @@ const Informaçoes = () =>{
         // fazer .catch retornar qual erro q deu, ver se isso não deve ser feito na horade charmar o método, tipo,
         // catch, setar alguma coisa no prouduto,se algumas coisas faltarem apenas dizer que não foi cadastrado
         const product_info = (await fetch(`http://localhost:3000/api/produto_info/${id}`).then(res => res.json()))
+        console.log(product_info)
         if (product_info){
             localStorage.setItem('produtoInfo', JSON.stringify(product_info[0]))
             setProdInfo(product_info[0])
@@ -23,6 +25,7 @@ const Informaçoes = () =>{
     }
     const apiCards = async() =>{
         const cards = (await fetch(`http://localhost:3000/api/cards/${id}`).then(res => res.json()))
+        console.log(cards)
         if (cards){
             localStorage.setItem('cards', JSON.stringify(cards))
             setCards(cards)
@@ -43,11 +46,20 @@ const Informaçoes = () =>{
             setProd(product)
         }
     }
-// tem sempre que verificar nessas condições se o id da linguagem tbm continua sendo o mesmo
-// o fetch do video ficou bugado no front, pq tem 3 videos em pt-br e 2 em en-es pro mesmo prodiuto, 
-// apesar disso nn ser um problema acabou bugando o fronto, arrumar ***
-// isso só na parte mobile, que louco, compare e observe a parte desktop com a mobile
+    // ele não tá indo qnd clica no select e sim quando clica no display dele não só nas options
+    const selectIdioma = document.querySelector('.select-idioma')
+    console.log(selectIdioma)
+    selectIdioma && selectIdioma.addEventListener('change', (event) => {
+        setIdioma(localStorage.getItem('idioma'))
+        // console.log(event.target.value)
+    })
+
+    // tem sempre que verificar nessas condições se o id da linguagem tbm continua sendo o mesmo
+    // o fetch do video ficou bugado no front, pq tem 3 videos em pt-br e 2 em en-es pro mesmo prodiuto, 
+    // apesar disso nn ser um problema acabou bugando o front, arrumar ***
+    // isso só na parte mobile, que louco, compare e observe a parte desktop com a mobile
     useEffect(() => {
+        
         let dadosPI = localStorage.getItem('produtoInfo')
         if (dadosPI != null && dadosPI != undefined && dadosPI != "undefined"){
             let infoProdutoInfo = JSON.parse(dadosPI)

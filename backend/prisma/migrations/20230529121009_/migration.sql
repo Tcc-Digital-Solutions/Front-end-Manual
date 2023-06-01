@@ -42,10 +42,10 @@ CREATE TABLE `imgmontage` (
 CREATE TABLE `infolog` (
     `idLog` INTEGER NOT NULL AUTO_INCREMENT,
     `action` VARCHAR(60) NOT NULL,
-    `fkUser` INTEGER NOT NULL,
+    `fkUser` VARCHAR(45) NOT NULL,
     `date` DATETIME(0) NOT NULL,
 
-    INDEX `fkUser_idx`(`fkUser`),
+    INDEX `IDLoginInfoLog_idx`(`fkUser`),
     PRIMARY KEY (`idLog`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -59,11 +59,11 @@ CREATE TABLE `languages` (
 
 -- CreateTable
 CREATE TABLE `login` (
-    `idLogin` INTEGER NOT NULL AUTO_INCREMENT,
     `user` VARCHAR(45) NOT NULL,
     `password` VARCHAR(45) NOT NULL,
 
-    PRIMARY KEY (`idLogin`)
+    UNIQUE INDEX `user_UNIQUE`(`user`),
+    PRIMARY KEY (`user`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
@@ -183,7 +183,7 @@ ALTER TABLE `category` ADD CONSTRAINT `IDCategoriesCategory` FOREIGN KEY (`fkCat
 ALTER TABLE `category` ADD CONSTRAINT `IDLanguageCategory` FOREIGN KEY (`fkLanguage`) REFERENCES `languages`(`idLanguages`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
-ALTER TABLE `infolog` ADD CONSTRAINT `fkUser` FOREIGN KEY (`fkUser`) REFERENCES `login`(`idLogin`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `infolog` ADD CONSTRAINT `IDLoginInfoLog` FOREIGN KEY (`fkUser`) REFERENCES `login`(`user`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- AddForeignKey
 ALTER TABLE `montage` ADD CONSTRAINT `IDMontageProduct` FOREIGN KEY (`fkProd`) REFERENCES `product`(`codeId`) ON DELETE NO ACTION ON UPDATE NO ACTION;

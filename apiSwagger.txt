@@ -1,0 +1,202 @@
+openapi: 3.0.0
+servers: []
+info:
+  version: "1.0.0"
+  title: home-iot-api
+  description: The API for the EatBacon IOT project
+
+paths:
+  '/produtos':
+    get:
+      description: retorna todos os registros de produtos
+      responses:
+        '200':
+          description: Todos os produtos
+          content:
+            application/json:
+              schema:
+                items:
+                  type: string
+                  format: json
+                  example: {'codeId': varchar(60),
+                           'img_prod': varchar(255),
+                           'img_360': varchar(255),
+                           'audio': varchar(255),
+                           'fkCategories': int}
+                           
+      tags:
+        - Produtos
+  /produto/{codeId}:
+    get:
+      tags:
+        - Produtos
+      description: retorna o registro do produto que tiver o sku igual ao codeId
+      parameters:
+        - name: codeId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: All the devices
+          content:
+            application/json:
+              schema:
+                items:
+                  example:  {'codeId': varchar(60),
+                           'img_prod': varchar(255),
+                           'img_360': varchar(255),
+                           'audio': varchar(255),
+                           'fkCategories': int}
+  /produtos_info:
+    get:
+      tags:
+        - Produtos Info
+      description: retorna as informações de todos os registros de produtos
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema: 
+                items:
+                  example: {'fkProd': varchar(60),
+                           'name': varchar(60),
+                           'product':{
+                             'img_prod': varchar(60)}
+                          }
+                           
+  /produto_info/{codeId}:
+    get:
+      tags:
+        - Produtos Info
+      description: retorna os registros do produto
+      parameters:
+        - name: codeId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                items:
+                   example: {'idProd': int,
+                            'name': varchar(60),
+                            'subtitle': varchar(255),
+                            'description': text,
+                            'content': text,
+                            'fkProd': varchar(60),
+                            'fkLanguage': int}
+  /category:
+    get:
+      tags:
+        - Categorias
+      description: retorna todas as categorias e suas subcategorias cadastradas
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                items:
+                  example: {
+                    "idCategory": int,
+                    "name": varchar(45),
+                    "fkLanguage": int,
+                    "fkCategories": int,
+                    "subcategory":[{
+                    "idSubcategory": int,
+                    "name": varchar(45),
+                    "fkCategory": int}]
+                  }
+                
+  /montagem/{codeId}:
+    get:
+      tags:
+        - Montagem
+      description: retorna o registro dos itens de montagem, legenda e imagens referente ao produto que tiver a sku igual ao fkProd
+      parameters:
+        - name: codeId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                items:
+                  example:
+                    {"idMontage": int,
+                    "img_guide": varchar(255),
+                    "fkProd": varchar(60),
+                      "subtitleimage":[
+                        "subtitlemontage":{
+                          "idSubtitle": int,
+                          "subititleImg": varchar(255),
+                          "fkLanguage": int
+                        },
+                        "imgmontage":{
+                          "idImgMontage": int,
+                          "img": varchar(255)
+                        }
+                      ]
+                    }
+                    
+  '/manual/{codeId}':
+    get:
+      tags:
+        - Manual
+      description: retorna o registro dos dados referentes ao manual do produto que tiver a sku igual ao fkProd
+      parameters:
+        - name: codeId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+               items:
+                example:
+                    {
+                      idPDF: int,
+                      pdf: varchar(255),
+                      fkProd: varchar(60),
+                      fkLanguage: int
+                    }
+                  
+               
+  'cards/{codeId}':
+    get:
+      tags:
+        - Cards
+      description: retorna o registro dos dados referentes a um conjunto de cards do produto que tiver a sku igual ao fkProd
+      parameters:
+        - name: codeId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  example: {
+                            "idCards": int,
+                            "icone": varchar(255),
+                            "description": varchar(255),
+                            "fkProd": varchar(60),
+                            "fkLanguage": int
+                          }
