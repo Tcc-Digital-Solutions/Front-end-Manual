@@ -46,15 +46,14 @@ model imgmontage {
   subtitleimage subtitleimage[]
 }
 
-/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model infolog {
   idLog  Int      @id @default(autoincrement())
   action String   @db.VarChar(60)
-  fkUser Int
+  fkUser String   @db.VarChar(45)
   date   DateTime @db.DateTime(0)
-  login  login    @relation(fields: [fkUser], references: [idLogin], onDelete: NoAction, onUpdate: NoAction, map: "fkUser")
+  login  login    @relation(fields: [fkUser], references: [user], onDelete: NoAction, onUpdate: NoAction, map: "IDLoginInfoLog")
 
-  @@index([fkUser], map: "fkUser_idx")
+  @@index([fkUser], map: "IDLoginInfoLog_idx")
 }
 
 model languages {
@@ -69,8 +68,7 @@ model languages {
 }
 
 model login {
-  idLogin  Int       @id @default(autoincrement())
-  user     String    @db.VarChar(45)
+  user     String    @id @unique(map: "user_UNIQUE") @db.VarChar(45)
   password String    @db.VarChar(45)
   infolog  infolog[]
 }
