@@ -1,4 +1,5 @@
 import { useSignIn } from 'react-auth-kit'
+import { API } from '../../../const'
 import '../../assets/css/css-login-mk/BoxLoginMk.css'
 import boschLogo from '../../assets/img/Meu projeto 1.png'
 import passImg from '../../assets/img/lock-closed.svg'
@@ -9,17 +10,24 @@ export const BoxLoginMk = () => {
 
     async function fetchLoginApi() {
         let data = JSON.stringify({})
-        var headers = new Headers();
-        headers = {
-            "Content-Type": "application/json",
-        }
+        var headers = new Headers({
+            'Content-Type': 'application/json',
+        })
+
         let config = {
             method: 'POST',
             headers: headers,
-            mode: cors,
+            mode: 'cors',
             cache: 'default',
             data: data
         }
+        await fetch(`${API}/auth/token/login`, config)
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
 
     function login() {

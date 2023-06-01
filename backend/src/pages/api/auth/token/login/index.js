@@ -1,8 +1,16 @@
 import { prisma } from "@/lib/prisma";
+import NextCors from 'nextjs-cors';
 
 var jwt = require('jsonwebtoken');
 
 export default async function handler(req, res) {
+
+    await NextCors(req, res, {
+        methods: ['POST'],
+        origin: '*',
+        optionsSuccessStatus: 201
+    })
+
     if (req.method === 'POST') {
         const { usuario, senha } = req.body
         const user = await prisma.usuario.findMany({
