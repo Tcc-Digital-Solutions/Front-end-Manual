@@ -14,13 +14,10 @@ export const ScreenEspera = () => {
     const { id } = useParams();
 
 
-    if (!animado) { 
-        if (!id) {
-            navigate('/home')
-            // window.location.reload(false);
-        }
-        if (id) navigate('/informacoes/' + id)
+    if (!animado) {
+        window.location.href="https://witty-dune-0fc167910.3.azurestaticapps.net/"; 
     };
+
 
     setTimeout(() => {
         setAnimado(false)
