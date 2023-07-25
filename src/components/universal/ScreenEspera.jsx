@@ -16,7 +16,7 @@ export const ScreenEspera = () => {
 
     if (!animado) {
         // window.location.href="https://witty-dune-0fc167910.3.azurestaticapps.net/"; 
-        navigate("home/informacoes" + id)
+        navigate("informacoes/" + id)
     };
 
 
